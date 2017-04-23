@@ -1,0 +1,24 @@
+%!PS
+%%BoundingBox: -20 -20 551 1001 
+%%HiResBoundingBox: -19.99971 -19.99971 550.00029 1000.00049 
+%%Creator: MetaPost 1.9991
+%%CreationDate: 2017.04.23:1718
+%%Pages: 1
+%%BeginProlog
+%%EndProlog
+%%Page: 1 1
+ 0 0 0 setrgbcolor 100.43083
+ 0 dtransform exch truncate exch idtransform pop setlinewidth [] 0 setdash
+ 1 setlinejoin 10 setmiterlimit
+gsave newpath 275.00014 9.02805 moveto
+402.19785 9.02805 499.78487 119.75815 499.78487 250.00014 curveto
+499.78487 380.2421 402.19781 490.9722 275.00014 490.9722 curveto
+140.497 490.9722 30.21571 383.78403 30.21571 250.00014 curveto
+30.21571 116.21626 140.497 9.02805 275.00014 9.02805 curveto closepath
+[0.99342 0.21115 -0.11438 0.5381 0 0] concat stroke grestore
+ 1 setlinecap
+gsave newpath 499.78487 29.02776 moveto
+499.78487 970.97273 lineto
+[0.99342 0.21115 -0.11438 0.5381 0 0] concat stroke grestore
+showpage
+%%EOF
