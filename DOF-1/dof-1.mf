@@ -18,19 +18,21 @@ mode_setup;
 % slant:=0; -> slanting for italicizing typefaces
 % overdraw# -> serifizing by "over"-drawing characters edges
 
-u#:=3/9pt#; cap#:=9pt#; desc#:=27/9pt#; xheight#:=.6*cap#;
-s#:=u#; o#:=1/9pt#;
-xgap#:=u#; barheight#:=.4*cap#; ebarheight#:=.5*xheight#;
-slant:=1/4; overdraw#:=0;
-penx#:=1pt#; peny#:=1pt#;
+slant:=0;
+u#:=3/9pt#; cap#:=9pt#; desc#:=27/9pt#; xheight#:=.6cap#;
+s#:=2u#; o#:=1/18pt#;
+xgap#:=u#; barheight#:=.4*cap#; ebarheight#:=.5xheight#; overdraw#:=0;
+leftstemloc#:=s#;
+penx#:=0.8pt#; peny#:=0.8pt#;
 
+% define pixels / pen(s)
 define_pixels(u,cap,desc,xheight,s,overdraw);
+define_whole_pixels(xgap);
 define_corrected_pixels(o);
-define_good_y_pixels(barheight,ebarheight);
 define_blacker_pixels(penx,peny);
-
-% define pen(s)
 pickup pencircle xscaled penx yscaled peny; dof_pen:=savepen;
+define_good_y_pixels(barheight,ebarheight);
+define_good_x_pixels(leftstemloc);
 
 def begindofchar(expr code,width_in_units,height,desc) = 
   beginchar(code,width_in_units*u#+2*s#,height,desc);
@@ -40,10 +42,23 @@ def begindofchar(expr code,width_in_units,height,desc) =
 if unknown slant: slant:=0 else: currenttransform:=
   identity slanted slant fi;
 
-begindofchar("O",18,cap#,0);
+begindofchar("A",15,cap#,0);
+  lft x1=leftstemloc; x4=w-x1;
+  bot y1=bot y4=0;
+  x2+xgap=x3-xgap=w/2;
+  top y2=top y3=h;
+  y5=y6=barheight;
+  z5=whatever[z1,z2];
+  z6=whatever[z3,z4];
+  draw z1--z2--z3--z4;
+  draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("O",20,cap#,0);
   x1=x3=w/2;
-  y1+o=y3-h-o=0;
-  x4+o=x2-w-o=0;
+  bot y1+o=top y3-h-o=0;
+  x4+o=leftstemloc; x2=w-x4;
   y4=y2=h/2;
   draw z1..z2..z3..z4..cycle;
   labels(range 1 thru 4);
