@@ -25,7 +25,7 @@ u#:=3/9pt#; cap#:=9pt#; desc#:=2.25pt#; xheight#:=.7cap#;
 s#:=2u#; o#:=1/18pt#;
 xgap#:=u#; ygap#:=3u#; barheight#:=.5*cap#; ebarheight#:=.5xheight#; overdraw#:=0;
 leftstemloc#:=s#;
-penx#:=1.1pt#; peny#:=0.35pt#; penangle:=0;
+penx#:=1.1pt#; peny#:=0.7pt#; penangle:=0;
 
 % setup font, pixels and pen(s)
 mode_setup;
@@ -48,6 +48,15 @@ if unknown slant: slant:=0 else: currenttransform:=
 % draw characters
 input dof-1-charu; % DOF uppercase characters
 input dof-1-charl; % DOF lowercase characters
+input dof-1-charfp; % DOF figures and punctuation
 % input dof-1-byproduct; % DOF by-product characters
+
+% metrics, etc.
+font_quad:=20u#;
+font_normal_space:=10u#;
+font_normal_stretch:=3u#;
+font_normal_shrink:=3u#;
+font_identifier:="DOF-1" if slant<>0: & "_italic" fi;
+% font_coding_scheme:=;
 
 bye

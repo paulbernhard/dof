@@ -1,3 +1,5 @@
+% dof-1 lowercase characters
+
 begindofchar("a",13,xheight#,0);
   rt x7=w-leftstemloc; x6=x1=x5=x7; 
   lft x3=leftstemloc-o; x2=x4=w/2;
@@ -157,14 +159,3 @@ begindofchar("q",12.5,xheight#,desc#);
   draw z3..z4{left}..z5{up}..z6{right}..z7;
   labels(range 1 thru 7);
 endchar;
-
-% space
-begindofchar(oct"040",5,cap#,0);
-endchar;
-
-font_quad:=20u#;
-font_normal_space:=10u#;
-font_normal_stretch:=3u#;
-font_normal_shrink:=3u#;
-font_identifier:="DOF-1" if slant<>0: & "_italic" fi;
-% font_coding_scheme:=;

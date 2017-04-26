@@ -5,3 +5,12 @@ begindofchar(oct"000",14,cap#,0);
   draw z1..z2{right}..z3{up}..z4{up}..z5{right}..z6;
   labels(range 1 thru 6);
 endchar;
+
+begindofchar("K",13.5,cap#,0);
+  lft x1=leftstemloc; x2=x3=x1; rt x1=lft x5;
+  rt x4=leftstemloc-.5u; x6=x4;
+  bot y1=0; top y2=h; y1=y6; y2=y4; 
+  y3=y5=barheight;
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  labels(range 1 thru 6);
+endchar;

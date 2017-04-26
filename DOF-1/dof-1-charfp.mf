@@ -1,0 +1,5 @@
+% dof-1 figures and punctuation
+
+% space
+begindofchar(oct"040",5,cap#,0);
+endchar;
