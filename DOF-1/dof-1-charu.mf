@@ -1,22 +1,3 @@
-mode_setup;
-
-% define pixels / pen(s)
-define_pixels(u,cap,desc,xheight,s,xgap,ygap,overdraw);
-define_corrected_pixels(o);
-define_blacker_pixels(penx,peny);
-pickup pencircle xscaled penx yscaled peny rotated penangle; dof_pen:=savepen;
-define_good_y_pixels(barheight,ebarheight);
-define_good_x_pixels(leftstemloc);
-
-% dof char method
-def begindofchar(expr code,width_in_units,height,desc) = 
-  beginchar(code,width_in_units*u#+2*s#,height,desc);
-  pickup dof_pen; enddef;
-
-% change currenttransform if slant is > 0;
-if unknown slant: slant:=0 else: currenttransform:=
-  identity slanted slant fi;
-
 begindofchar("A",15,cap#,0);
   lft x1=leftstemloc-.5u; x4=w-x1;
   bot y1=bot y4=0;
