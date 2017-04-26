@@ -1,0 +1,7 @@
+begindofchar(oct"000",14,cap#,0);
+  lft x1=leftstemloc-o; x5=x1; x3=x7=w-x1; x2=x4=x6=w/2;
+  bot y1=ygap; y7=h-y1; bot y2=top y6-h=0;
+  y3=h/4; y5=h-y3; bot y4=h/2;
+  draw z1..z2{right}..z3{up}..z4{up}..z5{right}..z6;
+  labels(range 1 thru 6);
+endchar;
