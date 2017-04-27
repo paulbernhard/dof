@@ -6,6 +6,7 @@ slant:=0; % slanting for italicizing typefaces
 u#:=3/9pt#; % basic character width-unit
 cap#:=9pt#; % cap height
 xheight#:=.7cap#; % x height
+figheight#:=cap#; % figure height
 desc#:=2.25pt#; % descender depth
 s#:=2u#; % distance to sidebearings
 o#:=1/18pt#; % overshoot for round characters
@@ -20,6 +21,7 @@ leftstemloc#:=s#; % basic location of the characters left stem
 penx#:=1.1pt#; % width of pen nib
 peny#:=0.55pt#; % height of pen nib
 penangle:=0; % angle of pen nib
+puncscale:=1.2; % scale factor of pen nib for punctuations
 
 % setup font
 mode_setup;
@@ -28,14 +30,21 @@ mode_setup;
 define_pixels(u,cap,desc,xheight,s,xgap,ygap,overdraw);
 define_corrected_pixels(o);
 define_blacker_pixels(penx,peny);
+
 pickup pencircle xscaled penx yscaled peny rotated penangle; dof_pen:=savepen;
+pickup currentpen scaled puncscale; dof_punc_pen:=savepen;
 define_good_y_pixels(barheight,ebarheight);
 define_good_x_pixels(leftstemloc);
 
-% dof char method
-def begindofchar(expr code,width_in_units,height,desc) = 
-  beginchar(code,width_in_units*u#+2*s#,height,desc);
+% dof char methods
+def begindofchar(expr code,width_in_units,height,desc,s_correction) = 
+  % set character dimensions: width in u, height, descender, correction for sidebearings
+  beginchar(code,width_in_units*u#+2*s#+s_correction,height,desc);
   pickup dof_pen; enddef;
+
+def begindofpuncchar(expr code,width_in_units) = 
+  beginchar(code,width_in_units,cap#,0);
+  pickup dof_punc_pen; enddef;
 
 % slant
 if unknown slant: slant:=0 else: currenttransform:=
