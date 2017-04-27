@@ -1,34 +1,30 @@
+% font output "design size"
 font_size 10pt#;
 
 % parameters
+slant:=0; % slanting for italicizing typefaces
+u#:=3/9pt#; % basic character width-unit
+cap#:=9pt#; % cap height
+xheight#:=.7cap#; % x height
+desc#:=2.25pt#; % descender depth
+s#:=2u#; % distance to sidebearings
+o#:=1/18pt#; % overshoot for round characters
 
-% u# -> basic character unit
-% cap# -> height of characters (no higher ascenders)
-% desc# -> depth of descenders
-% xheight# -> height of lowercase characters (without descenders)
-% s# -> sidebars left/right of character
-% o# -> vertical/horizontal overshoot for rounded character edges
-% xgap# -> shortening for x-strokes, as in F
-% ygap# -> vertical gap for stroke endings, as in C or e
-% barheight# -> height of H-bar relative to cap#
-% ebarheight# -> height of e-bar relative to xheight#
+xgap#:=u#; % horizontal gap, e.g. for the middle bar in E or F
+ygap#:=3u#; % vertical gap, e.g. for the middle point of M
+barheight#:=.5*cap#; % bar height, e.g. in H
+ebarheight#:=.5xheight#; % e-bar height, e.g. in e
+overdraw#:=.5u#; % overdrawing lines as the horizontal bars in E
+leftstemloc#:=s#; % basic location of the characters left stem
 
-% penx# -> pen width
-% peny# -> pen height
-% penangle -> angle of pen
+penx#:=1.1pt#; % width of pen nib
+peny#:=0.55pt#; % height of pen nib
+penangle:=0; % angle of pen nib
 
-% slant:=0; -> slanting for italicizing typefaces
-% overdraw# -> serifizing by "over"-drawing characters edges
-
-slant:=0;
-u#:=3/9pt#; cap#:=9pt#; desc#:=2.25pt#; xheight#:=.7cap#;
-s#:=2u#; o#:=1/18pt#;
-xgap#:=u#; ygap#:=3u#; barheight#:=.5*cap#; ebarheight#:=.5xheight#; overdraw#:=0;
-leftstemloc#:=s#;
-penx#:=1.1pt#; peny#:=0.7pt#; penangle:=0;
-
-% setup font, pixels and pen(s)
+% setup font
 mode_setup;
+
+% define pixels / pen(s)
 define_pixels(u,cap,desc,xheight,s,xgap,ygap,overdraw);
 define_corrected_pixels(o);
 define_blacker_pixels(penx,peny);
@@ -51,7 +47,7 @@ input dof-1-charl; % DOF lowercase characters
 input dof-1-charfp; % DOF figures and punctuation
 % input dof-1-byproduct; % DOF by-product characters
 
-% metrics, etc.
+% font metrics, etc.
 font_quad:=20u#;
 font_normal_space:=10u#;
 font_normal_stretch:=3u#;
