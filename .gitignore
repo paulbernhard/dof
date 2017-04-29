@@ -1,0 +1,5 @@
+*.log
+*.2602gf
+*.dvi
+/dof-1/mf/*.pfa
+/dof-1/mf/*.ttf

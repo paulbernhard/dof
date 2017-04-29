@@ -18,8 +18,8 @@ ebarheight#:=.5xheight#; % e-bar height, e.g. in e
 overdraw#:=.5u#; % overdrawing lines as the horizontal bars in E
 leftstemloc#:=s#; % basic location of the characters left stem
 
-penx#:=1.1pt#; % width of pen nib
-peny#:=0.55pt#; % height of pen nib
+penx#:=1pt#; % width of pen nib
+peny#:=0.5pt#; % height of pen nib
 penangle:=0; % angle of pen nib
 puncscale:=1.2; % scale factor of pen nib for punctuations
 
@@ -32,7 +32,6 @@ define_corrected_pixels(o);
 define_blacker_pixels(penx,peny);
 
 pickup pencircle xscaled penx yscaled peny rotated penangle; dof_pen:=savepen;
-pickup currentpen scaled puncscale; dof_punc_pen:=savepen;
 define_good_y_pixels(barheight,ebarheight);
 define_good_x_pixels(leftstemloc);
 
@@ -41,10 +40,6 @@ def begindofchar(expr code,width_in_units,height,desc,s_correction) =
   % set character dimensions: width in u, height, descender, correction for sidebearings
   beginchar(code,width_in_units*u#+2*s#+s_correction,height,desc);
   pickup dof_pen; enddef;
-
-def begindofpuncchar(expr code,width_in_units) = 
-  beginchar(code,width_in_units,cap#,0);
-  pickup dof_punc_pen; enddef;
 
 % slant
 if unknown slant: slant:=0 else: currenttransform:=
@@ -62,6 +57,6 @@ font_normal_space:=10u#;
 font_normal_stretch:=3u#;
 font_normal_shrink:=3u#;
 font_identifier:="DOF-1" if slant<>0: & "_italic" fi;
-% font_coding_scheme:=;
+font_coding_scheme:="ASCII";
 
 bye
