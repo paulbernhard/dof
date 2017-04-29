@@ -112,7 +112,7 @@ begindofchar("L",14,cap#,0,-.5s#);
   labels(range 1 thru 4);
 endchar;
 
-begindofchar("M",22,cap#,0,0);
+begindofchar("M",20,cap#,0,0);
   lft x1=lft x2=leftstemloc; x4=x5=w-x1; x3=w/2;
   bot y1=top y2-h=0; y1=y5; y2=y4; y3=ygap;
   draw z1--z2--z3--z4--z5;
@@ -192,7 +192,7 @@ begindofchar("V",16,cap#,0,-.5s#);
   labels(range 1 thru 4);
 endchar;
 
-begindofchar("W",24,cap#,0,-.5s#);
+begindofchar("W",22,cap#,0,-.5s#);
   lft x1=leftstemloc-.25s; x7=w-x1; x4=w/2;
   x2+xgap=x3-xgap=.5[x1,x4];
   x5+xgap=x6-xgap=.5[x4,x7];

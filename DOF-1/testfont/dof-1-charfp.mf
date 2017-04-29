@@ -112,7 +112,7 @@ endchar;
 begindofchar("@",20,cap#,0,0);
   lft x5=leftstemloc-o; x3=w-x5;
   x4=x6=x7=x8=x10=w/2;
-  x9=.55[x5,x4]; rt x1=lft x3-3u; x2=x1;
+  x9=x5+4u; rt x1=lft x3-3u; x2=x1;
   bot y6=0-o; y4=xheight+3u+o;
   y3=y5=y9=.5[y6,y4]; y7=y6+overdraw;
   y8=y4-3u; y10=y6+3u; 
@@ -197,7 +197,7 @@ begindofchar("*",14,cap#,0,-s#);
 endchar;
 
 % degree
-begindofchar(hex"B0",12,cap#,0,-s#);
+begindofchar(oct"260",12,cap#,0,-s#);
   x1=x3=w/2; lft x4=leftstemloc-.5s; x2=w-x4;
   top y3=h; y1=y3-(h-xheight+ygap);
   y2=y4=.5[y1,y3];
@@ -223,16 +223,12 @@ begindofchar("%",20,cap#,0,-s#);
 endchar;
 
 % #
-begindofchar("#",18,xheight#,0,-s#);
-  lft x1=leftstemloc-.5s; x2+2u=w-x1; x3=w-x2; x4=w-x1;
-  y1=y2=xheight-barheight; y3=y4=barheight;
-  bot y5=0; y7=y5; y6=y8=h-y5;
-  z5=whatever[z1,z3]+(.2[x1,x2]-x1,0); x8=w-x5;
-  z7=whatever[z2,z4]-(.2[x1,x2]-x1,0); x6=w-x7;
-  draw z1--z2; draw z3--z4;
-  draw z5--z6; draw z7--z8;
-  labels(range 1 thru 8);
-endchar;
+% begindofchar("#",18,xheight#,0,-s#);
+%   lft x1=leftstemloc-.5s; x2+2u=w-x1; x3=w-x2; x4=w-x1;
+%   y1=y2=xheight-barheight; y3=y4=barheight;
+%   bot y5=0; y7=y5; y6=y8=h-y5;
+%   labels(range 1 thru 4);
+% endchar;
 
 % punctuation
 
@@ -302,7 +298,7 @@ begindofchar(oct"042",10,xheight#,0,-2s#);
 endchar;
 
 % single quote
-begindofchar("'",4,xheight#,0,-2s#);
+begindofchar(oct"033",4,xheight#,0,-2s#);
   x1=w/2; x2=x1-u;
   top y1=h; y2=y1-4u;
   draw z2{up}..z1;
@@ -310,7 +306,7 @@ begindofchar("'",4,xheight#,0,-2s#);
 endchar;
 
 % accent grave
-begindofchar(hex"60",5,cap#,0,-2s#);
+begindofchar(oct"074",5,cap#,0,-2s#);
   x1=w/2; x2=x1+2u;
   top y1=h; y2=y1-4u;
   draw z2{up}..z1;
