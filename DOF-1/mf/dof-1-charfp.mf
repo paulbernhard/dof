@@ -303,8 +303,7 @@ endchar;
 
 % single quote
 begindofchar("'",4,cap#,0,-2s#);
-  x1=w/2; x2=x1-u;
-  top y1=h; y2=y1-4u;
+  x1=x2=w/2; top y1=h; y2=y1-4u;
   draw z2{up}..z1;
   labels(1,2);
 endchar;
