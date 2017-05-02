@@ -237,11 +237,11 @@ endchar;
 % punctuation
 
 % space
-begindofchar(oct"040",5,cap#,0,-2s#);
+begindofchar(oct"040",5,cap#,0,0);
 endchar;
 
 % period
-begindofchar(".",4,xheight#,0,-2s#);
+begindofchar(".",4,xheight#,0,-s#);
   pickup currentpen scaled puncscale;
   x1=w/2; bot y1=0;
   drawdot z1;
@@ -249,7 +249,7 @@ begindofchar(".",4,xheight#,0,-2s#);
 endchar;
 
 % comma
-begindofchar(",",4,xheight#,0,-2s#);
+begindofchar(",",4,xheight#,0,-s#);
   x1=w/2; x2=x1-u;
   bot y1=0; y2=y1-4u;
   draw z1{down}..z2;
@@ -257,7 +257,7 @@ begindofchar(",",4,xheight#,0,-2s#);
 endchar;
 
 % colon
-begindofchar(":",4,xheight#,0,-2s#);
+begindofchar(":",4,xheight#,0,-s#);
   pickup currentpen scaled puncscale;
   x1=x2=w/2; bot y2=0; y1=xheight-y2;
   drawdot z1; drawdot z2;
@@ -265,7 +265,7 @@ begindofchar(":",4,xheight#,0,-2s#);
 endchar;
 
 % semicolon
-begindofchar(";",4,xheight#,0,-2s#);
+begindofchar(";",4,xheight#,0,-s#);
   x1=x2=w/2; x3=x2-u;
   bot y2=0; y1=xheight-y2; y3=y2-4u;
   pickup currentpen scaled puncscale;
@@ -294,7 +294,7 @@ begindofchar("!",8,cap#,0,-s#);
 endchar;
 
 % double quote
-begindofchar(oct"042",10,xheight#,0,-2s#);
+begindofchar(oct"042",10,cap#,0,-2s#);
   x1=w/2-.7penx; x2=x1; x3=x4=w-x1;
   top y1=h; y3=y1; y2=y4=y1-4u;
   draw z1--z2; draw z3--z4;
@@ -302,7 +302,7 @@ begindofchar(oct"042",10,xheight#,0,-2s#);
 endchar;
 
 % single quote
-begindofchar("'",4,xheight#,0,-2s#);
+begindofchar("'",4,cap#,0,-2s#);
   x1=w/2; x2=x1-u;
   top y1=h; y2=y1-4u;
   draw z2{up}..z1;
@@ -315,6 +315,14 @@ begindofchar(hex"60",5,cap#,0,-2s#);
   top y1=h; y2=y1-4u;
   draw z2{up}..z1;
   labels(1,2);
+endchar;
+
+% accent circumflex
+begindofchar(hex"5E",8,cap#,0,-s#);
+  lft x1=leftstemloc-.5s; x3=w-x1; x2=w/2;
+  y1=y3=h-ygap; top y2=h;
+  draw z1--z2--z3;
+  labels(1,2,3);
 endchar;
 
 % left parenthesis
@@ -336,7 +344,7 @@ endchar;
 % left square bracket
 begindofchar("[",6,cap#,0,-s#);
   rt x1=w-leftstemloc+.5s; x4=x1; x2=x3=w-x1;
-  bot y1=0; y2=y1; y3=y4=h-y1;
+  bot y1=0-u; y2=y1; y3=y4=h-y1;
   draw z1--z2--z3--z4;
   labels(range 1 thru 4);
 endchar;
@@ -344,7 +352,7 @@ endchar;
 % right square bracket
 begindofchar("]",6,cap#,0,-s#);
   lft x1=leftstemloc-.5s; x4=x1; x2=x3=w-x1;
-  bot y1=0; y2=y1; y3=y4=h-y1;
+  bot y1=0-u; y2=y1; y3=y4=h-y1;
   draw z1--z2--z3--z4;
   labels(range 1 thru 4);
 endchar;
@@ -352,7 +360,7 @@ endchar;
 % left curly bracket
 begindofchar("{",6,cap#,0,-s#);
   lft x2=leftstemloc-.5s-o; x1=x3=w-x2-o;
-  bot y1=0; y2=h/2; y3=h-y1;
+  bot y1=0-u; y2=h/2; y3=h-y1;
   draw z1{left}..z2{left};
   draw z2{right}..z3{right};
   labels(range 1 thru 3); 
@@ -361,14 +369,14 @@ endchar;
 % right curly bracket
 begindofchar("}",6,cap#,0,-s#);
   rt x2=w-leftstemloc+.5s+o; x1=x3=w-x2-o;
-  bot y1=0; y2=h/2; y3=h-y1;
+  bot y1=0-u; y2=h/2; y3=h-y1;
   draw z1{right}..z2{right};
   draw z2{left}..z3{left};
   labels(range 1 thru 3); 
 endchar;
 
 % slash
-begindofchar("/",8,cap#,0,-s#);
+begindofchar("/",12,cap#,0,-s#);
   lft x1=leftstemloc-.5s; x2=w-x1;
   bot y1=0; y2=h-y1;
   draw z1--z2;
@@ -376,7 +384,7 @@ begindofchar("/",8,cap#,0,-s#);
 endchar;
 
 % backslash
-begindofchar("\",8,cap#,0,-s#);
+begindofchar("\",12,cap#,0,-s#);
   rt x1=w-leftstemloc+.5s; x2=w-x1;
   bot y1=0; y2=h-y1;
   draw z1--z2;
