@@ -30,7 +30,6 @@ mode_setup;
 define_pixels(u,cap,desc,xheight,s,xgap,ygap,overdraw);
 define_corrected_pixels(o);
 define_blacker_pixels(penx,peny);
-
 pickup pencircle xscaled penx yscaled peny rotated penangle; dof_pen:=savepen;
 define_good_y_pixels(barheight,ebarheight);
 define_good_x_pixels(leftstemloc);
