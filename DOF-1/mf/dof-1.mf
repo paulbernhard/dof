@@ -2,7 +2,7 @@
 font_size 10pt#;
 
 % parameters
-slant:=0; % slanting for italicizing typefaces
+slant:=1/4; % slanting for italicizing typefaces
 u#:=3/9pt#; % basic character width-unit
 cap#:=9pt#; % cap height
 xheight#:=.75cap#; % x height
