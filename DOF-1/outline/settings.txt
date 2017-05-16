@@ -1,0 +1,26 @@
+Applied settings for DOF-1 export:
+
+DOF-1 REGULAR
+slant = 0
+basic unit width (u) = 3/9 pt
+cap-height = 9 pt
+x-height = 0.75 cap-height
+figure-height = cap-height
+overdraw = 0.5 u
+
+DOF-1 ITALIC
+slant = 1/4
+basic unit width (u) = 3/9 pt
+cap-height = 9 pt
+x-height = 0.75 cap-height
+figure-height = cap-height
+overdraw = 0.5 u
+
+DOF-1 EXTENDED
+slant = 0
+basic unit width (u) = 5/9 pt
+cap-height = 9 pt
+x-height = 0.75 cap-height
+figure-height = cap-height
+overdraw = 0.8 u
+
