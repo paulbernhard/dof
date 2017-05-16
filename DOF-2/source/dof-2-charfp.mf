@@ -1,0 +1,407 @@
+% figures
+
+begindofchar("0",14,figheight#,0,0);
+  x1=x3=w/2; lft x4=leftstemloc-o; x2=w-x4;
+  bot y1=0-o; top y3=h+o; y2=y4=h/2;
+  draw z1..z2..z3..z4..cycle;
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("1",10,figheight#,0,-.75s#);
+  lft x1=leftstemloc-.7s; rt x2=w-leftstemloc; 
+  x3=x4+overdraw=x5-overdraw=x2;
+  top y2=h; bot y3=0; y4=y5=y3;
+  y1=h-(1[x1,x2]-x1);
+  draw z1--z2--z3; draw z4--z5;
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("2",14,figheight#,0,0);
+  lft x1=leftstemloc; x4=x1; 
+  x3=x5=w-x1; x2=.5[x1,x3];
+  bot y4=0; y5=y4; top y2=h+o;
+  y1=y3=h-(1[x1,x2]-x1);
+  draw z1{up}..z2{right}..z3{down}..z4{down};
+  draw z4--z5;
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("3",14,figheight#,0,0);
+  lft x1=leftstemloc; x7=x1;
+  rt x3=w-leftstemloc+o; x5=x3;
+  x2=x4=x6=w/2;
+  y1=ygap; y7=h-y1;
+  bot y2=0-o; y6=h-y2; y4=barheight;
+  y3=.5[y2,y4]; y5=.5[y4,y6];
+  draw z1..z2{right}..z3{up}..z4{left};
+  draw z4{right}..z5{up}..z6{left}..z7;
+  labels(range 1 thru 7);
+endchar;
+
+begindofchar("4",14,figheight#,0,-.75s#);
+  x1=x2=w/2+u; lft x4=leftstemloc-.25s; 
+  rt x5=w-leftstemloc+.5s; x3=x4+xgap;
+  bot y1=0; top y2=xheight; 
+  y3=h-y1; top y4=xheight-ygap; y5=y4;
+  draw z1--z2; draw z3--z4--z5;
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("5",14,figheight#,0,0);
+  lft x1=leftstemloc; x5=x6=x1;
+  x3-o=x7=w-x1; x2=x4=w/2;
+  y1=ygap; y5=xheight-y1;
+  bot y2=0-o; y4=xheight-y2;
+  y3=xheight/2; top y6=h; y7=y6;
+  draw z1..z2{right}..z3{up}..z4{left}..z5;
+  draw z5--z6--z7;
+  labels(range 1 thru 7);
+endchar;
+
+begindofchar("6",14,figheight#,0,0);
+  x1=x3=x5=w/2; lft x4=leftstemloc-o; x2=x6+xgap=w-x4;
+  bot y1=0-o; y3=xheight-y1; 
+  y5=h-y1; y2=y4=xheight/2;
+  y6=.3[y5,y3];
+  draw z1..z2..z3..z4..cycle;
+  draw z4{up}..tension 1.2..z5..z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("7",14,figheight#,0,-s#);
+  lft x3=leftstemloc-.5s; x2=w-x3; x1=x3+xgap;
+  bot y1=0; y2=y3=h-y1;
+  draw z1--z2--z3;
+  labels(range 1 thru 3);
+endchar;
+
+begindofchar("8",14,figheight#,0,0);
+  x1=x3=x5=w/2; lft x7=leftstemloc-o; 
+  x4=x7+.2u; x2=w-x7; x6=w-x4;
+  bot y1=0-o; y5=h-y1; y3=h/2+.4u;
+  y2=y7=.5[y1,y3]; y4=y6=.5[y3,y5];
+  draw z1{right}..z2{up}..z3..z4{up}..z5{right}..z6{down}..z7{down}..cycle;
+  labels(range 1 thru 7);
+endchar;
+
+begindofchar("9",14,figheight#,0,0);
+  x1=x3=x5=w/2; lft x2=leftstemloc-o; 
+  x4=w-x2; x6=x2+xgap;
+  bot y5=0-o; y1=h-y5;
+  bot y3+o=h-xheight;
+  y2=y4=.5[y3,y1]; y6=.3[y5,y3];
+  draw z1..z2..z3..z4..cycle;
+  draw z4{down}..tension 1.2..z5..z6;
+  labels(range 1 thru 6);
+endchar;
+
+% symbols
+
+% ampersand
+begindofchar("&",14,cap#,0,0);
+  rt x1=w-.25s; lft x6=leftstemloc; x8=w-x6+.5u; 
+  x2=x6+u; x4=w-x2; x3=x5=x7=w/2;
+  bot y1=0; y7=y1-o; y3=h-y7;
+  y5=h/2+.4u; y6=y8=.5[y7,y5];
+  y2=y4=.5[y5,y3];
+  draw z1..tension 1.5..z2{up}..z3{right}..z4{down}..z5..z6{down}..z7{right}..z8{up};
+  labels(range 1 thru 8);
+endchar;
+
+% @
+begindofchar("@",20,cap#,0,0);
+  lft x5=leftstemloc-o; x3=w-x5;
+  x4=x6=x7=x8=x10=w/2;
+  x9=.55[x5,x4]; rt x1=lft x3-3u; x2=x1;
+  bot y6=0-o; y4=xheight+3u+o;
+  y3=y5=y9=.5[y6,y4]; y7=y6+overdraw;
+  y8=y4-3u; y10=y6+3u; 
+  y1=y8-.5ygap; y2=y10+.5ygap;
+  draw z1--z2{down}..z3{up}..z4{left}..z5{down}..z6{right}..z7;
+  draw z1..z8{left}..z9{down}..z10{right}..z2;
+  labels(range 1 thru 10);
+endchar;
+
+% $
+begindofchar("$",14,cap#,0,0);
+  lft x1=leftstemloc; x5+o=x1;
+  x3=w-x1; x7=x3; x2=x4=x6=x8=x9=w/2;
+  bot y2+o=ygap; top y6-o=h-ygap; y4=h/2;
+  y3=.5[y4,y2]; y5=.5[y6,y4];
+  y1=.3[y2,y4]; y7=.3[y6,y4];
+  bot y8=0; y9=h-y8;
+  draw z1{down}..z2{right}..z3{up}..z4..z5{up}..z6{right}..z7{down};
+  draw z8--z9;
+  labels(range 1 thru 9);
+endchar;
+
+% +
+begindofchar("+",18,xheight#,0,-s#);
+  x1=x2=w/2; bot y1=0; 
+  lft x3=leftstemloc-.5s; x4=w-x3;
+  y2=h-y1; y3=y4=h/2;
+  draw z1--z2; draw z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+% -
+begindofchar("-",18,xheight#,0,-s#);
+  lft x1=leftstemloc-.5s; x2=w-x1;
+  y1=y2=h/2;
+  draw z1--z2;
+  labels(range 1 thru 2);
+endchar;
+
+% =
+begindofchar("=",18,xheight#,0,-s#);
+  lft x1=leftstemloc-.5s; x3=x1; x2=x4=w-x1;
+  y1=y2=h/3; y3=y4=h-y1; 
+  draw z1--z2; draw z3--z4;
+  labels(range 1 thru 4); 
+endchar;
+
+% ~
+begindofchar("~",18,xheight#,0,-s#);
+  lft x1=leftstemloc-.5s; x3=w/2; x5=w-x1;
+  x2=.5[x1,x3]; x4=w-x2;
+  y1=y3=y5=h/2; y2-ygap=y4+ygap=y1;
+  draw z1..z2..z3..z4..z5;
+  labels(range 1 thru 5);
+endchar;
+
+% <
+begindofchar("<",18,xheight#,0,-s#);
+  lft x2=leftstemloc-.5s; x1=x3=w-x2;
+  bot y1=0; y3=h-y1; y2=h/2;
+  draw z1--z2--z3;
+  labels(range 1 thru 3);
+endchar;
+
+% >
+begindofchar(">",18,xheight#,0,-s#);
+  rt x2=w-leftstemloc+.5s; x1=x3=w-x2;
+  bot y1=0; y3=h-y1; y2=h/2;
+  draw z1--z2--z3;
+  labels(range 1 thru 3);
+endchar;
+
+% asteriks
+begindofchar("*",14,cap#,0,-s#);
+  x1=x2=w/2; top y2=h; y1=y2-(h-xheight+ygap);
+  z3=z1 rotatedaround (.5[z1,z2],60);
+  z4=z2 rotatedaround (.5[z1,z2],60);
+  z5=z3 rotatedaround (.5[z1,z2],60);
+  z6=z4 rotatedaround (.5[z1,z2],60);
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+% degree
+begindofchar(hex"B0",12,cap#,0,-s#);
+  x1=x3=w/2; lft x4=leftstemloc-.5s; x2=w-x4;
+  top y3=h; y1=y3-(h-xheight+ygap);
+  y2=y4=.5[y1,y3];
+  draw z1..z2..z3..z4..cycle;
+  labels(range 1 thru 4);
+endchar;
+
+% %
+begindofchar("%",20,cap#,0,-s#);
+  lft x1=leftstemloc-.5s; x2=x4=w-x1;
+  x6=.25[w/2,w]; x3=x5=.5[x6,x4];
+  bot y1=0; y2=h-y1;
+  y3=y1-o; y5=.75[0,w/2];
+  y4=y6=.5[y3,y5]-y3;
+  z7=z3 rotatedaround ((w/2,h/2),180);
+  z8=z4 rotatedaround ((w/2,h/2),180);
+  z9=z5 rotatedaround ((w/2,h/2),180);
+  z10=z6 rotatedaround ((w/2,h/2),180);
+  draw z1--z2;
+  draw z3..z4..z5..z6;
+  draw z7..z8..z9..z10;
+  labels(range 1 thru 10);
+endchar;
+
+% #
+begindofchar("#",18,xheight#,0,-s#);
+  lft x1=leftstemloc-.5s; x2+2u=w-x1; x3=w-x2; x4=w-x1;
+  y1=y2=xheight-barheight; y3=y4=barheight;
+  bot y5=0; y7=y5; y6=y8=h-y5;
+  z5=whatever[z1,z3]+(.2[x1,x2]-x1,0); x8=w-x5;
+  z7=whatever[z2,z4]-(.2[x1,x2]-x1,0); x6=w-x7;
+  draw z1--z2; draw z3--z4;
+  draw z5--z6; draw z7--z8;
+  labels(range 1 thru 8);
+endchar;
+
+% punctuation
+
+% space
+begindofchar(oct"040",5,cap#,0,0);
+endchar;
+
+% period
+begindofchar(".",4,xheight#,0,-s#);
+  pickup currentpen scaled puncscale;
+  x1=w/2; bot y1=0;
+  drawdot z1;
+  labels(1);
+endchar;
+
+% comma
+begindofchar(",",4,xheight#,0,-s#);
+  x1=w/2; x2=x1-u;
+  bot y1=0; y2=y1-4u;
+  draw z1{down}..z2;
+  labels(1,2);
+endchar;
+
+% colon
+begindofchar(":",4,xheight#,0,-s#);
+  pickup currentpen scaled puncscale;
+  x1=x2=w/2; bot y2=0; y1=xheight-y2;
+  drawdot z1; drawdot z2;
+  labels(1,2);
+endchar;
+
+% semicolon
+begindofchar(";",4,xheight#,0,-s#);
+  x1=x2=w/2; x3=x2-u;
+  bot y2=0; y1=xheight-y2; y3=y2-4u;
+  pickup currentpen scaled puncscale;
+  drawdot z1; 
+  pickup round_pen;
+  draw z2{down}..z3;
+  labels(range 1 thru 3);
+endchar;
+
+% question mark
+begindofchar("?",14,cap#,0,-s#);
+  x1=x2=x4=x6=w/2; lft x5=leftstemloc-.5s; x3=w-x5;
+  bot y6=0; y1=2ygap; y2=h/2-ygap;
+  top y4=h+o; y3=y5=.5[y2,y4];
+  draw z1--z2..z3{up}..z4{left}..z5{down};
+  drawdot z6;
+  labels(range 1 thru 6);
+endchar;
+
+% exclamation mark
+begindofchar("!",8,cap#,0,-s#);
+  x1=x2=x3=w/2;
+  bot y3=0; y1=h-y3; y2=2ygap;
+  draw z1--z2; drawdot z3;
+  labels(range 1 thru 3);
+endchar;
+
+% double quote
+begindofchar(oct"042",10,cap#,0,-2s#);
+  x1=w/2-.7penx; x2=x1; x3=x4=w-x1;
+  top y1=h; y3=y1; y2=y4=y1-4u;
+  draw z1--z2; draw z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+% single quote
+begindofchar("'",4,cap#,0,-2s#);
+  x1=x2=w/2; top y1=h; y2=y1-4u;
+  draw z2{up}..z1;
+  labels(1,2);
+endchar;
+
+% accent grave
+begindofchar(hex"60",5,cap#,0,-2s#);
+  x1=w/2; x2=x1+2u;
+  top y1=h; y2=y1-4u;
+  draw z2{up}..z1;
+  labels(1,2);
+endchar;
+
+% accent circumflex
+begindofchar(hex"5E",8,cap#,0,-s#);
+  lft x1=leftstemloc-.5s; x3=w-x1; x2=w/2;
+  y1=y3=h-ygap; top y2=h;
+  draw z1--z2--z3;
+  labels(1,2,3);
+endchar;
+
+% left parenthesis
+begindofchar("(",5,cap#,0,-s#);
+  lft x2=leftstemloc-.5s; x1=x3=w-x2;
+  bot y1=-u; y3=h-y1; y2=.5[y1,y3];
+  draw z1..z2{up}..z3;
+  labels(range 1 thru 3);
+endchar;
+
+% right parenthesis
+begindofchar(")",5,cap#,0,-s#);
+  rt x2=w-leftstemloc+.5s; x1=x3=w-x2;
+  bot y1=-u; y3=h-y1; y2=.5[y1,y3];
+  draw z1..z2{up}..z3;
+  labels(range 1 thru 3);
+endchar;
+
+% left square bracket
+begindofchar("[",6,cap#,0,-s#);
+  rt x1=w-leftstemloc+.5s; x4=x1; x2=x3=w-x1;
+  bot y1=0-u; y2=y1; y3=y4=h-y1;
+  draw z1--z2--z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+% right square bracket
+begindofchar("]",6,cap#,0,-s#);
+  lft x1=leftstemloc-.5s; x4=x1; x2=x3=w-x1;
+  bot y1=0-u; y2=y1; y3=y4=h-y1;
+  draw z1--z2--z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+% left curly bracket
+begindofchar("{",6,cap#,0,-s#);
+  lft x2=leftstemloc-.5s-o; x1=x3=w-x2-o;
+  bot y1=0-u; y2=h/2; y3=h-y1;
+  draw z1{left}..z2{left};
+  draw z2{right}..z3{right};
+  labels(range 1 thru 3); 
+endchar;
+
+% right curly bracket
+begindofchar("}",6,cap#,0,-s#);
+  rt x2=w-leftstemloc+.5s+o; x1=x3=w-x2-o;
+  bot y1=0-u; y2=h/2; y3=h-y1;
+  draw z1{right}..z2{right};
+  draw z2{left}..z3{left};
+  labels(range 1 thru 3); 
+endchar;
+
+% slash
+begindofchar("/",12,cap#,0,-s#);
+  lft x1=leftstemloc-.5s; x2=w-x1;
+  bot y1=0; y2=h-y1;
+  draw z1--z2;
+  labels(1,2);
+endchar;
+
+% backslash
+begindofchar("\",12,cap#,0,-s#);
+  rt x1=w-leftstemloc+.5s; x2=w-x1;
+  bot y1=0; y2=h-y1;
+  draw z1--z2;
+  labels(1,2);
+endchar;
+
+% vertical bar
+begindofchar("|",8,cap#,0,-s#);
+  x1=x2=w/2;
+  bot y1=0; y2=h-y1;
+  draw z1--z2;
+  labels(1,2);
+endchar;
+
+% underscore
+begindofchar("_",18,xheight#,0,-2s#);
+  lft x1=0; x2=w-x1;
+  top y1=0; y2=y1;
+  draw z1--z2;
+  labels(range 1 thru 2);
+endchar;

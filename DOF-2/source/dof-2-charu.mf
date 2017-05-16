@@ -1,0 +1,287 @@
+% DOF-2 UPPERCASE
+
+begindofchar("A",18,cap#,0,-.5s#);
+  lft x1=leftstemloc-.25s; x4=w-x1;
+  x2+.35penx=x3-.35penx=w/2;
+  bot y1=0; y4=y1; top y2=h; y3=y2;
+  draw z1--z2--z3--z4;
+  top y5=barheight; y6=y5;
+  z5=whatever[z1,z2];
+  z6=whatever[z3,z4];
+  draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("B",16,cap#,0,0);
+  lft x1=leftstemloc; x1=x2=x4;
+  x3+.35penx=x5=w-x1+o;
+  bot y1=0; y2=h-y1; y4=h/2;
+  y3=.5[y2,y4]; y5=.5[y4,y1];
+  draw z1--z2;
+  super_crescent(2,3,4);
+  super_crescent(4,5,1);
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("C",16,cap#,0,0);
+  lft x3+o=leftstemloc; y3=h/2;
+  x1=x5=w-x3+.25s;
+  y1=.25[y2,y3]; y5=.25[y4,y3];
+  x2=x4=w/2;
+  bot y2+o=top y4-h-o=0;
+  super_crescent(2,3,4);
+  super_half(3,4,5);
+  super_half(3,2,1);
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("D",16,cap#,0,-.25s#);
+  lft x1=leftstemloc; x2=x3+overdraw=x5+overdraw=x1;
+  rt x4=w-leftstemloc+o+.25s;
+  bot y1=0; y5=y1; 
+  top y2=h; y3=y2; y4=h/2;
+  draw z1--z2; 
+  super_crescent(3,4,5);
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("E",16,cap#,0,-.25s#);
+  lft x1=lft x2=leftstemloc; x3=x5=x7=x1-overdraw;
+  x4=w-x1+.25s; x6+xgap=x8=x4;
+  bot y1=top y2-h=0; y3=y2; y7=y1; y5=h/2;
+  y4=y3; y6=y5; y8=y7;
+  draw z1--z2;
+  draw z3--z4; draw z5--z6; draw z7--z8;
+  labels(range 1 thru 8);
+endchar;
+
+begindofchar("F",16,cap#,0,-.25s#);
+  lft x1=lft x2=leftstemloc; x3=x5=x1-overdraw;
+  x4=w-x1+.25s; x6+xgap=x4;
+  bot y1=top y2-h=0; y3=y2; 
+  y5=h/2; y4=y3; y6=y5;
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("G",16,cap#,0,0);
+  lft x3+o=leftstemloc; y3=h/2;
+  x1=x5=w-x3+.25s; x2=x4=w/2;
+  x6=x5; rt x7=x4;
+  y1=.25[y2,y3]; y5=.25[y4,y3];
+  bot y2+o=top y4-h-o=0;
+  y6=y7=h/2;
+  super_crescent(2,3,4);
+  super_half(3,4,5);
+  super_half(3,2,1);
+  draw z1--z6--z7;
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("H",16,cap#,0,0);
+  lft x1=leftstemloc; x1=x2=x5+overdraw; x3=x4=x6-overdraw=w-x1;
+  bot y1=bot y3=top y2-h=0; y2=y4; bot y5=bot y6=h/2;
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("I",7,cap#,0,0);
+  x1=x2=w/2; x3=x5=x1-overdraw; x4=x6=x1+overdraw;
+  bot y1=top y2-h=0; y1=y3=y4; y2=y5=y6;
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("J",14,cap#,0,-.5s#);
+  rt x1=w-leftstemloc; x2=x5+overdraw=x6-overdraw=x1;
+  lft x4=leftstemloc-.5s; x3=.5[x4,x2];
+  top y1=h; y5=y6=y1; 
+  bot y3=0; y2=y4=1[x4,x2]-x4; 
+  draw z1--z2; 
+  super_half(2,3,4);
+  draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("K",16,cap#,0,-.25s#);
+  lft x1=leftstemloc; x2=x3=x1; 
+  rt x4=w-leftstemloc+.25s; x6=x4;
+  bot y1=0; top y2=h; y1=y6; y2=y4; 
+  y3=barheight; y5=yratio[y3,y4];
+  z5=whatever[z3,z4];
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("L",16,cap#,0,-.5s#);
+  lft x1=leftstemloc; x1=x2; 
+  x3+overdraw=x1; rt x4=w-leftstemloc+.5s;
+  bot y1=top y2-h=0; y1=y3=y4;
+  draw z1--z2; draw z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("M",24,cap#,0,0);
+  lft x1=lft x2=leftstemloc; x4=x5=w-x1; x3=w/2;
+  bot y1=top y2-h=0; y1=y5; y2=y4; y3=ygap;
+  draw z1--z2--z3--z4--z5;
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("N",16,cap#,0,0);
+  lft x1=lft x2=leftstemloc; x3=x4=w-x1;
+  bot y1=top y2-h=0; y1=y3; y2=y4;
+  draw z1--z2--z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("O",20,cap#,0,-.5s#);
+  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
+  bot y1+o=top y3-h-o=0; y4=y2=h/2;
+  super_half(4,3,2);
+  super_half(4,1,2);
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("P",16,cap#,0,-.25s#);
+  lft x1=leftstemloc; x2=x1; 
+  x3+overdraw=x5+overdraw=x1; rt x4=w-leftstemloc+o+.25s;
+  bot y1=0; top y2=h; y3=y2; y5=barheight; y4=.5[y3,y5];
+  draw z1--z2; super_crescent(3,4,5);
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("Q",20,cap#,0,-.5s#);
+  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
+  bot y1+o=top y3-h-o=0; y4=y2=h/2;
+  bot rt z6=(w-leftstemloc,0); z5=.45[z6,(w/2,h/2)];
+  super_half(4,3,2);
+  super_half(4,1,2);
+  draw z5--z6;
+  labels(range 1 thru 6);
+endchar;
+
+begindofchar("R",16,cap#,0,0);
+  lft x1=leftstemloc; x2=x3+overdraw=x5+overdraw=x1;
+  lft x6=rt x1; rt x4=w-leftstemloc+o+.5u; x7=x4;
+  bot y1=0; y7=y1; top y2=h; y3=y2; 
+  y5=barheight; y6=y5; y4=.5[y3,y5];
+  draw z1--z2; 
+  super_crescent(3,4,5);
+  draw z6--z7;
+  labels(range 1 thru 7);
+endchar;
+
+begindofchar("S",16,cap#,0,0);
+  lft x1=leftstemloc; x5+o=x1;
+  x3=w-x1; x7=x3; x2=x4=x6=w/2;
+  bot y2+o=0; top y6-o=h; y4=h/2;
+  y3=.5[y4,y2]; y5=.5[y6,y4];
+  y1=yratio[y2,y4]; y7=yratio[y6,y4];
+  % draw z1{down}..z2{right}..z3{up}..z4..z5{up}..z6{right}..z7{down};
+  super_half(1,2,3);
+  super_half(5,6,7);
+  draw z3{up}..z4..z5{up};
+  labels(range 1 thru 7);
+endchar;
+
+begindofchar("T",16,cap#,0,-.5s#);
+  x1=x2=w/2; lft x3=leftstemloc-.25s; x4=w-x3;
+  bot y1=top y2-h=0; y2=y3=y4;
+  draw z1--z2; draw z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("U",16,cap#,0,0);
+  lft x1=leftstemloc; x2=x1; x4=x5=w-x1; x3=w/2;
+  bot y3+o=top y1-h=0; y5=y1;
+  y2=x3-x2; y4=y2;
+  draw z1--z2; draw z4--z5;
+  super_half(2,3,4);
+  labels(range 1 thru 5);
+endchar;
+
+begindofchar("V",18,cap#,0,-.5s#);
+  lft x1=leftstemloc-.25s; x4=w-x1; 
+  x2+.35penx=x3-.35penx=w/2;
+  bot y2=0; top y1=h; y1=y4; y2=y3;
+  draw z1--z2--z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("W",26,cap#,0,-.5s#);
+  lft x1=leftstemloc-.25s; x7=w-x1; x4=w/2;
+  x2+.35penx=x3-.35penx=.5[x1,x4];
+  x5+.35penx=x6-.35penx=.5[x4,x7];
+  top y1=h; y4+ygap=y7=y1;
+  bot y2=0; y3=y5=y6=y2;
+  draw z1--z2--z3--z4--z5--z6--z7;
+  labels(range 1 thru 7);
+endchar;
+
+begindofchar("X",16,cap#,0,0);
+  lft x1=leftstemloc-.3u; x4=w-x1; x3=x1+.3u; x4=x2+.3u;
+  bot y1=top y3-h=0; y1=y4; y3=y2;
+  draw z1--z2; draw z3--z4;
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("Y",16,cap#,0,0);
+  x1=x2=w/2; lft x3=leftstemloc; x4=w-x3;
+  bot y1=top y3-h=0; y4=y3; bot y2=barheight;
+  draw z1--z2; 
+  super_arc(3,2);
+  super_arc(4,2);
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("Z",16,cap#,0,-.5s#);
+  lft x1=leftstemloc-.25s; x3=x1; x2=x4=w-x1;
+  bot y3=top y1-h=0; y2=y1; y4=y3;
+  draw z1--z2--z3--z4;
+  labels(range 1 thru 4); 
+endchar;
+
+% Ä
+begindofchar(hex"C4",18,cap#,0,-.5s#);
+  lft x1=leftstemloc-.25s; x4=w-x1;
+  x2+.35penx=x3-.35penx=w/2;
+  bot y1=0; y4=y1; top y2=h; y3=y2;
+  draw z1--z2--z3--z4;
+  top y5=barheight; y6=y5;
+  z5=whatever[z1,z2];
+  z6=whatever[z3,z4];
+  draw z5--z6;
+  pickup currentpen scaled puncscale;
+  rt x7=w/2-.2penx; x8=w-x7;
+  bot y7=h+u; y8=y7;
+  drawdot z7; drawdot z8;
+  labels(range 1 thru 8);
+endchar;
+
+% Ö
+begindofchar(hex"D6",20,cap#,0,-.5s#);
+  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
+  bot y1+o=top y3-h-o=0; y4=y2=h/2;
+  super_half(4,3,2);
+  super_half(4,1,2);
+  pickup currentpen scaled puncscale;
+  rt x5=w/2-.2penx; x6=w-x5;
+  bot y5=h+u; y6=y5;
+  drawdot z5; drawdot z6;
+  labels(range 1 thru 6);
+endchar;
+
+% Ü
+begindofchar(hex"DC",16,cap#,0,0);
+  lft x1=leftstemloc; x2=x1; x4=x5=w-x1; x3=w/2;
+  bot y3+o=top y1-h=0; y5=y1;
+  y2=x3-x2; y4=y2;
+  draw z1--z2; draw z4--z5;
+  super_half(2,3,4);
+  pickup currentpen scaled puncscale;
+  rt x6=w/2-.2penx; x7=w-x6;
+  bot y6=h+u; y7=y6;
+  drawdot z6; drawdot z7;
+  labels(range 1 thru 7);
+endchar;
