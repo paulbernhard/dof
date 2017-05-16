@@ -18,8 +18,8 @@ superness:=.8; % "corner"-amount of super-ellipses
 yratio:=.65*superness; % closing/opening of letters like C
 leftstemloc#:=s#; % basic location of the characters left stem
 
-penx#:=0.85pt#; % width of pen nib
-peny#:=0.85pt#; % height of pen nib
+penx#:=1.15pt#; % width of pen nib
+peny#:=1.15pt#; % height of pen nib
 penangle:=0; % angle of pen nib
 puncscale:=1; % scale factor of pen nib for punctuations
 

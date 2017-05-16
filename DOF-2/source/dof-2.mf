@@ -17,10 +17,10 @@ def begindofchar(expr code,width_in_units,height,desc,s_correction) =
   beginchar(code,width_in_units*u#+2*s#+s_correction,height,desc);
   pickup round_pen; enddef;
 
-% def super_arc(suffix i,j) = 
-%   draw z.i{0,y.j-y.i}
-%   ... (superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
-%   ... z.j enddef;
+def super_arc(suffix i,j) = 
+  draw z.i{0,y.j-y.i}
+  ... (superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
+  ... z.j enddef;
 
 % horizontal "super-half"
 def super_half(suffix i,j,k) =
