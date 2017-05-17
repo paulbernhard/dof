@@ -28,4 +28,4 @@ puncscale:=1; % scale factor of pen nib for punctuations
 % boolean squarish; squarish:=true; % squarize pen edges
 % squarishratio:=.2; % square-sharpness: razor = 0 <--> round = 1 (only IF sqarish is true)
 
-input dof-2; % DOF-2 Base file
+input dof-2-base; % DOF-2 Base file
