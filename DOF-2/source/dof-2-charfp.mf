@@ -64,7 +64,7 @@ begindofchar("5",14,figheight#,0,0);
 endchar;
 
 begindofchar("6",14,figheight#,0,0);
-  x1=x3=x5=w/2; lft x4=leftstemloc-o; x2=x6+xgap=w-x4;
+  x1=x3=x5=w/2; lft x4=leftstemloc-o; x2=x6=w-x4;
   bot y1=0-o; y3=xheight-y1; 
   y5=h-y1; y2=y4=xheight/2;
   y6=.6[y5,y3];
@@ -75,7 +75,7 @@ begindofchar("6",14,figheight#,0,0);
 endchar;
 
 begindofchar("7",14,figheight#,0,-s#);
-  lft x3=leftstemloc-.5s; x2=w-x3; x1=x3+xgap;
+  lft x3=leftstemloc-.5s; x2=w-x3; x1=.3[x3,x2];
   bot y1=0; y2=y3=h-y1;
   draw z1--z2--z3;
   labels(range 1 thru 3);
@@ -95,7 +95,7 @@ endchar;
 
 begindofchar("9",14,figheight#,0,0);
   x1=x3=x5=w/2; lft x2=leftstemloc-o; 
-  x4=w-x2; x6=x2+xgap;
+  x4=w-x2; x6=x2;
   bot y5=0-o; y1=h-y5;
   bot y3+o=h-xheight;
   y2=y4=.5[y3,y1]; y6=.6[y5,y3];
@@ -144,7 +144,7 @@ endchar;
 begindofchar("$",14,cap#,0,0);
   lft x1=leftstemloc; x5+o=x1;
   x3=w-x1; x7=x3; x2=x4=x6=x8=x9=w/2;
-  bot y2+o=ygap; top y6-o=h-ygap; y4=h/2;
+  y2+o=.4[y8,y3]; y6=h-y2; y4=h/2;
   y3=.5[y4,y2]; y5=.5[y6,y4];
   y1=.3[y2,y4]; y7=.3[y6,y4];
   bot y8=0; y9=h-y8;
@@ -184,7 +184,8 @@ endchar;
 begindofchar("~",18,xheight#,0,-s#);
   lft x1=leftstemloc-.5s; x3=w/2; x5=w-x1;
   x2=.5[x1,x3]; x4=w-x2;
-  y1=y3=y5=h/2; y2-ygap=y4+ygap=y1;
+  y1=y3=y5=h/2; 
+  y2=y1+.3[x1,x3]-x1; y4=h-y2;
   super_half(1,2,3);
   super_half(3,4,5);
   labels(range 1 thru 5);
@@ -208,7 +209,7 @@ endchar;
 
 % asteriks
 begindofchar("*",14,cap#,0,-s#);
-  x1=x2=w/2; top y2=h; y1=y2-(h-xheight+ygap);
+  x1=x2=w/2; top y2=h; y1=y2-(h-xheight+u);
   z3=z1 rotatedaround (.5[z1,z2],60);
   z4=z2 rotatedaround (.5[z1,z2],60);
   z5=z3 rotatedaround (.5[z1,z2],60);
@@ -220,7 +221,7 @@ endchar;
 % degree
 begindofchar(hex"B0",12,cap#,0,-s#);
   x1=x3=w/2; lft x4=leftstemloc-.5s; x2=w-x4;
-  top y3=h; y1=y3-(h-xheight+ygap);
+  top y3=h; y1=y3-(h-xheight+u);
   y2=y4=.5[y1,y3];
   super_half(4,1,2);
   super_half(4,3,2);
@@ -302,7 +303,7 @@ endchar;
 % question mark
 begindofchar("?",14,cap#,0,-s#);
   x1=x2=x4=x6=w/2; lft x5=leftstemloc-.5s; x3=w-x5;
-  bot y6=0; y1=2ygap; y2=h/2-ygap;
+  bot y6=0; bot y1=top y6+u; y2=h/2-u;
   top y4=h+o; y3=y5=.5[y2,y4];
   draw z1--z2;
   super_arc(3,2);
@@ -314,7 +315,7 @@ endchar;
 % exclamation mark
 begindofchar("!",8,cap#,0,-s#);
   x1=x2=x3=w/2;
-  bot y3=0; y1=h-y3; y2=2ygap;
+  bot y3=0; y1=h-y3; bot y2=top y3+u;
   draw z1--z2; drawdot z3;
   labels(range 1 thru 3);
 endchar;
@@ -345,7 +346,7 @@ endchar;
 % accent circumflex
 begindofchar(hex"5E",8,cap#,0,-s#);
   lft x1=leftstemloc-.5s; x3=w-x1; x2=w/2;
-  y1=y3=h-ygap; top y2=h;
+  y1=y3=h-u; top y2=h;
   draw z1--z2--z3;
   labels(1,2,3);
 endchar;

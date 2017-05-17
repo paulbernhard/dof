@@ -23,7 +23,7 @@ endchar;
 
 begindofchar("B",14,cap#,0,0);
   lft x1=leftstemloc; x2=x1; 
-  x3=x6=x8=x1-overdraw; x5=x1+2xgap;
+  x3=x6=x8=x1-overdraw; x5=.3[x6,x4];
   bot y1=top y2-h=0; y8=y1; y3=y2; y5=y6=barheight;
   x4=w-x1; x7=w-x1+o;
   y4=y6+(y3-y6)/2; y7=y8+(y6-y1)/2;
@@ -76,7 +76,7 @@ endchar;
 
 begindofchar("E",14,cap#,0,-.25s#);
   lft x1=lft x2=leftstemloc; x3=x5=x7=x1-overdraw;
-  x4=w-x1+.25s; x6+xgap=x8=x4;
+  x4=w-x1+.25s; x6+u=x8=x4;
   bot y1=top y2-h=0; y3=y2; y7=y1; y5=h/2;
   y4=y3; y6=y5; y8=y7;
   draw z1--z2;
@@ -96,7 +96,7 @@ endchar;
 
 begindofchar("F",14,cap#,0,-.25s#);
   lft x1=lft x2=leftstemloc; x3=x5=x1-overdraw;
-  x4=w-x1+.25s; x6+xgap=x4;
+  x4=w-x1+.25s; x6+u=x4;
   bot y1=top y2-h=0; y3=y2; 
   y5=h/2; y4=y3; y6=y5;
   draw z1--z2; draw z3--z4; draw z5--z6;
@@ -211,7 +211,7 @@ endchar;
 begindofchar("M",22,cap#,0,0);
   if squarish: pickup vsquare_pen; fi
   lft x1=lft x2=leftstemloc; x4=x5=w-x1; x3=w/2;
-  bot y1=top y2-h=0; y1=y5; y2=y4; y3=ygap;
+  bot y1=top y2-h=0; y1=y5; y2=y4; y3=u;
   draw z1--z2--z3--z4--z5;
   labels(range 1 thru 5);
 endchar;
@@ -345,7 +345,7 @@ begindofchar("W",24,cap#,0,-.5s#);
   lft x1=leftstemloc-.25s; x7=w-x1; x4=w/2;
   x2+.35penx=x3-.35penx=.5[x1,x4];
   x5+.35penx=x6-.35penx=.5[x4,x7];
-  top y1=h; y4+ygap=y7=y1;
+  top y1=h; y4+u=y7=y1;
   bot y2=0; y3=y5=y6=y2;
   draw z1--z2--z3--z4--z5--z6--z7;
   labels(range 1 thru 7);

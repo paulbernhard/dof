@@ -10,8 +10,6 @@ s#:=2u#; % distance to sidebearings
 o#:=1/18pt#; % overshoot for round characters
 
 leftstemloc#:=s#; % basic location of the characters left stem
-xgap#:=u#; % horizontal gap, e.g. for the middle bar in E or F
-ygap#:=3u#; % vertical gap, e.g. for the middle point of M
 barheight#:=.5*cap#; % bar height, e.g. in H
 ebarheight#:=.48xheight#; % e-bar height, e.g. in e
 

@@ -74,7 +74,7 @@ endchar;
 begindofchar("f",10,cap#,0,-.75s#);
   lft x1=leftstemloc; 
   x2=x5+overdraw=x7+overdraw=x8-overdraw=x1;
-  rt x4=w-leftstemloc+.75s; x6=x4-xgap; x3=.5[x2,x4];
+  rt x4=w-leftstemloc+.75s; x6=.3[x4,x5]; x3=.5[x2,x4];
   bot y5=barheight; y6=y5;
   bot y1=0; y7=y8=y1; top y3-o=h;
   y2=y4=h-(1[x2,x4]-x2);

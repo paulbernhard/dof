@@ -7,7 +7,7 @@ boolean squarish; squarish:=false;
 mode_setup;
 
 % define pixels / pen(s)
-define_pixels(u,cap,desc,xheight,s,xgap,ygap,overdraw);
+define_pixels(u,cap,desc,xheight,s,ygap,overdraw);
 define_corrected_pixels(o);
 define_blacker_pixels(penx,peny);
 pickup pencircle xscaled penx yscaled peny rotated penangle; round_pen:=savepen;
