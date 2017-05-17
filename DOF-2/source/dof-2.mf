@@ -45,9 +45,9 @@ if unknown slant: slant:=0 else: currenttransform:=
   identity slanted slant fi;
 
 % draw characters
-input dof-2-charu; % DOF-2 uppercase characters
+% input dof-2-charu; % DOF-2 uppercase characters
 input dof-2-charl; % DOF-2 lowercase characters
-input dof-2-charfp; % DOF-2 figures and punctuation
+% input dof-2-charfp; % DOF-2 figures and punctuation
 
 % font metrics, etc.
 font_size 10pt#;

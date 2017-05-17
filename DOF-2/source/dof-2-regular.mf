@@ -1,6 +1,6 @@
 % DOF-2 REGULAR PARAMETERS
 
-slant:=0; % slanting for italicizing typefaces
+slant:=1/20; % slanting for italicizing typefaces
 u#:=3/9pt#; % basic character width-unit
 cap#:=9pt#; % cap height
 xheight#:=.75cap#; % x height
@@ -13,7 +13,7 @@ leftstemloc#:=s#; % basic location of the characters left stem
 xgap#:=u#; % horizontal gap, e.g. for the middle bar in E or F
 ygap#:=3u#; % vertical gap, e.g. for the middle point of M
 barheight#:=.5*cap#; % bar height, e.g. in H
-ebarheight#:=.5xheight#; % e-bar height, e.g. in e
+ebarheight#:=.48xheight#; % e-bar height, e.g. in e
 
 overdraw#:=0u#; % overdrawing lines as the horizontal bars in E
 superness:=.8; % "corner"-amount of super-ellipses
@@ -23,7 +23,7 @@ penx#:=1pt#; % width of pen nib
 peny#:=1pt#; % height of pen nib
 penangle:=0; % angle of pen nib
 puncscale:=1; % scale factor of pen nib for punctuations
-boolean squarish; squarish:=true; % squarize pen edges
-squarishratio:=.1; % square-sharpness: razor = 0 <--> round = 1 (only IF sqarish is true)
+boolean squarish; squarish:=false; % squarize pen edges
+squarishratio:=.2; % square-sharpness: razor = 0 <--> round = 1 (only IF sqarish is true)
 
 input dof-2; % DOF-2 Base file
