@@ -77,7 +77,7 @@ begindofchar("f",10,cap#,0,-.75s#);
   rt x4=w-leftstemloc+.75s; x6=.3[x4,x5]; x3=.5[x2,x4];
   bot y5=barheight; y6=y5;
   bot y1=0; y7=y8=y1; top y3-o=h;
-  y2=y4=h-(1[x2,x4]-x2);
+  y2=y4=h-(.8[x2,x4]-x2);
   draw z1--z2; 
   super_half(2,3,4);
   draw z5--z6; draw z7--z8;
@@ -276,19 +276,12 @@ begindofchar("x",13,xheight#,0,-.5s#);
   labels(range 1 thru 4);
 endchar;
 
-begindofchar("y",13,xheight#,desc#,-.25s#);
-  % lft x1=leftstemloc-.25s; x3=w-x1; x2=w/2;
-  % top y1=h; y3=y1; bot y2=0; bot y4=-d;
-  % z4=whatever[z3,z2];
-  % draw z1--z2;;
-  % draw z3--z4;
-  % labels(range 1 thru 4);
-
-  lft x1=leftstemloc; x3=w-x1+.25s; x4=.5[x1,x3];
+begindofchar("y",13,xheight#,desc#,-.5s#);
+  lft x1=leftstemloc-.25s; x3=w-x1; x2=w/2;
   top y1=h; y3=y1; y2=h-y1; y4=h-y1-d;
-  z2=whatever[z4,z3];
+  z4=whatever[z2,z3];
+  draw z1--z2;
   draw z3--z4;
-  super_arc(1,2);
   labels(range 1 thru 4);
 endchar;
 

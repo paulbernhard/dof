@@ -1,4 +1,4 @@
-Applied settings for DOF-1 export:
+Applied settings for DOF-1 rendering:
 
 DOF-1 REGULAR
 slant = 0
@@ -7,6 +7,9 @@ cap-height = 9 pt
 x-height = 0.75 cap-height
 figure-height = cap-height
 overdraw = 0.5 u
+pen = 1.1 / 0.4 pt
+penangle = 0
+puncscale = 1
 
 DOF-1 ITALIC
 slant = 1/4
@@ -15,6 +18,9 @@ cap-height = 9 pt
 x-height = 0.75 cap-height
 figure-height = cap-height
 overdraw = 0.5 u
+pen = 1.1 / 0.4 pt
+penangle = 0
+puncscale = 1
 
 DOF-1 EXTENDED
 slant = 0
@@ -23,4 +29,7 @@ cap-height = 9 pt
 x-height = 0.75 cap-height
 figure-height = cap-height
 overdraw = 0.8 u
+pen = 1.1 / 0.4 pt
+penangle = 0
+puncscale = 1
 

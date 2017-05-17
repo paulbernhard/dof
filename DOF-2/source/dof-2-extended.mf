@@ -1,7 +1,7 @@
 % DOF-2 REGULAR PARAMETERS
 
 slant:=0; % slanting for italicizing typefaces
-u#:=3/9pt#; % basic character width-unit
+u#:=5/9pt#; % basic character width-unit
 cap#:=9pt#; % cap height
 xheight#:=.75cap#; % x height
 figheight#:=cap#; % figure height
