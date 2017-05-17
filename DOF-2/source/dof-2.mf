@@ -1,5 +1,8 @@
 % DOF-2 BASE
 
+% !! "squarish" is not yet fully implemented -> disable here by default
+boolean squarish; squarish:=false;
+
 % setup font
 mode_setup;
 
@@ -8,8 +11,10 @@ define_pixels(u,cap,desc,xheight,s,xgap,ygap,overdraw);
 define_corrected_pixels(o);
 define_blacker_pixels(penx,peny);
 pickup pencircle xscaled penx yscaled peny rotated penangle; round_pen:=savepen;
-pickup pencircle xscaled penx yscaled (squarishratio*peny) rotated penangle; vsquare_pen:=savepen;
-pickup pencircle xscaled (squarishratio*penx) yscaled peny rotated penangle; hsquare_pen:=savepen;
+if squarish:
+  pickup pencircle xscaled penx yscaled (squarishratio*peny) rotated penangle; vsquare_pen:=savepen;
+  pickup pencircle xscaled (squarishratio*penx) yscaled peny rotated penangle; hsquare_pen:=savepen;
+fi
 define_good_y_pixels(barheight,ebarheight);
 define_good_x_pixels(leftstemloc);
 
@@ -45,9 +50,9 @@ if unknown slant: slant:=0 else: currenttransform:=
   identity slanted slant fi;
 
 % draw characters
-% input dof-2-charu; % DOF-2 uppercase characters
+input dof-2-charu; % DOF-2 uppercase characters
 input dof-2-charl; % DOF-2 lowercase characters
-% input dof-2-charfp; % DOF-2 figures and punctuation
+input dof-2-charfp; % DOF-2 figures and punctuation
 
 % font metrics, etc.
 font_size 10pt#;
