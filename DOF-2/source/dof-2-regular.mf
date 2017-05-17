@@ -9,18 +9,21 @@ desc#:=2.25pt#; % descender depth
 s#:=2u#; % distance to sidebearings
 o#:=1/18pt#; % overshoot for round characters
 
+leftstemloc#:=s#; % basic location of the characters left stem
 xgap#:=u#; % horizontal gap, e.g. for the middle bar in E or F
 ygap#:=3u#; % vertical gap, e.g. for the middle point of M
-barheight#:=.4*cap#; % bar height, e.g. in H
+barheight#:=.5*cap#; % bar height, e.g. in H
 ebarheight#:=.5xheight#; % e-bar height, e.g. in e
+
 overdraw#:=0u#; % overdrawing lines as the horizontal bars in E
 superness:=.8; % "corner"-amount of super-ellipses
 yratio:=.65*superness; % closing/opening of letters like C
-leftstemloc#:=s#; % basic location of the characters left stem
 
-penx#:=1.15pt#; % width of pen nib
-peny#:=1.15pt#; % height of pen nib
+penx#:=1pt#; % width of pen nib
+peny#:=1pt#; % height of pen nib
 penangle:=0; % angle of pen nib
 puncscale:=1; % scale factor of pen nib for punctuations
+boolean squarish; squarish:=true; % squarize pen edges
+squarishratio:=0.25; % square-sharpness: razor = 0 <--> round = 1 (only IF sqarish is true)
 
 input dof-2; % DOF-2 Base file
