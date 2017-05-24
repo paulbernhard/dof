@@ -1,7 +1,5 @@
-% font output "design size"
-font_size 10pt#;
+% DOF-1 REGULAR PARAMETERS
 
-% parameters
 slant:=0; % slanting for italicizing typefaces
 u#:=3/9pt#; % basic character width-unit
 cap#:=9pt#; % cap height
@@ -23,39 +21,6 @@ peny#:=0.4pt#; % height of pen nib
 penangle:=0; % angle of pen nib
 puncscale:=1.2; % scale factor of pen nib for punctuations
 
-% setup font
-mode_setup;
-
-% define pixels / pen(s)
-define_pixels(u,cap,desc,xheight,s,xgap,ygap,overdraw);
-define_corrected_pixels(o);
-define_blacker_pixels(penx,peny);
-pickup pencircle xscaled penx yscaled peny rotated penangle; dof_pen:=savepen;
-define_good_y_pixels(barheight,ebarheight);
-define_good_x_pixels(leftstemloc);
-
-% dof char methods
-def begindofchar(expr code,width_in_units,height,desc,s_correction) = 
-  % set character dimensions: width in u, height, descender, correction for sidebearings
-  beginchar(code,width_in_units*u#+2*s#+s_correction,height,desc);
-  pickup dof_pen; enddef;
-
-% slant
-if unknown slant: slant:=0 else: currenttransform:=
-  identity slanted slant fi;
-
-% draw characters
-input dof-1-charu; % DOF uppercase characters
-input dof-1-charl; % DOF lowercase characters
-input dof-1-charfp; % DOF figures and punctuation
-% input dof-1-byproduct; % DOF by-product characters
-
-% font metrics, etc.
-font_quad:=20u#;
-font_normal_space:=10u#;
-font_normal_stretch:=3u#;
-font_normal_shrink:=3u#;
-font_identifier:="DOF-1" if slant<>0: & "_italic" fi;
-font_coding_scheme:="ASCII";
+input dof-1-base; % input parameters to dof-1-base file to render characters
 
 bye

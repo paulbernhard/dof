@@ -14,8 +14,7 @@ barheight#:=.5*cap#; % bar height, e.g. in H
 ebarheight#:=.48xheight#; % e-bar height, e.g. in e
 
 overdraw#:=0u#; % overdrawing lines as the horizontal bars in E
-superness:=.8; % "corner"-amount of super-ellipses
-% yratio:=.65*superness; % closing/opening of letters like C
+superness:=.74; % "corner"-amount of super-ellipses (0.74 ~ regular ellipse)
 
 penx#:=.9pt#; % width of pen nib
 peny#:=.9pt#; % height of pen nib
@@ -26,4 +25,4 @@ puncscale:=1; % scale factor of pen nib for punctuations
 % boolean squarish; squarish:=true; % squarize pen edges
 % squarishratio:=.2; % square-sharpness: razor = 0 <--> round = 1 (only IF sqarish is true)
 
-input dof-2-base; % DOF-2 Base file
+input dof-2-base; % input parameters to dof-2-base file to render characters

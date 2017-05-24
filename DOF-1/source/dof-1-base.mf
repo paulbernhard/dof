@@ -1,0 +1,38 @@
+% DOF-1 BASE
+
+% setup font
+mode_setup;
+
+% define pixels / pen(s)
+define_pixels(u,cap,desc,xheight,s,xgap,ygap,overdraw);
+define_corrected_pixels(o);
+define_blacker_pixels(penx,peny);
+pickup pencircle xscaled penx yscaled peny rotated penangle; dof_pen:=savepen;
+define_good_y_pixels(barheight,ebarheight);
+define_good_x_pixels(leftstemloc);
+
+% dof char methods
+def begindofchar(expr code,width_in_units,height,desc,s_correction) = 
+  % set character dimensions: width in u, height, descender, correction for sidebearings
+  beginchar(code,width_in_units*u#+2*s#+s_correction,height,desc);
+  pickup dof_pen; enddef;
+
+% slant
+if unknown slant: slant:=0 else: currenttransform:=
+  identity slanted slant fi;
+
+% draw characters
+input dof-1-charu; % DOF uppercase characters
+input dof-1-charl; % DOF lowercase characters
+input dof-1-charfp; % DOF figures and punctuation
+
+% font metrics, etc.
+font_size 10pt#;
+font_quad:=20u#;
+font_normal_space:=10u#;
+font_normal_stretch:=3u#;
+font_normal_shrink:=3u#;
+font_identifier:="DOF-1" if slant<>0: & "_italic" fi;
+font_coding_scheme:="ASCII";
+
+bye

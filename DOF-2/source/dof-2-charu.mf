@@ -28,8 +28,10 @@ begindofchar("B",14,cap#,0,0);
   x4=w-x1; x7=w-x1+o;
   y4=y6+(y3-y6)/2; y7=y8+(y6-y1)/2;
   draw z1--z2;
-  super_crescent(3,4,5); draw z5--z6;
-  super_crescent(5,7,8);
+  draw z3{right}..z4{down}..z5{left}--z6;
+  draw z5{right}..z7{down}..z8{left};
+  % super_crescent(3,4,5); draw z5--z6;
+  % super_crescent(5,7,8);
   labels(range 1 thru 8);
   if squarish:
     pickup vsquare_pen;
