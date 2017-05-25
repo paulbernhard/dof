@@ -1,0 +1,58 @@
+% base
+
+mode_setup;
+
+% define pixels / pen(s)
+define_pixels(u,cap,desc,xheight,s,ygap,overdraw,velocity,expand);
+define_corrected_pixels(o);
+define_blacker_pixels(penx,peny);
+pickup pencircle xscaled penx yscaled peny rotated penangle; round_pen:=savepen;
+define_good_y_pixels(barheight,ebarheight);
+define_good_x_pixels(leftstemloc);
+
+% dof char methods
+def begindofchar(expr code,width_in_units,height,desc,s_correction) = 
+  % set character dimensions: width in u, height, descender, correction for sidebearings
+  beginchar(code,width_in_units*u#+2*s#+s_correction,height,desc);
+  pickup round_pen; enddef;
+
+def super_arc(suffix i,j) = 
+  draw z.i{0,y.j-y.i}
+  ... (superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
+  ... z.j enddef;
+
+% horizontal "super-half"
+def super_half(suffix i,j,k) =
+  draw z.i{0,y.j-y.i}
+  ... (superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
+  ... z.j{x.k-x.i,0}
+  ... (superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}
+  ... z.k{0,y.k-y.j} enddef;
+
+% vertical "super-half"
+def super_crescent(suffix i,j,k) =
+  draw z.i{x.j-x.i,0}
+  ... (superness[x.i,x.j],superness[y.j,y.i]){z.j-z.i}
+  ... z.j{0,y.k-y.i}
+  ... (superness[x.k,x.j],superness[y.j,y.k]){z.k-z.j}
+  ... z.k{x.k-x.j,0} enddef;
+
+% slant
+if unknown slant: slant:=0 else: currenttransform:=
+  identity slanted slant fi;
+
+% draw characters
+input dof-3-charu; % DOF-3 uppercase characters
+input dof-3-charl; % DOF-3 lowercase characters
+input dof-3-charfp; % DOF-3 figures and punctuation
+
+% font metrics, etc.
+font_size 10pt#;
+font_quad:=20u#;
+font_normal_space:=10u#;
+font_normal_stretch:=3u#;
+font_normal_shrink:=3u#;
+font_identifier:="DOF-2" if slant<>0: & "_italic" fi;
+font_coding_scheme:="ASCII";
+
+bye
