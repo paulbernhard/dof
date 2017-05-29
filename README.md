@@ -1,11 +1,5 @@
 # DOF
 
-- introduction
-- image
-- file / folder structure
-- documentation
-- links / references
-
 _DOF_ is a (type)surface to enables the communication between two parties. It was created and written by Paul Bernhard in order to interface the exhibition _[The Weathers They Live In](http://twtli.nicolaarthen.com)_ (initiated by [Nicola Arthen](http://nicolaarthen.com)) and its multiple stages. _DOF_ is written in METAFONT (a typographic description language created by Donald E. Knuth) which allows the parameter-based rendering of different cuts.
 
 At present the families [DOF-1](/Outline/DOF-1/), [DOF-2](/Outline/DOF-2/), [DOF-1](/Outline/DOF-3/) were released which can all be rendered from the same source files at [/Source/DOF/](/Source/DOF/).
