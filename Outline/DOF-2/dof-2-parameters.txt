@@ -1,0 +1,77 @@
+ ``              `...`        `````````                    `...`     
+dMNNMmh+`     +dNNmmmNMds.   oMNNNNNNNN/                `yNNmmmNNs`  
+mM`  .+NN:  `dMo`     `/NN-  sM+                        /My     oMs  
+mM`    .NN` +Ms         :Mh  sM+                         .      :Mh  
+mM`     hM: hM:          MN  sM+                                yMo  
+mM`     sM/ hM:          MM  sMdyyyyyy+                       -dMs   
+mM`     yM/ hM:          MM  sMs::::::.  -++++++++++++`     -hMh-    
+mM`     dM- yM/         `MN  sM+         :oosssssooooo.   -hMh-      
+mM`    /Md  :Md         oMs  sM+                         +Md-        
+mM///odMy`   oMd+:---:+yMh`  sM+                        -MN:::::::`  
+ohhyyo/`      `+shhddhyo-    :h-                        -hhhhhhhhh+  
+
+
+DOF-2 Regular
+
+slant = 0
+u = 3/9 pt
+cap = 9 pt
+xheight = 0.75 * cap
+figheight = cap
+desc = 2.25 pt
+s = 2 * u
+o = 1/18 pt
+barheight = 0.5 * cap
+ebarheight = 0.48 * xheight
+overdraw = 0
+opendraw = false
+superness = 0.8
+cutoff = false
+penx = 0.9 pt
+peny 0.9 pt
+penangle = 0
+puncscale = 1
+
+
+DOF-2 Italic
+
+slant = 1/3.2
+u = 3/9 pt
+cap = 9 pt
+xheight = 0.75 * cap
+figheight = cap
+desc = 2.25 pt
+s = 2 * u
+o = 1/18 pt
+barheight = 0.5 * cap
+ebarheight = 0.48 * xheight
+overdraw = 0
+opendraw = false
+superness = 0.8
+cutoff = false
+penx = 0.9 pt
+peny 0.9 pt
+penangle = 0
+puncscale = 1
+
+
+DOF-2 Extended
+
+slant = 1/3.2
+u = 5/9 pt
+cap = 9 pt
+xheight = 0.75 * cap
+figheight = cap
+desc = 2.25 pt
+s = 2 * u
+o = 1/18 pt
+barheight = 0.5 * cap
+ebarheight = 0.48 * xheight
+overdraw = 0
+opendraw = false
+superness = 0.8
+cutoff = false
+penx = 0.9 pt
+peny 0.9 pt
+penangle = 0
+puncscale = 1
