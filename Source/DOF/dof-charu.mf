@@ -481,7 +481,7 @@ begindofchar("Z",14,cap#,0,-.5s#);
 endchar;
 
 % Ä
-begindofchar(hex"C4",18,cap#,0,-.5s#);
+begindofchar(hex"C4",16,cap#,0,-.5s#);
   lft x1=leftstemloc-.25s; x4=w-x1;
   x2+.35penx=x3-.35penx=w/2;
   bot y1=0; y4=y1; top y2=h; y3=y2;
