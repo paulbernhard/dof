@@ -1,5 +1,5 @@
 % base file 
-% (parameters are set up in cut files, e.g. regular, italic, …)
+% (parameters are set up in cut files, e.g. dof-1-regular, …)
 
 mode_setup;
 

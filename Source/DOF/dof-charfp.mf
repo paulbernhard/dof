@@ -1,4 +1,4 @@
-% figures
+% figures and puncuation
 
 begindofchar("0",14,figheight#,0,0);
   x1=x3=w/2; lft x4=leftstemloc-o; x2=w-x4;
@@ -457,8 +457,6 @@ begindofchar("#",18,xheight#,0,-s#);
     draw z5--z6; draw z7--z8;
   fi
 endchar;
-
-% punctuation
 
 % space
 begindofchar(oct"040",5,cap#,0,0);

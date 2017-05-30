@@ -1,4 +1,4 @@
-% lowercase
+% lowercase characters
 
 begindofchar("a",13,xheight#,0,0);
   % draw different a for slanted typeface
@@ -641,5 +641,139 @@ begindofchar(hex"E7",13,xheight#,0,0);
   else:
     draw z2{right}..z8{left};
     labels(8);
+  fi
+endchar;
+
+begindofchar("ø",16,xheight#,0,-.5s#);
+  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
+  bot y1+o=top y3-h-o=0; y4=y2=h/2;
+  super_half(4,3,2);
+  super_half(4,1,2);
+  labels(range 1 thru 4);
+  x5=x4+.5s; x6=w-x5;
+  y5=y1+o; y6=h-y5;
+  if cutoff:
+    penpos5(compactcor*penx,-45); penpos6(compactcor*penx,-45);
+    penstroke z5e--z6e;
+    penlabels(5,6);
+  else:
+    draw z5--z6;
+    labels(5,6);
+  fi
+endchar;
+
+begindofchar("å",13,xheight#,0,0);
+  % draw different a for slanted typeface
+  if slant<>0:
+    rt x7=w-leftstemloc; x6=x1=x5=x7; 
+    lft x3=leftstemloc-o; x2=x4=w/2;
+    bot y7=top y6-h=0; y4+o=y7; y2-o=y6; y3=h/2; 
+    y5=.6[y4,y3]; y1=h-y5;
+    super_half(5,4,3);
+    super_half(3,2,1);
+    draw z6--z7;
+    labels(range 1 thru 7);
+    if cutoff:
+      z8=bot z7; z9=top z6;
+      z7l=z7; z7r=rt z7;
+      z8l=z8; z8r=rt z8;
+      z6l=z6; z6r=rt z6;
+      z9l=z9; z9r=rt z9;
+      penstroke z7e--z8e;
+      penstroke z6e--z9e;
+      penlabels(6,7,8,9);
+    fi
+  else:
+    lft x1=leftstemloc; x7=x1;
+    x2=x6=x8=w/2;
+    x3=x4=x5=x9=w-x1;
+    bot y4=0; y8=y4-o; y2=h-y8;
+    top y6=2/3*h+o; y7=1/2[y8,y6]; y9=2/3[y8,y6];
+    y1=2/3[y6,y2]; y3=1/3[y6,y2]; y5=y3+.5u;
+    super_half(1,2,3);
+    draw z3--z4;
+    super_arc(5,6);
+    super_crescent(6,7,8);
+    super_half(7,8,9);
+    labels(range 1 thru 9);
+    if cutoff:
+      z10=bot z1; z11=bot z4;
+      penpos1(penx,0); 
+      z10l=lft z10; z10r=rt z10+expand*right;
+      z4l=z4; z4r=rt z4;
+      z11l=z11; z11r=rt z11;
+      penstroke z1e--z10e;
+      penstroke z4e--z11e;
+      penlabels(1,4,10,11);
+    fi
+  fi
+  % add circle on top
+  x12=x14=w/2; x13-2u=x15+2u=x12;
+  bot y12=h+.5u; y14=y12+(1[x15,x13]-x15);
+  y13=y15=.5[y12,y14];
+  pickup pencircle xscaled .55penx yscaled .55peny rotated penangle;
+  super_crescent(12,13,14);
+  super_crescent(14,15,12);
+  labels(range 12 thru 15);
+endchar;
+
+begindofchar("œ",15,xheight#,0,0);
+  % part "o"
+  x1=x5=w/2; x2=x4=.5[x1,x3]; 
+  x3=leftstemloc-o;
+  y1=h/2; top y2=h+o;
+  y3=h/2; y4=h-y2; y5=h-y1;
+  labels(range 1 thru 5);
+  super_half(1,2,3);
+  super_half(3,4,5);
+  % part "e"
+  x6=x1; x7=.5[x6,x8]; x8=w-x3;
+  x9=x7; x10=x8;
+  y6=ebarheight; y7=y2; y8=y6;
+  y9=y4; y10=1/3[y9,y6];
+  labels(range 6 thru 10);
+  super_half(6,7,8);
+  super_half(6,9,10);
+  draw z6--z8;
+  if cutoff:
+    z11=bot z8; z12=top z10;
+    penpos8(penx,0); penpos10(penx,0); penpos11(penx,0);
+    z12l=lft z12+expand*left; z12r=rt z12;
+    penlabels(8,10,11,12);
+    penstroke z8e--z11e;
+    penstroke z10e--z12e;
+  fi
+endchar;
+
+begindofchar("æ",15,xheight#,0,0);
+  % part "a"
+  x1=leftstemloc; x2=.5[x1,x3];
+  x3=w/2; x4=x8=x3; x5=x7=x2; x6=x1-o;
+  y1=1/3[y2,y5]; top y2=h; y3=2/3[y2,y5];
+  y4=y3+.5u; top y5=2/3*h+o; 
+  y6=.5[y7,y5]; bot y7+o=0; y8=2/3[y8,y6];
+  labels(range 1 thru 8);
+  super_half(1,2,3);
+  super_arc(4,5);
+  super_crescent(5,6,7);
+  super_arc(8,7);
+  % part "e"
+  x9=x8; x10=x12=w-x2; x11=x13=w-x1;
+  y9=y11=ebarheight; y10=y2; 
+  y12=y7; y13=1/3[y12,y9];
+  labels(range 9 thru 13);
+  super_half(9,10,11);
+  super_half(9,12,13);
+  draw z9--z11;
+  if cutoff:
+    z14=bot z1; z15=bot z11; z16=top z13;
+    penpos1(penx,0); penpos11(penx,0); 
+    penpos13(penx,0); penpos15(penx,0); 
+    z14l=lft z14; z14r=rt z14+expand*right;
+    z16l=lft z16+expand*left; z16r=rt z16;
+    penlabels(1,11,13,14,15,16);
+    penstroke z1e--z14e;
+    penstroke z11e--z15e;
+    penstroke z13e--z16e;
   fi
 endchar;
