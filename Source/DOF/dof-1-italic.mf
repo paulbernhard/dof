@@ -22,9 +22,9 @@ cutoff:=false; % cut off the pen at stroke endings (true or false)
 expand#:=1/10pt#; % if cutoff = true, expand the pen stroke towards the stroke ending, as in C
 compactcor:=.7; % if cutoff = true, thin out strokes to correct compaction in certain letters, as in the top of A or the middle of M 
 
-penx#:=.9pt#; % width of (elliptical) pen nib
-peny#:=.9pt#; % height of (elliptical) pen nib
+penx#:=1.1pt#; % width of (elliptical) pen nib
+peny#:=.4pt#; % height of (elliptical) pen nib
 penangle:=0; % angle of pen nib
-puncscale:=1; % factor to scale the pen nib for punctuations, as in period or colon
+puncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
 
 input dof-base; % input parameters to base file

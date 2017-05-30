@@ -1,30 +1,30 @@
-% DOF-1 Extended parameters
+% DOF-3 Regular parameters
 
 boolean opendraw; boolean cutoff; % basic setup of variables
 
 slant:=0; % slant to italicize font (numeric value, e.g. 1/4, 1/3, …), 0 = no slant
-u#:=5/9pt#; % character width unit, controls the basic character widths
+u#:=6.2/9pt#; % character width unit, controls the basic character widths
 cap#:=9pt#; % cap- / ascender-height
 xheight#:=.75cap#; % x-height relative to cap-height
 figheight#:=cap#; % figures' height relative to cap-height
 desc#:=2.25pt#; % descender-height
-s#:=2u#; % average distance of character to sidebearings
+s#:=1.75u#; % average distance of character to sidebearings
 o#:=1/18pt#; % top- / bottom-overshoot for round characters, as for O or U
 
 leftstemloc#:=s#; % location of the characters' left stem, control this with the sidebearing value
 barheight#:=.5*cap#; % height of horizontal bar, as in H
-ebarheight#:=.5xheight#; % height of the horizontal bar, as in e
+ebarheight#:=.48xheight#; % height of the horizontal bar, as in e
 
-overdraw#:=.5u#; % overdraw certain lines, as the horizontal bars of E
-opendraw:=true; % leave certain circles open (currently in %-, °-symbol and 0)
-superness:=.74; % superness controls the corner-expansion of all round shapes (as in O, S or g). A higher value expands the corners, a lower value implodes the corners, a value of 0.74 equals to regular round ellipses
-cutoff:=false; % cut off the pen at stroke endings (true or false)
+overdraw#:=0; % overdraw certain lines, as the horizontal bars of E
+opendraw:=false; % leave certain circles open (currently in %-, °-symbol and 0)
+superness:=.8; % superness controls the corner-expansion of all round shapes (as in O, S or g). A higher value expands the corners, a lower value implodes the corners, a value of 0.74 equals to regular round ellipses
+cutoff:=true; % cut off the pen at stroke endings (true or false)
 expand#:=1/10pt#; % if cutoff = true, expand the pen stroke towards the stroke ending, as in C
 compactcor:=.7; % if cutoff = true, thin out strokes to correct compaction in certain letters, as in the top of A or the middle of M 
 
-penx#:=1.1pt#; % width of (elliptical) pen nib
-peny#:=.4pt#; % height of (elliptical) pen nib
+penx#:=2.55pt#; % width of (elliptical) pen nib
+peny#:=.8pt#; % height of (elliptical) pen nib
 penangle:=0; % angle of pen nib
-puncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
+puncscale:=1; % factor to scale the pen nib for punctuations, as in period or colon
 
 input dof-base; % input parameters to base file
