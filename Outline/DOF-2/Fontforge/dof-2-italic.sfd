@@ -4,7 +4,7 @@ FullName: DOF-2-Italic
 FamilyName: DOF-2
 Weight: Italic
 Copyright: The DOF family was created by Paul Bernhard. It is written in METAFONT, a typographic language created by Donald E. Knuth. The METAFONT bitmap output was traced using mftrace (lilypond.org/mftrace/), reencoded and converted to TTF using Fontforge (fontforge.github.io).\n\nAll source and font files can be found at: github.com/paulbernhard/dof\n\n=== LICENSE ===\n\nCopyright (c) 2017, Paul Bernhard (http://pbernhard.com | mail@pbernhard.com),\nwith Reserved Font Name DOF.\n\nThis Font Software is licensed under the SIL Open Font License, Version 1.1.\nThis license is copied below, and is also available with a FAQ at:\nhttp://scripts.sil.org/OFL\n\n\n-----------------------------------------------------------\nSIL OPEN FONT LICENSE Version 1.1 - 26 February 2007\n-----------------------------------------------------------\n\nPREAMBLE\nThe goals of the Open Font License (OFL) are to stimulate worldwide\ndevelopment of collaborative font projects, to support the font creation\nefforts of academic and linguistic communities, and to provide a free and\nopen framework in which fonts may be shared and improved in partnership\nwith others.\n\nThe OFL allows the licensed fonts to be used, studied, modified and\nredistributed freely as long as they are not sold by themselves. The\nfonts, including any derivative works, can be bundled, embedded, \nredistributed and/or sold with any software provided that any reserved\nnames are not used by derivative works. The fonts and derivatives,\nhowever, cannot be released under any other type of license. The\nrequirement for fonts to remain under this license does not apply\nto any document created using the fonts or their derivatives.\n\nDEFINITIONS\n"Font Software" refers to the set of files released by the Copyright\nHolder(s) under this license and clearly marked as such. This may\ninclude source files, build scripts and documentation.\n\n"Reserved Font Name" refers to any names specified as such after the\ncopyright statement(s).\n\n"Original Version" refers to the collection of Font Software components as\ndistributed by the Copyright Holder(s).\n\n"Modified Version" refers to any derivative made by adding to, deleting,\nor substituting -- in part or in whole -- any of the components of the\nOriginal Version, by changing formats or by porting the Font Software to a\nnew environment.\n\n"Author" refers to any designer, engineer, programmer, technical\nwriter or other person who contributed to the Font Software.\n\nPERMISSION & CONDITIONS\nPermission is hereby granted, free of charge, to any person obtaining\na copy of the Font Software, to use, study, copy, merge, embed, modify,\nredistribute, and sell modified and unmodified copies of the Font\nSoftware, subject to the following conditions:\n\n1) Neither the Font Software nor any of its individual components,\nin Original or Modified Versions, may be sold by itself.\n\n2) Original or Modified Versions of the Font Software may be bundled,\nredistributed and/or sold with any software, provided that each copy\ncontains the above copyright notice and this license. These can be\nincluded either as stand-alone text files, human-readable headers or\nin the appropriate machine-readable metadata fields within text or\nbinary files as long as those fields can be easily viewed by the user.\n\n3) No Modified Version of the Font Software may use the Reserved Font\nName(s) unless explicit written permission is granted by the corresponding\nCopyright Holder. This restriction only applies to the primary font name as\npresented to the users.\n\n4) The name(s) of the Copyright Holder(s) or the Author(s) of the Font\nSoftware shall not be used to promote, endorse or advertise any\nModified Version, except to acknowledge the contribution(s) of the\nCopyright Holder(s) and the Author(s) or with their explicit written\npermission.\n\n5) The Font Software, modified or unmodified, in part or in whole,\nmust be distributed entirely under this license, and must not be\ndistributed under any other license. The requirement for fonts to\nremain under this license does not apply to any document created\nusing the Font Software.\n\nTERMINATION\nThis license becomes null and void if any of the above conditions are\nnot met.\n\nDISCLAIMER\nTHE FONT SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,\nEXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO ANY WARRANTIES OF\nMERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT\nOF COPYRIGHT, PATENT, TRADEMARK, OR OTHER RIGHT. IN NO EVENT SHALL THE\nCOPYRIGHT HOLDER BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY,\nINCLUDING ANY GENERAL, SPECIAL, INDIRECT, INCIDENTAL, OR CONSEQUENTIAL\nDAMAGES, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING\nFROM, OUT OF THE USE OR INABILITY TO USE THE FONT SOFTWARE OR FROM\nOTHER DEALINGS IN THE FONT SOFTWARE.\n
-Version: 1.1
+Version: 1.2
 ItalicAngle: 0
 UnderlinePosition: -91
 UnderlineWidth: 45
@@ -18,7 +18,7 @@ OS2Version: 0
 OS2_WeightWidthSlopeOnly: 0
 OS2_UseTypoMetrics: 0
 CreationTime: 1496051376
-ModificationTime: 1496051501
+ModificationTime: 1496156470
 OS2TypoAscent: 0
 OS2TypoAOffset: 1
 OS2TypoDescent: 0
@@ -41,13 +41,13 @@ NameList: AGL For New Fonts
 DisplaySize: -48
 AntiAlias: 1
 FitToEm: 0
-WinInfo: 25 25 10
+WinInfo: 130 13 10
 BeginPrivate: 3
 lenIV 1 4
 BlueValues 2 []
 ForceBold 5 false
 EndPrivate
-BeginChars: 260 104
+BeginChars: 260 110
 
 StartChar: space
 Encoding: 32 32 0
@@ -3808,48 +3808,46 @@ EndChar
 
 StartChar: Adieresis
 Encoding: 196 196 93
-Width: 637
+Width: 576
 VWidth: 910
 Flags: HW
 LayerCount: 2
 Fore
 SplineSet
-530 931 m 0
- 552 936 574 923 579 900 c 0
- 586 875 566 849 540 849 c 0
- 513 849 493 875 499 900 c 0
- 504 915 515 927 530 931 c 0
-645 931 m 0
- 667 936 689 923 694 900 c 0
- 701 875 681 849 655 849 c 0
- 628 849 608 875 614 900 c 0
- 619 915 630 927 645 931 c 0
-522 818 m 0
- 528 819 595 819 601 818 c 0
- 611 815 621 807 626 799 c 0
- 630 792 632 786 632 774 c 0
- 632 768 625 599 618 399 c 0
- 605 60 605 34 603 29 c 0
- 601 22 597 17 592 12 c 0
- 568 -11 530 1 523 33 c 0
- 521 38 521 48 526 159 c 0
- 529 226 531 284 531 289 c 2
- 532 297 l 1
- 415 297 l 1
- 298 297 l 1
- 216 157 l 2
- 150 45 133 16 128 12 c 0
- 113 -3 86 -3 70 13 c 0
- 59 24 56 41 61 56 c 0
- 63 61 493 793 499 802 c 0
- 504 809 513 815 522 818 c 0
-541 550 m 0
- 545 644 547 720 547 720 c 1
- 547 720 502 644 447 550 c 2
- 347 380 l 1
- 441 380 l 1
- 534 380 l 2
- 534 381 537 457 541 550 c 0
+499 931 m 0
+ 521 936 543 923 548 900 c 0
+ 555 875 535 849 508 849 c 0
+ 482 849 462 875 468 900 c 0
+ 473 915 484 927 499 931 c 0
+615 931 m 0
+ 637 936 659 923 664 900 c 0
+ 671 875 651 849 625 849 c 0
+ 598 849 578 875 584 900 c 0
+ 589 915 600 927 615 931 c 0
+492 817 m 0
+ 499 820 563 820 570 817 c 0
+ 582 814 592 806 597 796 c 0
+ 602 784 605 818 573 411 c 0
+ 557 209 543 39 543 35 c 0
+ 542 31 541 27 540 24 c 0
+ 534 10 517 0 502 0 c 0
+ 483 0 466 14 461 34 c 0
+ 460 39 461 42 471 167 c 0
+ 476 238 481 296 481 296 c 2
+ 481 297 437 297 383 297 c 2
+ 287 297 l 1
+ 210 157 l 2
+ 143 34 134 18 129 13 c 0
+ 113 -3 87 -4 70 13 c 0
+ 60 23 55 41 60 55 c 0
+ 61 57 154 226 265 431 c 0
+ 443 756 468 802 473 806 c 0
+ 478 811 485 815 492 817 c 0
+500 545 m 0
+ 507 636 513 711 513 711 c 2
+ 512 711 332 380 332 380 c 2
+ 332 379 487 380 487 380 c 1
+ 487 380 494 454 500 545 c 0
 EndSplineSet
 EndChar
 
@@ -4317,6 +4315,399 @@ SplineSet
  232 627 221 646 225 662 c 0
  227 671 265 793 268 798 c 0
  273 807 282 814 293 817 c 0
+EndSplineSet
+EndChar
+
+StartChar: Aring
+Encoding: 197 197 104
+Width: 576
+VWidth: 910
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+578 1019 m 0
+ 585 1020 618 1020 626 1019 c 0
+ 651 1014 666 1002 671 981 c 0
+ 673 974 672 959 669 949 c 0
+ 664 925 653 900 645 888 c 0
+ 633 871 616 860 593 855 c 0
+ 587 854 582 854 562 854 c 0
+ 539 854 536 854 529 856 c 0
+ 517 859 509 862 503 868 c 0
+ 493 878 489 891 490 907 c 0
+ 491 918 493 926 499 947 c 0
+ 509 978 520 993 537 1005 c 0
+ 549 1012 561 1017 578 1019 c 0
+620 973 m 0
+ 613 974 586 974 578 973 c 0
+ 575 972 570 971 566 969 c 0
+ 555 964 550 955 542 930 c 0
+ 537 916 534 902 535 901 c 0
+ 536 899 549 898 562 898 c 0
+ 600 898 607 904 620 942 c 0
+ 625 956 627 970 626 972 c 0
+ 625 972 623 973 620 973 c 0
+492 817 m 0
+ 499 820 563 820 570 817 c 0
+ 582 814 592 806 597 796 c 0
+ 602 784 605 818 573 411 c 0
+ 557 209 543 39 543 35 c 0
+ 542 31 541 27 540 24 c 0
+ 534 10 517 0 502 0 c 0
+ 483 0 466 14 461 34 c 0
+ 460 39 461 42 471 167 c 0
+ 476 238 481 296 481 296 c 2
+ 481 297 437 297 383 297 c 2
+ 287 297 l 1
+ 210 157 l 2
+ 143 34 134 18 129 13 c 0
+ 113 -3 87 -4 70 13 c 0
+ 60 23 55 41 60 55 c 0
+ 61 57 154 226 265 431 c 0
+ 443 756 468 802 473 806 c 0
+ 478 811 485 815 492 817 c 0
+500 545 m 0
+ 507 636 513 711 513 711 c 2
+ 512 711 332 380 332 380 c 2
+ 332 379 487 380 487 380 c 1
+ 487 380 494 454 500 545 c 0
+EndSplineSet
+EndChar
+
+StartChar: AE
+Encoding: 198 198 105
+Width: 698
+VWidth: 910
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+553 817 m 0
+ 560 820 858 820 865 818 c 0
+ 877 814 887 807 892 795 c 0
+ 895 789 896 787 896 778 c 0
+ 896 768 895 767 892 761 c 0
+ 887 752 882 746 875 742 c 0
+ 864 737 871 736 741 736 c 2
+ 623 736 l 1
+ 620 727 l 2
+ 618 722 598 659 575 585 c 2
+ 533 452 l 1
+ 625 451 l 2
+ 691 451 718 451 721 450 c 0
+ 733 446 741 438 746 427 c 0
+ 749 422 750 421 750 411 c 0
+ 750 400 749 398 746 393 c 0
+ 741 382 733 374 721 370 c 0
+ 718 369 689 369 613 369 c 2
+ 508 369 l 1
+ 463 227 l 2
+ 438 149 419 84 419 84 c 2
+ 419 83 466 83 524 83 c 0
+ 638 83 634 83 644 78 c 0
+ 658 71 665 57 665 41 c 0
+ 665 22 652 6 634 1 c 0
+ 629 0 604 0 493 0 c 0
+ 344 0 352 0 342 5 c 0
+ 327 12 318 32 321 47 c 0
+ 321 51 339 109 360 175 c 2
+ 399 297 l 1
+ 354 297 l 1
+ 309 297 l 1
+ 221 157 l 2
+ 159 58 133 17 129 13 c 0
+ 113 -3 87 -4 70 13 c 0
+ 59 24 56 41 61 56 c 0
+ 65 64 529 802 534 807 c 0
+ 539 812 547 815 553 817 c 0
+455 477 m 2
+ 471 531 485 574 485 574 c 2
+ 485 575 461 539 433 494 c 0
+ 405 449 377 405 372 396 c 2
+ 361 380 l 1
+ 393 380 l 1
+ 424 380 l 1
+ 455 477 l 2
+EndSplineSet
+EndChar
+
+StartChar: Oslash
+Encoding: 216 216 106
+Width: 698
+VWidth: 910
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+559 824 m 0
+ 573 825 619 825 634 824 c 0
+ 673 821 709 816 734 806 c 0
+ 745 802 763 792 771 787 c 2
+ 777 783 l 1
+ 791 797 l 2
+ 806 812 810 815 821 818 c 0
+ 841 823 863 810 869 790 c 0
+ 871 784 871 771 869 765 c 0
+ 866 757 862 752 844 733 c 2
+ 826 715 l 1
+ 829 707 l 2
+ 835 687 838 663 837 634 c 0
+ 836 593 828 550 812 489 c 0
+ 797 437 762 327 747 286 c 0
+ 685 119 610 38 492 8 c 0
+ 457 -1 424 -4 374 -5 c 0
+ 293 -6 241 2 200 23 c 0
+ 194 26 187 30 183 32 c 2
+ 177 36 l 1
+ 164 23 l 2
+ 149 8 144 4 135 1 c 0
+ 125 -1 114 0 105 5 c 0
+ 95 10 87 23 84 35 c 0
+ 82 46 86 59 94 68 c 0
+ 96 71 104 80 112 88 c 2
+ 127 105 l 1
+ 125 112 l 2
+ 119 132 116 157 117 187 c 0
+ 118 209 118 221 123 246 c 0
+ 131 292 141 332 169 421 c 0
+ 202 524 218 570 243 618 c 0
+ 263 659 283 687 309 718 c 0
+ 367 785 443 819 559 824 c 0
+630 741 m 0
+ 615 742 576 742 563 741 c 0
+ 518 739 492 735 463 725 c 0
+ 446 720 426 710 413 701 c 0
+ 372 674 336 625 306 557 c 0
+ 288 516 275 480 248 394 c 0
+ 222 309 212 275 206 236 c 0
+ 202 217 198 180 199 180 c 0
+ 200 180 717 721 718 722 c 2
+ 718 722 716 723 712 725 c 0
+ 693 733 666 739 630 741 c 0
+754 624 m 0
+ 755 631 755 638 755 639 c 1
+ 754 639 237 98 236 97 c 0
+ 236 96 245 93 255 89 c 0
+ 280 81 322 76 373 77 c 0
+ 426 79 457 83 492 95 c 0
+ 508 100 529 110 542 118 c 0
+ 591 151 631 213 667 309 c 0
+ 680 341 702 408 721 472 c 0
+ 741 538 751 583 754 624 c 0
+EndSplineSet
+EndChar
+
+StartChar: aring
+Encoding: 229 229 107
+Width: 516
+VWidth: 910
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+481 814 m 0
+ 491 815 522 815 532 814 c 0
+ 553 810 565 802 572 787 c 0
+ 580 772 579 755 568 722 c 0
+ 563 706 559 697 554 689 c 0
+ 540 665 522 654 495 650 c 0
+ 482 648 453 648 441 649 c 0
+ 416 654 402 665 397 686 c 0
+ 395 694 396 708 399 721 c 0
+ 403 736 411 760 416 769 c 0
+ 429 794 451 810 481 814 c 0
+530 767 m 0
+ 526 769 490 769 484 768 c 0
+ 470 766 462 760 456 748 c 0
+ 452 741 445 717 443 708 c 0
+ 440 698 440 695 443 695 c 0
+ 444 694 453 695 462 694 c 0
+ 497 693 508 698 517 715 c 0
+ 521 722 528 746 530 755 c 0
+ 533 765 533 767 530 767 c 0
+417 619 m 0
+ 419 620 435 620 453 619 c 0
+ 488 619 502 618 520 613 c 0
+ 533 610 540 608 551 602 c 2
+ 560 597 l 1
+ 564 602 l 2
+ 574 613 589 617 603 613 c 0
+ 615 609 626 602 631 590 c 0
+ 634 584 634 582 634 573 c 2
+ 634 564 l 1
+ 551 297 l 2
+ 505 150 466 27 464 24 c 0
+ 452 -1 420 -7 399 11 c 2
+ 395 15 l 1
+ 388 12 l 2
+ 372 5 351 -1 327 -4 c 0
+ 308 -6 247 -6 231 -4 c 0
+ 190 2 163 15 143 35 c 0
+ 122 56 113 81 111 119 c 0
+ 111 139 112 155 117 180 c 0
+ 123 217 131 249 156 328 c 0
+ 179 400 191 435 209 471 c 0
+ 233 520 258 554 289 577 c 0
+ 318 599 360 613 403 618 c 0
+ 408 619 415 619 417 619 c 0
+477 536 m 0
+ 465 537 429 537 421 536 c 0
+ 367 532 337 517 312 482 c 0
+ 287 449 267 402 242 326 c 0
+ 208 222 199 181 195 142 c 0
+ 193 120 195 101 200 95 c 0
+ 205 89 217 83 235 80 c 0
+ 256 76 309 76 331 81 c 0
+ 377 90 402 115 424 174 c 0
+ 429 189 511 449 516 466 c 0
+ 521 484 522 492 522 506 c 0
+ 522 516 522 518 520 522 c 0
+ 518 527 514 528 509 531 c 0
+ 501 534 492 535 477 536 c 0
+EndSplineSet
+EndChar
+
+StartChar: ae
+Encoding: 230 230 108
+Width: 576
+VWidth: 910
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+310 613 m 0
+ 325 614 372 614 385 613 c 0
+ 411 611 432 605 447 594 c 0
+ 453 589 462 581 466 576 c 2
+ 469 573 l 1
+ 475 579 l 2
+ 495 594 519 605 544 610 c 0
+ 608 625 665 601 687 553 c 0
+ 703 516 698 455 667 348 c 0
+ 656 310 647 280 644 275 c 0
+ 639 266 629 258 618 254 c 0
+ 613 253 594 253 512 253 c 2
+ 411 253 l 1
+ 409 246 l 2
+ 399 213 391 183 386 162 c 0
+ 379 125 377 91 382 86 c 0
+ 385 82 393 80 400 78 c 0
+ 413 76 449 77 466 81 c 0
+ 491 86 501 94 512 127 c 0
+ 515 133 517 141 519 144 c 0
+ 526 158 545 166 560 163 c 0
+ 581 159 597 140 595 119 c 0
+ 594 113 589 98 584 84 c 0
+ 564 36 532 9 483 0 c 0
+ 464 -5 453 -5 423 -5 c 0
+ 392 -6 384 -4 367 2 c 0
+ 348 8 330 20 319 33 c 2
+ 315 38 l 1
+ 306 31 l 2
+ 271 1 230 -12 189 -7 c 0
+ 182 -6 170 -6 163 -5 c 0
+ 131 -3 108 4 90 18 c 0
+ 65 37 54 66 55 106 c 0
+ 56 137 65 175 89 247 c 0
+ 123 347 162 394 231 409 c 0
+ 253 414 290 417 301 414 c 0
+ 318 409 338 411 360 422 c 0
+ 371 427 376 433 381 445 c 0
+ 392 466 403 511 400 522 c 0
+ 399 526 400 527 395 528 c 0
+ 386 531 369 532 340 532 c 0
+ 305 531 289 527 277 522 c 0
+ 271 518 264 511 259 497 c 0
+ 254 485 250 478 244 473 c 0
+ 237 468 229 466 221 465 c 0
+ 196 463 175 484 177 509 c 0
+ 178 518 182 529 190 544 c 0
+ 212 589 247 608 310 613 c 0
+598 529 m 0
+ 592 532 576 533 566 531 c 0
+ 551 527 535 521 523 511 c 0
+ 502 496 482 458 458 396 c 0
+ 453 382 437 338 437 336 c 2
+ 507 336 l 1
+ 577 336 l 1
+ 580 343 l 2
+ 594 389 607 443 612 475 c 0
+ 614 491 614 515 612 520 c 0
+ 609 524 604 527 598 529 c 0
+292 330 m 0
+ 279 333 255 331 239 326 c 0
+ 228 321 221 318 213 309 c 0
+ 196 292 182 265 167 219 c 0
+ 152 174 143 141 139 122 c 0
+ 138 112 137 92 138 87 c 0
+ 140 82 153 78 176 77 c 0
+ 184 77 193 77 197 76 c 0
+ 216 72 239 80 257 98 c 0
+ 266 107 273 117 280 132 c 0
+ 289 149 296 164 318 230 c 0
+ 319 233 321 243 323 251 c 0
+ 326 258 333 281 338 298 c 0
+ 343 316 348 330 348 330 c 2
+ 348 331 343 331 338 330 c 0
+ 325 329 303 328 292 330 c 0
+EndSplineSet
+EndChar
+
+StartChar: oslash
+Encoding: 248 248 109
+Width: 576
+VWidth: 910
+Flags: HW
+LayerCount: 2
+Fore
+SplineSet
+429 619 m 0
+ 447 620 508 619 523 618 c 0
+ 555 614 575 609 597 599 c 2
+ 606 594 l 1
+ 613 601 l 2
+ 626 613 639 618 654 613 c 0
+ 670 609 681 596 684 580 c 0
+ 687 565 682 554 668 539 c 2
+ 660 530 l 1
+ 662 521 l 2
+ 667 506 667 496 668 480 c 0
+ 669 455 665 427 658 393 c 0
+ 646 341 612 232 593 186 c 0
+ 558 104 515 54 459 25 c 0
+ 414 2 364 -6 288 -5 c 0
+ 250 -4 229 -2 205 4 c 0
+ 191 8 183 10 171 15 c 2
+ 162 20 l 1
+ 156 14 l 2
+ 143 2 130 -3 115 2 c 0
+ 99 6 87 19 84 35 c 0
+ 81 50 86 61 100 76 c 2
+ 108 85 l 1
+ 106 94 l 2
+ 101 109 101 119 100 135 c 0
+ 99 181 109 232 144 338 c 0
+ 160 391 172 420 187 452 c 0
+ 210 500 238 539 271 565 c 0
+ 311 597 362 614 429 619 c 0
+515 535 m 0
+ 502 536 447 537 432 536 c 0
+ 375 532 339 519 310 489 c 0
+ 276 455 254 410 226 322 c 0
+ 201 244 189 199 185 168 c 2
+ 184 162 l 1
+ 193 170 l 1
+ 236 214 543 530 543 531 c 1
+ 542 531 524 534 515 535 c 0
+583 449 m 0
+ 583 451 584 452 584 452 c 2
+ 583 452 225 85 225 84 c 1
+ 226 84 244 80 254 79 c 0
+ 269 77 310 77 331 78 c 0
+ 392 82 427 95 458 125 c 0
+ 490 158 513 201 540 285 c 0
+ 566 365 580 418 583 449 c 0
 EndSplineSet
 EndChar
 EndChars
