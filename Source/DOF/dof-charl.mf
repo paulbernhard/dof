@@ -644,7 +644,8 @@ begindofchar(hex"E7",13,xheight#,0,0);
   fi
 endchar;
 
-begindofchar("ø",16,xheight#,0,-.5s#);
+% ø
+begindofchar(hex"F8",16,xheight#,0,-.5s#);
   x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
   bot y1+o=top y3-h-o=0; y4=y2=h/2;
   super_half(4,3,2);
@@ -662,7 +663,8 @@ begindofchar("ø",16,xheight#,0,-.5s#);
   fi
 endchar;
 
-begindofchar("å",13,xheight#,0,0);
+% å
+begindofchar(hex"E5",13,xheight#,0,0);
   % draw different a for slanted typeface
   if slant<>0:
     rt x7=w-leftstemloc; x6=x1=x5=x7; 
@@ -717,35 +719,37 @@ begindofchar("å",13,xheight#,0,0);
   labels(range 12 thru 15);
 endchar;
 
-begindofchar("œ",15,xheight#,0,0);
-  % part "o"
-  x1=x5=w/2; x2=x4=.5[x1,x3]; 
-  x3=leftstemloc-o;
-  y1=h/2; top y2=h+o;
-  y3=h/2; y4=h-y2; y5=h-y1;
-  labels(range 1 thru 5);
-  super_half(1,2,3);
-  super_half(3,4,5);
-  % part "e"
-  x6=x1; x7=.5[x6,x8]; x8=w-x3;
-  x9=x7; x10=x8;
-  y6=ebarheight; y7=y2; y8=y6;
-  y9=y4; y10=1/3[y9,y6];
-  labels(range 6 thru 10);
-  super_half(6,7,8);
-  super_half(6,9,10);
-  draw z6--z8;
-  if cutoff:
-    z11=bot z8; z12=top z10;
-    penpos8(penx,0); penpos10(penx,0); penpos11(penx,0);
-    z12l=lft z12+expand*left; z12r=rt z12;
-    penlabels(8,10,11,12);
-    penstroke z8e--z11e;
-    penstroke z10e--z12e;
-  fi
-endchar;
+% œ is drawn, but doesn't yet have a glyph spot
+% begindofchar("œ",15,xheight#,0,0);
+%   % part "o"
+%   x1=x5=w/2; x2=x4=.5[x1,x3]; 
+%   x3=leftstemloc-o;
+%   y1=h/2; top y2=h+o;
+%   y3=h/2; y4=h-y2; y5=h-y1;
+%   labels(range 1 thru 5);
+%   super_half(1,2,3);
+%   super_half(3,4,5);
+%   % part "e"
+%   x6=x1; x7=.5[x6,x8]; x8=w-x3;
+%   x9=x7; x10=x8;
+%   y6=ebarheight; y7=y2; y8=y6;
+%   y9=y4; y10=1/3[y9,y6];
+%   labels(range 6 thru 10);
+%   super_half(6,7,8);
+%   super_half(6,9,10);
+%   draw z6--z8;
+%   if cutoff:
+%     z11=bot z8; z12=top z10;
+%     penpos8(penx,0); penpos10(penx,0); penpos11(penx,0);
+%     z12l=lft z12+expand*left; z12r=rt z12;
+%     penlabels(8,10,11,12);
+%     penstroke z8e--z11e;
+%     penstroke z10e--z12e;
+%   fi
+% endchar;
 
-begindofchar("æ",15,xheight#,0,0);
+% æ
+begindofchar(hex"E6",15,xheight#,0,0);
   % part "a"
   x1=leftstemloc; x2=.5[x1,x3];
   x3=w/2; x4=x8=x3; x5=x7=x2; x6=x1-o;

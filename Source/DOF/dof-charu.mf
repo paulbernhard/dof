@@ -578,7 +578,8 @@ begindofchar(hex"C7",14,cap#,0,0);
   fi
 endchar;
 
-begindofchar("Ø",20,cap#,0,-.5s#);
+% Ø
+begindofchar(hex"D8",20,cap#,0,-.5s#);
   x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
   bot y1+o=top y3-h-o=0; y4=y2=h/2;
   super_half(4,3,2);
@@ -596,7 +597,8 @@ begindofchar("Ø",20,cap#,0,-.5s#);
   fi
 endchar;
 
-begindofchar("Å",16,cap#,0,-.5s#);
+% Å
+begindofchar(hex"C5",16,cap#,0,-.5s#);
   lft x1=leftstemloc-.25s; x4=w-x1;
   x2+.35penx=x3-.35penx=w/2;
   bot y1=0; y4=y1; top y2=h; y3=y2;
@@ -628,40 +630,42 @@ begindofchar("Å",16,cap#,0,-.5s#);
   labels(range 13 thru 16);
 endchar;
 
-begindofchar("Œ",20,cap#,0,-.5s#);
-  % part "O"
-  x1=w/2; x2=.5[x1,x3]; 
-  lft x3=leftstemloc-o-.25s;
-  x4=x2; x5=x1;
-  y1=.6[y3,y2]; top y2=h+o;
-  y3=h/2; y4=h-y2; y5=h-y1;
-  labels(range 1 thru 5);
-  super_half(1,2,3);
-  super_half(3,4,5);
-  % part "E"
-  x6=x7=x9=x1; x8=x10+u=x11=w-x3-o;
-  y6=y4+o; y7=h-y6; y8=y7;
-  y9=y10=y3; y11=y6;
-  labels(range 6 thru 11);
-  draw z6--z7; draw z7--z8;
-  draw z9--z10; draw z6--z11;
-  if cutoff:
-    z12=bot z6; z13=top z7;
-    z14=rt z8; z15=rt z10;
-    z16=rt z11;
-    penpos6(penx,0); penpos12(penx,0);
-    penpos7(penx,0); penpos13(penx,0);
-    penpos8(peny,90); penpos14(peny,90);
-    penpos10(peny,90); penpos15(peny,90);
-    penpos11(peny,90); penpos16(peny,90);
-    penlabels(6,7,8,10,11,12,13,14,15,16);
-    penstroke z6e--z12e; penstroke z7e--z13e;
-    penstroke z8e--z14e; penstroke z10e--z15e;
-    penstroke z11e--z16e;
-  fi
-endchar;
+% Œ is drawn, but doesn't yet have a glyph spot
+% begindofchar("Œ",20,cap#,0,-.5s#);
+%   % part "O"
+%   x1=w/2; x2=.5[x1,x3]; 
+%   lft x3=leftstemloc-o-.25s;
+%   x4=x2; x5=x1;
+%   y1=.6[y3,y2]; top y2=h+o;
+%   y3=h/2; y4=h-y2; y5=h-y1;
+%   labels(range 1 thru 5);
+%   super_half(1,2,3);
+%   super_half(3,4,5);
+%   % part "E"
+%   x6=x7=x9=x1; x8=x10+u=x11=w-x3-o;
+%   y6=y4+o; y7=h-y6; y8=y7;
+%   y9=y10=y3; y11=y6;
+%   labels(range 6 thru 11);
+%   draw z6--z7; draw z7--z8;
+%   draw z9--z10; draw z6--z11;
+%   if cutoff:
+%     z12=bot z6; z13=top z7;
+%     z14=rt z8; z15=rt z10;
+%     z16=rt z11;
+%     penpos6(penx,0); penpos12(penx,0);
+%     penpos7(penx,0); penpos13(penx,0);
+%     penpos8(peny,90); penpos14(peny,90);
+%     penpos10(peny,90); penpos15(peny,90);
+%     penpos11(peny,90); penpos16(peny,90);
+%     penlabels(6,7,8,10,11,12,13,14,15,16);
+%     penstroke z6e--z12e; penstroke z7e--z13e;
+%     penstroke z8e--z14e; penstroke z10e--z15e;
+%     penstroke z11e--z16e;
+%   fi
+% endchar;
 
-begindofchar("Æ",20,cap#,0,-.5s#);
+% Æ
+begindofchar(hex"C6",20,cap#,0,-.5s#);
   if cutoff:
     lft x1=leftstemloc-.25s; x2=x3=x4-.35penx;
     x4=x5=x7=x9=x11=w/2+u; 
