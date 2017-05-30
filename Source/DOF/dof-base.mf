@@ -1,4 +1,5 @@
-% base
+% base file 
+% (parameters are set up in cut files, e.g. regular, italic, …)
 
 mode_setup;
 
@@ -16,6 +17,7 @@ def begindofchar(expr code,width_in_units,height,desc,s_correction) =
   beginchar(code,width_in_units*u#+2*s#+s_correction,height,desc);
   pickup round_pen; enddef;
 
+% "super-quarter"
 def super_arc(suffix i,j) = 
   draw z.i{0,y.j-y.i}
   ... (superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
@@ -42,11 +44,11 @@ if unknown slant: slant:=0 else: currenttransform:=
   identity slanted slant fi;
 
 % draw characters
-input dof-charu; % DOF-3 uppercase characters
-input dof-charl; % DOF-3 lowercase characters
-input dof-charfp; % DOF-3 figures and punctuation
+input dof-charu; % input to DOF uppercase characters
+input dof-charl; % input to DOF lowercase characters
+input dof-charfp; % input to DOF figures and punctuation
 
-% font metrics, etc.
+% font metrics for TeX
 font_size 10pt#;
 font_quad:=20u#;
 font_normal_space:=10u#;
@@ -55,4 +57,5 @@ font_normal_shrink:=3u#;
 font_identifier:="DOF-2" if slant<>0: & "_italic" fi;
 font_coding_scheme:="ASCII";
 
+% bye bye
 bye
