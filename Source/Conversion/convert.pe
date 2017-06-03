@@ -1,0 +1,31 @@
+#!/usr/local/bin/fontforge
+# format of arguments is file family weight version
+family=$argv[2]
+weight=$argv[3]
+version=$argv[4]
+copyright="DOF were created by Paul Bernhard and written in METAFONT (Donald E. Knuth). DOF is licensed under SIL Open Font License (OFL): http://scripts.sil.org/cms/scripts/page.php?site_id=nrsi&id=OFL . All files available at: https://github.com/paulbernhard/dof/"
+# open, reeconcode and scale
+Open($1)
+Reencode("iso8859-1")
+SelectAll()
+ScaleToEm(1024)
+# move misplaced glyphs to correct places
+# move degree from ř to °
+Select("rcaron")
+Cut()
+Select("degree")
+Paste() 
+# move apostrophe from quotation mark
+Select("quoteright")
+Cut()
+Select("quotesingle")
+Paste()
+# move accent grave from quoteleft
+Select("quoteleft")
+Cut()
+Select("grave")
+Paste()
+# generate names / copyright and save
+SetFontNames(family + "-" + weight,family,family + "-" + weight,weight,copyright,version)
+Save($1:r + ".sfd")
+Generate($1:r + ".ttf")

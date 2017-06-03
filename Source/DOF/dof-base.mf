@@ -49,7 +49,9 @@ input dof-charl; % input to DOF lowercase characters
 input dof-charfp; % input to DOF figures and punctuation
 
 % font metrics for TeX
-font_size 10pt#;
+% mftrace will use font_size to set the converted font size
+% set font_size to cap + descender height
+font_size 11.25pt#; 
 font_quad:=20u#;
 font_normal_space:=10u#;
 font_normal_stretch:=3u#;

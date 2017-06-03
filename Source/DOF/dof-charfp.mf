@@ -384,6 +384,7 @@ begindofchar("*",14,cap#,0,-s#);
 endchar;
 
 % degree
+% !! move this later with fontforge to the right glyph slot !!
 begindofchar(hex"B0",12,cap#,0,-s#);
   x1=x3=w/2; lft x4=leftstemloc-.5s; x2=w-x4;
   top y3=h; y1=y3-(h-xheight+u);
