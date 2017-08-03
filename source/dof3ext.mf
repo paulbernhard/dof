@@ -27,4 +27,4 @@ peny#:=.8pt#; % height of (elliptical) pen nib
 penangle:=0; % angle of pen nib
 puncscale:=1; % factor to scale the pen nib for punctuations, as in period or colon
 
-input dof-base; % input parameters to base file
+input dofbase; % input parameters to base file

@@ -1,0 +1,65 @@
+{\rtf1\ansi\ansicpg1252\cocoartf1404\cocoasubrtf470
+{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww12400\viewh14500\viewkind0
+\pard\tx566\tx1133\tx1700\tx2267\tx2834\tx3401\tx3968\tx4535\tx5102\tx5669\tx6236\tx6803\pardirnatural\partightenfactor0
+
+\f0\fs32 \cf0 ocean of a machine\
+contact with the machine surface\
+collective response of the machine\
+the opaque / reflective surface hides the machine, the fragility / strength\
+\
+the interface as a cut in the surface\
+two sides of the surface, top = frontend, bottom = backend\
+communication from client-surface-machine and machine-surface-client\
+the interface as dictionnary\
+cuts through the surface seamlessly for a communication, \
+hides the original parts as a tactile mask - often superimposed by a high sensuality\
+through this cut we understand each other natively\
+\
+\
+You machine, you complex ocean of functionality, deeper constantly. I contact you or your eco-system of algorythmic creatures and waiting for a collective response. I could not see or dive through your milky and reflective surface, to judge your fragility, strength or maturity.\
+\
+An interface cuts through your surface to enable our communication. It reflects each of our faces and mediates between them for us to talk a common mother tongue. It is you or a seamless dictionary with high sensuality to mask your and my nature.\
+\
+DOF are typefaces created to interface the exhibition \'84The Weathers They Live In\'93. Written in METAFONT (a typographic description language created by Donald E. Knuth), the source code of DOF can react with a set of adjustable parameters to render cuts according to different circumstances. At present, the three typefaces DOF-1, DOF-2, DOF-3 were modulated by the major parameters Slant, Unit-Width, Pen-Width, Pen-Ratio, Opendraw, Overdraw, Cutoff and Superness throughout the multiple stages of the exhibition. DOF and its typefaces are licensed under the SIL and are free to be used. Further glyphs and parameters can be developed in the future.\
+\
+\ul DOCS\ulnone \
+\
+This is a basic introduction on DOF\'92s current parameters and how to render different cuts. For a deeper understanding of METAFONT read \'84The concept of a Meta-Font\'93 and the \'84METAFONTbook\'93.\
+\
+\ul Parameters\ulnone \
+\
+All parameters have to be defined in a setup-file. Example images of different parameter settings can be found in Specimen/Research and all settings for released typefaces can be found in Source/DOF, e.g. dof-1-regular.mf.\
+\
+Slant = controls the font\'92s slant (numeric value, 0 = no slant)\
+u = basic character width (value in pt, e.g. 3/9pt)\
+cap = capitals / ascender height (value in pt, e.g. 9pt)\
+xheight = x-height relative to cap-height\
+figheight = figures\'92 height relative to cap-height\
+desc = descender height\
+s = average distance of character to sidebearings (value in u, e.g. 2u)\
+o = overshoot for round characters, as in O or U (value in pt, e.g. 1/18pt)\
+barheight = height of the horizontal bar, as in H\
+ebarheight = height of the horizontal bar, as in e\
+\
+opendraw = overdraw certain lines, as the horizontal bars of E (value in u, e.g. 0.5u, 0 = no overdraw)\
+opendraw = leave certain circles open, as in %-symbol or 0 (boolean)\
+superness = controls the corner-expansion of all round shapes, as in O, U or g (numeric value, a higher value expands, a lower value implodes the corners, 0.74 = regular ellipse)\
+cutoff = cut off the pen at stroke endings (boolean)\
+expand = if cutoff is true, expand strokes towards their endings (value in pt, e.g. 1/10pt)\
+compactcor = if cutoff is true, this thins out strokes to correct a compaction in certain letters, as in the top of A or the middle of M (numeric value)\
+\
+penx = width of elliptical nib (value in pt, e.g. 1pt)\
+peny = height of eiilptical nib (value in pt, e.g. 1pt)\
+penangle = angle of pen nib (numeric value for a degree in counter-clockwise rotation, 0 = horizontal)\
+puncscale = scale the pen nib for punctuations, as in period or colon (numeric value, e.g. 1.2)\
+\
+\ul File / Folder Structure\ulnone \
+\
+Source contains all of DOF\'92s source files which are needed to render a cut. The files can be divided in setup-, base- and character-files. \
+\
+Setup-files (e.g. dof-3-regular.mf) set up all basic parameters (all parameters have to be defined here) and pass the to the dof-base.mf. \
+The base-file dof-base.mf sets basic helper methods, converts all units and defines the font metrics. For a later conversion to an outline font the font_size has to be defined here and should be an addition of the ascender and descender height (e.g. ascender = 9pt, descender = 2.5pt, font_size = 11.5pt).\
+\
+\ul References}
