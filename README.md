@@ -18,25 +18,25 @@ To generate DOF families with the following steps METAFONT, GFtoDVI and XDVI are
 
 Visualisations of major parameters can be found at [examples/parameters/](https://github.com/paulbernhard/dof/tree/master/examples/parameters/). Parameter settings of existing families can be found in the respective [outline/](https://github.com/paulbernhard/dof/tree/master/outline/) folder (e.g. [dof-1-parameters.txt](https://github.com/paulbernhard/dof/tree/master/Outline/DOF-1/dof-1-parameters.txt)). 
 
-`slant = 0` positive or negative font slant (_numeric value_, _0_ = no slant)
-`u = 3/9pt` unit width defines the basic character width
-`cap = 9pt` capital height
-`xheight = 0.75cap` x-height
-`figheight = cap` figure height
-`desc = 2.25pt` descender depth
-`s = 2u` character's distance to its sidebearings
-`o = 1/18pt` vertical overshoot of round characters, as in O or U
-`barheight = 0.5cap` height of horizontal bar, as in H
-`ebarheight = 0.5xheight` height of horizontal bar in lowercase, as in e
-`overdraw = 0.5u` overdraw the stroke endings of certain characters, as in E, I or R
-`opendraw = true` leave circles of certain characters open, as in %-, °-symbol and 0 (boolean _true_ or _false_)
-`superness = 0.74` controls the corner expansion of round shapes (super-ellipse), as in O, S or g (_numeric value_ between _0_ and _1_, higher values expand and lower values implode the character's corners, _0.74_ equals a regular round ellipse)
-`cutoff = false` cut off the stroke endings (boolean _true_ or _false_)
-`expand = 1/10pt` _if cutoff = true_, controls the stroke expansion towards cut off stroke endings
-`compactcor = 0.7` _if cutoff = true_, thin out strokes to correct compaction, as in A or M (_numeric value_ between _0_ and _1_)
-`penx = 1.1pt` stroke-width
-`peny = 0.4pt` stroke-height
-`penangle = 0` pen angle (degrees as _numeric value_)
+`slant = 0` positive or negative font slant (_numeric value_, _0_ = no slant)  
+`u = 3/9pt` unit width defines the basic character width  
+`cap = 9pt` capital height  
+`xheight = 0.75cap` x-height  
+`figheight = cap` figure height  
+`desc = 2.25pt` descender depth  
+`s = 2u` character's distance to its sidebearings  
+`o = 1/18pt` vertical overshoot of round characters, as in O or U  
+`barheight = 0.5cap` height of horizontal bar, as in H  
+`ebarheight = 0.5xheight` height of horizontal bar in lowercase, as in e  
+`overdraw = 0.5u` overdraw the stroke endings of certain characters, as in E, I or R  
+`opendraw = true` leave circles of certain characters open, as in %-, °-symbol and 0 (boolean _true_ or _false_)  
+`superness = 0.74` controls the corner expansion of round shapes (super-ellipse), as in O, S or g (_numeric value_ between _0_ and _1_, higher values expand and lower values implode the character's corners, _0.74_ equals a regular round ellipse)  
+`cutoff = false` cut off the stroke endings (boolean _true_ or _false_)  
+`expand = 1/10pt` _if cutoff = true_, controls the stroke expansion towards cut off stroke endings  
+`compactcor = 0.7` _if cutoff = true_, thin out strokes to correct compaction, as in A or M (_numeric value_ between _0_ and _1_)  
+`penx = 1.1pt` stroke-width  
+`peny = 0.4pt` stroke-height  
+`penangle = 0` pen angle (degrees as _numeric value_)  
 `puncscale = 1.2` scale of pen for dots in punctuation
 
 ## Structure and Rendering
