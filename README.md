@@ -1,4 +1,4 @@
-![DOF Specimen](examples/DOF_specimen.png?raw=true "DOF Specimen")
+![DOF Specimen](examples/DOF_specimen_02.png?raw=true "DOF Specimen")
 
 # DOF
 
