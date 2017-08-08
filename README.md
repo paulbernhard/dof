@@ -1,7 +1,7 @@
 ![DOF Specimen](examples/DOF_title.png?raw=true "DOF Specimen")
 ![DOF Specimen](examples/DOF_specimen_04.png?raw=true "DOF Specimen")
 
-DOF is a type(inter)face initiated on the occasion of the exhibition and research project [The Weathers They Live In](http://twtli.nicolaarthen.com). Written in the typographic description language METAFONT, it can be understood as a set of genes to generate different families by the regulation of parameters. 
+DOF is a type(inter)face initiated on the occasion of the exhibition and research project [The Weathers They Live In](http://twtli.nicolaarthen.com). Written in the typographic description language METAFONT, DOF can be understood as a set of genes to generate different font families by the regulation of parameters. 
 
 At present DOF supports the ASCII character set (with some additional characters) and its major parameters are `unit-width`, `stroke-width` and `-height`, `slant`, `overdraw`, `superness` and `cutoff (/ expand)`. Throughout the development the three families [DOF-1](https://github.com/paulbernhard/dof/tree/master/outline/DOF-1), [DOF-2](https://github.com/paulbernhard/dof/tree/master/outline/DOF-2) and [DOF-3](https://github.com/paulbernhard/dof/tree/master/outline/DOF-3) have been released and converted to outline fonts (TrueType).
 
