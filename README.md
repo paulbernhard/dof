@@ -1,4 +1,5 @@
-![DOF Specimen](examples/DOF_specimen_03.png?raw=true "DOF Specimen")
+![DOF Specimen](examples/DOF_title.png?raw=true "DOF Specimen")
+![DOF Specimen](examples/DOF_specimen_04.png?raw=true "DOF Specimen")
 
 DOF is a type(inter)face initiated on the occasion of the exhibition and research project [The Weathers They Live In](http://twtli.nicolaarthen.com). Written in the typographic description language METAFONT, it can be understood as a set of genes to generate different families by the regulation of parameters. 
 
