@@ -2,7 +2,7 @@
 
 DOF is a type(inter)face initiated on the occasion of the exhibition and research project [The Weathers They Live In](http://twtli.nicolaarthen.com). Written in the typographic description language _METAFONT_, it can be understood as a set of genes to generate different families by the regulation of parameters. 
 
-At present DOF supports the ASCII character set (with some additional characters) and its major parameters are `unite-width`, `stroke-width` and `-height`, `slant`, `overdraw`, `superness` and `cutoff (/ expand)`. Throughout the development the three families [DOF-1](https://github.com/paulbernhard/dof/tree/master/Outline/DOF-1), [DOF-2](https://github.com/paulbernhard/dof/tree/master/Outline/DOF-2) and [DOF-3](https://github.com/paulbernhard/dof/tree/master/Outline/DOF-3) have been released and converted to outline fonts.
+At present DOF supports the ASCII character set (with some additional characters) and its major parameters are `unite-width`, `stroke-width` and `-height`, `slant`, `overdraw`, `superness` and `cutoff (/ expand)`. Throughout the development the three families [DOF-1](https://github.com/paulbernhard/dof/tree/master/outline/DOF-1), [DOF-2](https://github.com/paulbernhard/dof/tree/master/outline/DOF-2) and [DOF-3](https://github.com/paulbernhard/dof/tree/master/outline/DOF-3) have been released and converted to outline fonts.
 
 DOF is licenesed under the _SIL Open Font License_, its source code and outline fonts are free to use. Further parameters and characters will be developed in the future. For requests contact me mail (at) pbernhard.com.
 
@@ -16,7 +16,7 @@ To generate DOF families with the following steps METAFONT, GFtoDVI and XDVI are
 
 ## Parameters
 
-Visualisations of major parameters can be found at [examples/parameters/](https://github.com/paulbernhard/dof/tree/master/examples/parameters/). Parameter settings of existing families can be found in the respective [outline/](https://github.com/paulbernhard/dof/tree/master/Outline/) folder (e.g. [dof-1-parameters.txt](https://github.com/paulbernhard/dof/tree/master/Outline/DOF-1/dof-1-parameters.txt)). 
+Visualisations of major parameters can be found at [examples/parameters/](https://github.com/paulbernhard/dof/tree/master/examples/parameters/). Parameter settings of existing families can be found in the respective [outline/](https://github.com/paulbernhard/dof/tree/master/outline/) folder (e.g. [dof-1-parameters.txt](https://github.com/paulbernhard/dof/tree/master/Outline/DOF-1/dof-1-parameters.txt)). 
 
 `slant = 0` positive or negative font slant (_numeric value_, _0_ = no slant)
 `u = 3/9pt` unit width defines the basic character width
@@ -65,7 +65,7 @@ METAFONT was originally meant to provide bitmap fonts for TeX, thus it is not ab
 
     $ mftrace newdof.mf
 
-The resulting output `newdof.pfa` (PostScript) might have some misplaced glyphs, missing font information or encoding which can be done with any font editor, such as _[FontForge](https://fontforge.github.io/en-US/)_. DOF has a _FontForge_ script [outline/convert.pe](https://github.com/paulbernhard/dof/tree/master/source/) to fix its misplaced glyphs, add font information and output a ISO8859-1 TrueType file. Move the PostScript file `newdof.pfa` in the same folder as the `convert.pe` script and run with the following arguments…
+The resulting output `newdof.pfa` (PostScript) might have some misplaced glyphs, missing font information or encoding which can be done with any font editor, such as _[FontForge](https://fontforge.github.io/en-US/)_. DOF has a _FontForge_ script [outline/convert.pe](https://github.com/paulbernhard/dof/tree/master/outline/convert.pe) to fix its misplaced glyphs, add font information and output a ISO8859-1 TrueType file. Move the PostScript file `newdof.pfa` in the same folder as the `convert.pe` script and run with the following arguments…
 
     $ fontforge -script convert.pe newdof.pfa familyname fontweight versionnumber
 
