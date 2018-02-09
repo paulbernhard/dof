@@ -75,3 +75,7 @@ The resulting output `newdof.pfa` (PostScript) might have some misplaced glyphs,
 - _[The Concept of a Meta-Font](http://www.zigzaganimal.be/elements/the-concept-of-metafont.pdf)_ by Donald E. Knuth, 1982
 - _[METAFONTbook](http://www.ctex.org/documents/shredder/src/mfbook.pdf)_ by Donald E. Knuth, Reading, Massachusetts: Addison-Wesley, 1986 (PDF version without figures)
 - _[mftrace - Scalable PostScript Fonts  for MetaFont](http://lilypond.org/mftrace/)_ by Han-Wen Nienhuys
+
+## ToDo
+
+- Add accents (à, è, é, spanisch wave, etc.) for Miguel. (to surf)
