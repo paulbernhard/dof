@@ -1,0 +1,28 @@
+% DOF Accents
+
+% accent grave
+begindofchar(oct"022",14,cap#,0,0);
+  x1=w/2; bot y1=h+accdist;
+  x2=x1+accwidth; top y2=y1+accheight;
+  draw z1--z2;
+endchar;
+
+% accent acute
+begindofchar(oct"023",4,cap#,0,0);
+  x1=w/2; bot y1=h+accdist;
+  x2=x1-accwidth; top y2=y1+accheight;
+  draw z1--z2;
+endchar;
+
+% umlaut
+begindofchar(oct"177",4,cap#,0,0);
+  x1=w/2-.5accwidth-.25penx; x2=w-x1;
+  y1=y2=h+accdist;
+  drawdot z1; drawdot z2;
+endchar;
+
+% sedilla accent
+% …
+
+% check accent
+% …

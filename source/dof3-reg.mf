@@ -10,6 +10,9 @@ figheight#:=cap#; % figures' height relative to cap-height
 desc#:=2.25pt#; % descender-height
 s#:=1.75u#; % average distance of character to sidebearings
 o#:=1/18pt#; % top- / bottom-overshoot for round characters, as for O or U
+accdist#:=0; % distance between character's top and accent
+accheight#:=u#; % height of accent
+accslant#:=1u#; % horizontal slant of accent
 
 leftstemloc#:=s#; % location of the characters' left stem, control this with the sidebearing value
 barheight#:=.5*cap#; % height of horizontal bar, as in H
@@ -20,7 +23,7 @@ opendraw:=false; % leave certain circles open (currently in %-, °-symbol and 0)
 superness:=.8; % superness controls the corner-expansion of all round shapes (as in O, S or g). A higher value expands the corners, a lower value implodes the corners, a value of 0.74 equals to regular round ellipses
 cutoff:=true; % cut off the pen at stroke endings (true or false)
 expand#:=1/10pt#; % if cutoff = true, expand the pen stroke towards the stroke ending, as in C
-compactcor:=.62; % if cutoff = true, thin out strokes to correct compaction in certain letters, as in the top of A or the middle of M 
+compactcor:=.7; % if cutoff = true, thin out strokes to correct compaction in certain letters, as in the top of A or the middle of M 
 
 penx#:=2.55pt#; % width of (elliptical) pen nib
 peny#:=.8pt#; % height of (elliptical) pen nib

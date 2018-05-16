@@ -1,4 +1,4 @@
-% lowercase characters
+% lower case
 
 begindofchar("a",13,xheight#,0,0);
   % draw different a for slanted typeface
@@ -45,6 +45,8 @@ begindofchar("a",13,xheight#,0,0);
       penlabels(1,4,10,11);
     fi
   fi
+
+  picture pic_lowera; pic_lowera := currentpicture;
 endchar;
 
 begindofchar("b",13,cap#,0,0);
@@ -122,13 +124,37 @@ begindofchar("e",13,xheight#,0,-.25s#);
   fi
 endchar;
 
-begindofchar("f",10,cap#,0,-.75s#);
+% original DOF
+% begindofchar("f",10,cap#,0,-.75s#);
+%   lft x1=leftstemloc; 
+%   x2=x5+overdraw=x7+overdraw=x8-overdraw=x1;
+%   rt x4=w-leftstemloc+.75s; x6=.3[x4,x5]; x3=.5[x2,x4];
+%   bot y5=barheight; y6=y5;
+%   bot y1=0; y7=y8=y1; top y3-o=h;
+%   y2=y4=h-(.8[x2,x4]-x2);
+%   draw z1--z2; 
+%   super_half(2,3,4);
+%   draw z5--z6; draw z7--z8;
+%   labels(range 1 thru 8);
+%   if cutoff:
+%     z9=bot z1; z10=rt z6; z11=bot z4;
+%     penpos1(penx,0); penpos9(penx,0);
+%     penpos6(peny,90); penpos10(peny,90);
+%     penpos4(penx,0); 
+%     z11l=lft z11+expand*left; z11r=rt z11;
+%     penstroke z1e--z9e; penstroke z4e--z11e; penstroke z6e--z10e;
+%     penlabels(1,4,6,9,10,11);
+%   fi
+% endchar;
+
+begindofchar("f",12,cap#,0,-.75s#);
   lft x1=leftstemloc; 
   x2=x5+overdraw=x7+overdraw=x8-overdraw=x1;
   rt x4=w-leftstemloc+.75s; x6=.3[x4,x5]; x3=.5[x2,x4];
   bot y5=barheight; y6=y5;
   bot y1=0; y7=y8=y1; top y3-o=h;
-  y2=y4=h-(.8[x2,x4]-x2);
+  y2=h-(.8[x2,x4]-x2);
+  y4=h-(.4[x2,x4]-x2);
   draw z1--z2; 
   super_half(2,3,4);
   draw z5--z6; draw z7--z8;
@@ -521,263 +547,4 @@ begindofchar("z",13,xheight#,0,-.5s#);
     penstroke z9e--z10e;
     penlabels(range 5 thru 10);
   fi 
-endchar;
-
-% ä
-begindofchar(hex"E4",13,xheight#,0,0);
-  % draw different a for slanted typeface
-  if slant<>0:
-    rt x7=w-leftstemloc; x6=x1=x5=x7; 
-    lft x3=leftstemloc-o; x2=x4=w/2;
-    bot y7=top y6-h=0; y4+o=y7; y2-o=y6; y3=h/2; 
-    y5=.6[y4,y3]; y1=h-y5;
-    super_half(5,4,3);
-    super_half(3,2,1);
-    draw z6--z7;
-    labels(range 1 thru 7);
-    if cutoff:
-      z8=bot z7; z9=top z6;
-      z7l=z7; z7r=rt z7;
-      z8l=z8; z8r=rt z8;
-      z6l=z6; z6r=rt z6;
-      z9l=z9; z9r=rt z9;
-      penstroke z7e--z8e;
-      penstroke z6e--z9e;
-      penlabels(6,7,8,9);
-    fi
-  else:
-    lft x1=leftstemloc; x7=x1;
-    x2=x6=x8=w/2;
-    x3=x4=x5=x9=w-x1;
-    bot y4=0; y8=y4-o; y2=h-y8;
-    top y6=2/3*h+o; y7=1/2[y8,y6]; y9=2/3[y8,y6];
-    y1=2/3[y6,y2]; y3=1/3[y6,y2]; y5=y3+.5u;
-    super_half(1,2,3);
-    draw z3--z4;
-    super_arc(5,6);
-    super_crescent(6,7,8);
-    super_half(7,8,9);
-    labels(range 1 thru 9);
-    if cutoff:
-      z10=bot z1; z11=bot z4;
-      penpos1(penx,0); 
-      z10l=lft z10; z10r=rt z10+expand*right;
-      z4l=z4; z4r=rt z4;
-      z11l=z11; z11r=rt z11;
-      penstroke z1e--z10e;
-      penstroke z4e--z11e;
-      penlabels(1,4,10,11);
-    fi
-  fi
-  % add umlaut dots
-  pickup currentpen scaled puncscale;
-  rt x12=w/2-.2penx; x13=w-x12;
-  bot y12=h+u; y13=y12;
-  drawdot z12; drawdot z13;
-  labels(12,13);
-endchar;
-
-% ö
-begindofchar(hex"F6",16,xheight#,0,-.5s#);
-  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
-  bot y1+o=top y3-h-o=0; y4=y2=h/2;
-  super_half(4,3,2);
-  super_half(4,1,2);
-  labels(range 1 thru 4);
-  % add umlaut dots
-  pickup currentpen scaled puncscale;
-  rt x5=w/2-.2penx; x6=w-x5;
-  bot y5=h+u; y6=y5;
-  drawdot z5; drawdot z6;
-  labels(5,6);
-endchar;
-
-% ü
-begindofchar(hex"FC",13,xheight#,0,0);
-  lft x6=leftstemloc; x5=x6; 
-  x1=x2=x3=w-x6; x4=.5[x5,x3];
-  bot y1=0; y4=y1-o;
-  top y2=h; y6=y2;
-  y5=.5[y4,y6]; y3=.6[y4,y5];
-  draw z1--z2; 
-  super_half(3,4,5);
-  draw z5--z6;
-  labels(range 1 thru 6);
-  if cutoff:
-    z7=bot z1; z8=top z2; z9=top z6;
-    penpos1(penx,0); z7l=z7; z7r=rt z7+.5expand*right;
-    penpos2(penx,0); penpos8(penx,0);
-    penpos6(penx,0); penpos9(penx,0);
-    penstroke z1e--z7e; penstroke z2e--z8e; penstroke z6e--z9e;
-    penlabels(1,2,6,7,8,9);
-  fi
-  % add umlaut dots
-  pickup currentpen scaled puncscale;
-  rt x10=w/2-.2penx; x11=w-x10;
-  bot y10=h+u; y11=y10;
-  drawdot z10; drawdot z11;
-  labels(10,11);
-endchar;
-
-% ç
-begindofchar(hex"E7",13,xheight#,0,0);
-  lft x3+o=leftstemloc; x1=x5=w-x3-o; x2=x4=w/2;
-  bot y2=0-o; y3=h/2; y4=h-y2;
-  y1=.3[y2,y3]; y5=h-y1;
-  x8=x2; y8=-.15xheight-o;
-  super_half(3,2,1);
-  super_half(3,4,5);
-  labels(range 1 thru 5);
-  if cutoff:
-    z6=top z1; z7=bot z5;
-    penpos1(penx,0); penpos5(penx,0); 
-    z6l=lft z6+expand*left; z6r=rt z6;
-    z7l=lft z7+expand*left; z7r=rt z7;
-    penpos2(penx,0); penpos8(penx,0);
-    penstroke z1e--z6e;
-    penstroke z5e--z7e;
-    penstroke z2e{right}..z8e{left};
-    penlabels(1,5,6,7,8);
-  else:
-    draw z2{right}..z8{left};
-    labels(8);
-  fi
-endchar;
-
-% ø
-begindofchar(hex"F8",16,xheight#,0,-.5s#);
-  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
-  bot y1+o=top y3-h-o=0; y4=y2=h/2;
-  super_half(4,3,2);
-  super_half(4,1,2);
-  labels(range 1 thru 4);
-  x5=x4+.5s; x6=w-x5;
-  y5=y1+o; y6=h-y5;
-  if cutoff:
-    penpos5(compactcor*penx,-45); penpos6(compactcor*penx,-45);
-    penstroke z5e--z6e;
-    penlabels(5,6);
-  else:
-    draw z5--z6;
-    labels(5,6);
-  fi
-endchar;
-
-% å
-begindofchar(hex"E5",13,xheight#,0,0);
-  % draw different a for slanted typeface
-  if slant<>0:
-    rt x7=w-leftstemloc; x6=x1=x5=x7; 
-    lft x3=leftstemloc-o; x2=x4=w/2;
-    bot y7=top y6-h=0; y4+o=y7; y2-o=y6; y3=h/2; 
-    y5=.6[y4,y3]; y1=h-y5;
-    super_half(5,4,3);
-    super_half(3,2,1);
-    draw z6--z7;
-    labels(range 1 thru 7);
-    if cutoff:
-      z8=bot z7; z9=top z6;
-      z7l=z7; z7r=rt z7;
-      z8l=z8; z8r=rt z8;
-      z6l=z6; z6r=rt z6;
-      z9l=z9; z9r=rt z9;
-      penstroke z7e--z8e;
-      penstroke z6e--z9e;
-      penlabels(6,7,8,9);
-    fi
-  else:
-    lft x1=leftstemloc; x7=x1;
-    x2=x6=x8=w/2;
-    x3=x4=x5=x9=w-x1;
-    bot y4=0; y8=y4-o; y2=h-y8;
-    top y6=2/3*h+o; y7=1/2[y8,y6]; y9=2/3[y8,y6];
-    y1=2/3[y6,y2]; y3=1/3[y6,y2]; y5=y3+.5u;
-    super_half(1,2,3);
-    draw z3--z4;
-    super_arc(5,6);
-    super_crescent(6,7,8);
-    super_half(7,8,9);
-    labels(range 1 thru 9);
-    if cutoff:
-      z10=bot z1; z11=bot z4;
-      penpos1(penx,0); 
-      z10l=lft z10; z10r=rt z10+expand*right;
-      z4l=z4; z4r=rt z4;
-      z11l=z11; z11r=rt z11;
-      penstroke z1e--z10e;
-      penstroke z4e--z11e;
-      penlabels(1,4,10,11);
-    fi
-  fi
-  % add circle on top
-  x12=x14=w/2; x13-2u=x15+2u=x12;
-  bot y12=h+.5u; y14=y12+(1[x15,x13]-x15);
-  y13=y15=.5[y12,y14];
-  pickup pencircle xscaled .55penx yscaled .55peny rotated penangle;
-  super_crescent(12,13,14);
-  super_crescent(14,15,12);
-  labels(range 12 thru 15);
-endchar;
-
-% œ is drawn, but doesn't yet have a glyph spot
-% begindofchar("œ",15,xheight#,0,0);
-%   % part "o"
-%   x1=x5=w/2; x2=x4=.5[x1,x3]; 
-%   x3=leftstemloc-o;
-%   y1=h/2; top y2=h+o;
-%   y3=h/2; y4=h-y2; y5=h-y1;
-%   labels(range 1 thru 5);
-%   super_half(1,2,3);
-%   super_half(3,4,5);
-%   % part "e"
-%   x6=x1; x7=.5[x6,x8]; x8=w-x3;
-%   x9=x7; x10=x8;
-%   y6=ebarheight; y7=y2; y8=y6;
-%   y9=y4; y10=1/3[y9,y6];
-%   labels(range 6 thru 10);
-%   super_half(6,7,8);
-%   super_half(6,9,10);
-%   draw z6--z8;
-%   if cutoff:
-%     z11=bot z8; z12=top z10;
-%     penpos8(penx,0); penpos10(penx,0); penpos11(penx,0);
-%     z12l=lft z12+expand*left; z12r=rt z12;
-%     penlabels(8,10,11,12);
-%     penstroke z8e--z11e;
-%     penstroke z10e--z12e;
-%   fi
-% endchar;
-
-% æ
-begindofchar(hex"E6",15,xheight#,0,0);
-  % part "a"
-  x1=leftstemloc; x2=.5[x1,x3];
-  x3=w/2; x4=x8=x3; x5=x7=x2; x6=x1-o;
-  y1=1/3[y2,y5]; top y2=h; y3=2/3[y2,y5];
-  y4=y3+.5u; top y5=2/3*h+o; 
-  y6=.5[y7,y5]; bot y7+o=0; y8=2/3[y8,y6];
-  labels(range 1 thru 8);
-  super_half(1,2,3);
-  super_arc(4,5);
-  super_crescent(5,6,7);
-  super_arc(8,7);
-  % part "e"
-  x9=x8; x10=x12=w-x2; x11=x13=w-x1;
-  y9=y11=ebarheight; y10=y2; 
-  y12=y7; y13=1/3[y12,y9];
-  labels(range 9 thru 13);
-  super_half(9,10,11);
-  super_half(9,12,13);
-  draw z9--z11;
-  if cutoff:
-    z14=bot z1; z15=bot z11; z16=top z13;
-    penpos1(penx,0); penpos11(penx,0); 
-    penpos13(penx,0); penpos15(penx,0); 
-    z14l=lft z14; z14r=rt z14+expand*right;
-    z16l=lft z16+expand*left; z16r=rt z16;
-    penlabels(1,11,13,14,15,16);
-    penstroke z1e--z14e;
-    penstroke z11e--z15e;
-    penstroke z13e--z16e;
-  fi
 endchar;

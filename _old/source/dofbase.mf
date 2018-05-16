@@ -1,6 +1,9 @@
-% DOF Base
+% base file 
+% (parameters are set up in cut files, e.g. dof-1-regular, …)
 
-% convert sharp values
+% mode_setup;
+
+% define pixels / pen(s)
 define_pixels(u,cap,desc,xheight,s,ygap,overdraw,velocity,expand,accdist,accwidth,accheight);
 define_corrected_pixels(o);
 define_blacker_pixels(penx,peny);
@@ -8,19 +11,19 @@ pickup pencircle xscaled penx yscaled peny rotated penangle; round_pen:=savepen;
 define_good_y_pixels(barheight,ebarheight);
 define_good_x_pixels(leftstemloc);
 
-% dof char method
+% dof char methods
 def begindofchar(expr code,width_in_units,height,desc,s_correction) = 
   % set character dimensions: width in u, height, descender, correction for sidebearings
   beginchar(code,width_in_units*u#+2*s#+s_correction,height,desc);
   pickup round_pen; enddef;
 
-% super-quarter method
+% "super-quarter"
 def super_arc(suffix i,j) = 
   draw z.i{0,y.j-y.i}
   ... (superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
   ... z.j enddef;
 
-% horizontal super-half method
+% horizontal "super-half"
 def super_half(suffix i,j,k) =
   draw z.i{0,y.j-y.i}
   ... (superness[x.j,x.i],superness[y.i,y.j]){z.j-z.i}
@@ -28,7 +31,7 @@ def super_half(suffix i,j,k) =
   ... (superness[x.j,x.k],superness[y.k,y.j]){z.k-z.j}
   ... z.k{0,y.k-y.j} enddef;
 
-% vertical super-half method
+% vertical "super-half"
 def super_crescent(suffix i,j,k) =
   draw z.i{x.j-x.i,0}
   ... (superness[x.i,x.j],superness[y.j,y.i]){z.j-z.i}
@@ -36,7 +39,31 @@ def super_crescent(suffix i,j,k) =
   ... (superness[x.k,x.j],superness[y.j,y.k]){z.k-z.j}
   ... z.k{x.k-x.j,0} enddef;
 
-% set global slant
+
+% draw an accent (grave or acute)
+% (dir: 1 -> acute, dir: -1 -> grave)
+% def draw_accent(suffix i,j)(expr dir) = 
+%   if accdist>0:
+%     x.i=w/2-dir*(accslant/2); 
+%   else:
+%     x.i=w/2;
+%   fi
+%   x.j=x.i+dir*accslant;
+%   y.j=y.i+accheight;
+%   if cutoff:
+%     y.i=h+accdist;
+%     penpos.i(penx,0);
+%     penpos.j(penx,0);
+%     penstroke z.i.e--z.j.e;
+%     penlabels(i,j);
+%   else:
+%     bot y.i=h+accdist;
+%     draw z.i--z.j;
+%     labels(i,j);
+%   fi
+% enddef;
+
+% slant
 if unknown slant: slant:=0 else: currenttransform:=
   identity slanted slant fi;
 
@@ -50,8 +77,17 @@ if unknown slant: slant:=0 else: currenttransform:=
 % input dofd; % digits
 % input dofspl; % special lower case
 % input dofspu; % special lower case
+% % input dofaccl; % lower case accents
+% % input dofaccu; % upper case accents
 % input dofsym; % symbols
 % input dofp; % punctuation
-input dofacc; % accents
+input dofacc;
+
+% font metrics for TeX
+% mftrace will use font_size to set the converted font size
+% set font_size to cap + descender height
+% font_size 11.25pt#;
+% font_identifier:="DOF" if slant<>0: & "_italic" fi;
+% font_coding_scheme:="ASCII";
 
 bye

@@ -1,0 +1,550 @@
+% lower case
+
+begindofchar("a",13,xheight#,0,0);
+  % draw different a for slanted typeface
+  if slant<>0:
+    rt x7=w-leftstemloc; x6=x1=x5=x7; 
+    lft x3=leftstemloc-o; x2=x4=w/2;
+    bot y7=top y6-h=0; y4+o=y7; y2-o=y6; y3=h/2; 
+    y5=.6[y4,y3]; y1=h-y5;
+    super_half(5,4,3);
+    super_half(3,2,1);
+    draw z6--z7;
+    labels(range 1 thru 7);
+    if cutoff:
+      z8=bot z7; z9=top z6;
+      z7l=z7; z7r=rt z7;
+      z8l=z8; z8r=rt z8;
+      z6l=z6; z6r=rt z6;
+      z9l=z9; z9r=rt z9;
+      penstroke z7e--z8e;
+      penstroke z6e--z9e;
+      penlabels(6,7,8,9);
+    fi
+  else:
+    lft x1=leftstemloc; x7=x1;
+    x2=x6=x8=w/2;
+    x3=x4=x5=x9=w-x1;
+    bot y4=0; y8=y4-o; y2=h-y8;
+    top y6=2/3*h+o; y7=1/2[y8,y6]; y9=2/3[y8,y6];
+    y1=2/3[y6,y2]; y3=1/3[y6,y2]; y5=y3+.5u;
+    super_half(1,2,3);
+    draw z3--z4;
+    super_arc(5,6);
+    super_crescent(6,7,8);
+    super_half(7,8,9);
+    labels(range 1 thru 9);
+    if cutoff:
+      z10=bot z1; z11=bot z4;
+      penpos1(penx,0); 
+      z10l=lft z10; z10r=rt z10+expand*right;
+      z4l=z4; z4r=rt z4;
+      z11l=z11; z11r=rt z11;
+      penstroke z1e--z10e;
+      penstroke z4e--z11e;
+      penlabels(1,4,10,11);
+    fi
+  fi
+
+  picture pic_lowera; pic_lowera := currentpicture;
+endchar;
+
+begindofchar("b",13,cap#,0,0);
+  lft x1=leftstemloc; x2=x3=x7=x1; 
+  x5=w-x1+o; x4=x6=w/2;
+  bot y1=top y2-h=0; y6=y1-o; 
+  y4=xheight+o; y5=.5[y6,y4];
+  y7=.6[y6,y5]; y3=xheight-y7;
+  draw z1--z2; 
+  super_half(3,4,5);
+  super_half(5,6,7);
+  labels(range 1 thru 7);
+  if cutoff:
+    z8=bot z1; z9=top z2;
+    z1l=lft z1; z1r=z1; z8l=lft z8; z8r=z8;
+    penpos2(penx,0); penpos9(penx,0);
+    penstroke z1e--z8e; penstroke z2e--z9e;
+    penlabels(1,2,8,9);
+  fi
+endchar;
+
+begindofchar("c",13,xheight#,0,0);
+  lft x3+o=leftstemloc; x1=x5=w-x3-o; x2=x4=w/2;
+  bot y2=0-o; y3=h/2; y4=h-y2;
+  y1=.3[y2,y3]; y5=h-y1;
+  super_half(3,2,1);
+  super_half(3,4,5);
+  labels(range 1 thru 5);
+  if cutoff:
+    z6=top z1; z7=bot z5;
+    penpos1(penx,0); penpos5(penx,0); 
+    z6l=lft z6+expand*left; z6r=rt z6;
+    z7l=lft z7+expand*left; z7r=rt z7;
+    penstroke z1e--z6e;
+    penstroke z5e--z7e;
+    penlabels(1,5,6,7);
+  fi
+endchar;
+
+begindofchar("d",13,cap#,0,0);
+  rt x1=w-leftstemloc; x2=x3=x7=x1; 
+  x5=w-x1; x4=x6=w/2;
+  bot y1=0; y2=h-y1; 
+  y4=y1-o; y6=xheight-y4;
+  y5=.5[y4,y6]; 
+  y3=.6[y4,y5]; y7=xheight-y3;
+  draw z1--z2;
+  super_half(3,4,5);
+  super_half(5,6,7);
+  labels(range 1 thru 7);
+  if cutoff:
+    z8=bot z1; z9=top z2;
+    z1l=z1; z1r=rt z1; z8l=z8; z8r=rt z8;
+    penpos2(penx,0); penpos9(penx,0);
+    penstroke z1e--z8e; penstroke z2e--z9e;
+    penlabels(1,2,8,9);
+  fi
+endchar;
+
+begindofchar("e",13,xheight#,0,-.25s#);
+  lft x3+o=leftstemloc; x1=x5=w-x3-o; 
+  x2=x4=w/2; x6=x3-overdraw;
+  bot y2=0-o; y3=ebarheight; y4=h-y2;
+  y1=.3[y2,y3]; y5=y6=y3;
+  super_half(1,2,3);
+  super_half(3,4,5);
+  draw z5--z6;
+  labels(range 1 thru 6);
+  if cutoff:
+    z7=top z1; z8=bot z5;
+    penpos1(penx,0); penpos5(penx,0); 
+    penpos8(penx,0); z7l=lft z7+expand*left; z7r=rt z7;
+    penstroke z1e--z7e; penstroke z5e--z8e;
+    penlabels(1,5,7,8);
+  fi
+endchar;
+
+% original DOF
+% begindofchar("f",10,cap#,0,-.75s#);
+%   lft x1=leftstemloc; 
+%   x2=x5+overdraw=x7+overdraw=x8-overdraw=x1;
+%   rt x4=w-leftstemloc+.75s; x6=.3[x4,x5]; x3=.5[x2,x4];
+%   bot y5=barheight; y6=y5;
+%   bot y1=0; y7=y8=y1; top y3-o=h;
+%   y2=y4=h-(.8[x2,x4]-x2);
+%   draw z1--z2; 
+%   super_half(2,3,4);
+%   draw z5--z6; draw z7--z8;
+%   labels(range 1 thru 8);
+%   if cutoff:
+%     z9=bot z1; z10=rt z6; z11=bot z4;
+%     penpos1(penx,0); penpos9(penx,0);
+%     penpos6(peny,90); penpos10(peny,90);
+%     penpos4(penx,0); 
+%     z11l=lft z11+expand*left; z11r=rt z11;
+%     penstroke z1e--z9e; penstroke z4e--z11e; penstroke z6e--z10e;
+%     penlabels(1,4,6,9,10,11);
+%   fi
+% endchar;
+
+begindofchar("f",12,cap#,0,-.75s#);
+  lft x1=leftstemloc; 
+  x2=x5+overdraw=x7+overdraw=x8-overdraw=x1;
+  rt x4=w-leftstemloc+.75s; x6=.3[x4,x5]; x3=.5[x2,x4];
+  bot y5=barheight; y6=y5;
+  bot y1=0; y7=y8=y1; top y3-o=h;
+  y2=h-(.8[x2,x4]-x2);
+  y4=h-(.4[x2,x4]-x2);
+  draw z1--z2; 
+  super_half(2,3,4);
+  draw z5--z6; draw z7--z8;
+  labels(range 1 thru 8);
+  if cutoff:
+    z9=bot z1; z10=rt z6; z11=bot z4;
+    penpos1(penx,0); penpos9(penx,0);
+    penpos6(peny,90); penpos10(peny,90);
+    penpos4(penx,0); 
+    z11l=lft z11+expand*left; z11r=rt z11;
+    penstroke z1e--z9e; penstroke z4e--z11e; penstroke z6e--z10e;
+    penlabels(1,4,6,9,10,11);
+  fi
+endchar;
+
+begindofchar("g",13,xheight#,desc#,0);
+  rt x1=w-leftstemloc; x2=x5=x9=x1; 
+  x3=x6=x8=w/2; x4=x7+o=w-x1;
+  top y1=h; y2=y4=.5[y3,y6];
+  bot y3=-d-o; y6=y3+d; y8=h-y6;
+  y7=.5[y6,y8]; y5=.3[y6,y7]; y9=h-y5;
+  draw z1--z2;
+  super_half(2,3,4);
+  super_half(5,6,7);
+  super_half(7,8,9);
+  labels(range 1 thru 9);
+  if cutoff:
+    z10=top z4; z11=top z1;
+    penpos4(penx,0); z10l=lft z10; z10r=rt z10+expand*right;
+    z1l=z1; z1r=rt z1; z11l=z11; z11r=rt z11;
+    penstroke z4e--z10e;
+    penstroke z1e--z11e;
+    penlabels(1,4,10,11);
+  fi
+endchar;
+
+begindofchar("h",13,cap#,0,0);
+  lft x1=leftstemloc; x2=x3=x1;
+  x5=w-x1; x6=x5; x4=.5[x3,x5];
+  bot y1=0; y6=y1; 
+  top y2=h; top y4=xheight+o;
+  y5=.5[y6,y4]; y3=.3[y4,y5];
+  draw z1--z2; 
+  super_half(3,4,5);
+  draw z5--z6;
+  labels(range 1 thru 6);
+  if cutoff:
+    z7=bot z1; z8=top z2; z9=bot z6;
+    penpos1(penx,0); penpos7(penx,0);
+    penpos2(penx,0); penpos8(penx,0);
+    penpos6(penx,0); penpos9(penx,0);
+    penstroke z1e--z7e; penstroke z2e--z8e; penstroke z6e--z9e;
+    penlabels(1,2,6,7,8,9);
+  fi
+endchar;
+
+begindofchar("i",5,cap#,0,0);
+  x1=x2=w/2; x3=x5=x1-overdraw; x4=x6=x1+overdraw;
+  bot y1=top y2-xheight=0; y1=y3=y4; y2=y5=y6; 
+  z7=(x1,xheight+(h-xheight)/2);
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  drawdot z7;
+  labels(range 1 thru 7);
+  if cutoff:
+    z8=bot z1; z9=top z2;
+    penpos1(penx,0); penpos8(penx,0);
+    penpos2(penx,0); penpos9(penx,0);
+    penstroke z1e--z8e;
+    penstroke z2e--z9e;
+    penlabels(1,2,8,9);
+  fi
+endchar;
+
+begindofchar("j",10,cap#,desc#,-s#);
+  rt x1=w-leftstemloc; x2=x7=x5+overdraw=x6-overdraw=x1;
+  lft x4=0; x3=.5[x4,x2];
+  top y1=xheight; y5=y6=y1; bot y3+o=-d; 
+  y2=y4=-d+(1[x4,x2]-x4); y7=.5[xheight,h];
+  draw z1--z2;
+  super_half(2,3,4);
+  draw z5--z6; drawdot z7;
+  labels(range 1 thru 7);
+  if cutoff:
+    z8=top z1; z9=top z4;
+    penpos1(penx,0); penpos8(penx,0);
+    penpos4(penx,0); z9l=lft z9; z9r=rt z9+expand*right;
+    penstroke z1e--z8e; penstroke z4e--z9e;
+    penlabels(1,4,8,9);
+  fi
+endchar;
+
+begindofchar("k",13,cap#,0,-.5s#);
+  lft x1=leftstemloc; x2=x3=x1; 
+  rt x4=w-leftstemloc+.5s; x6=x4; 
+  bot y1=0; y6=y1; y2=h-y1; 
+  y4=xheight; y3=ebarheight; 
+  y5=.3[y3,y4]; z5=whatever[z3,z4];
+  draw z1--z2; 
+  labels(range 1 thru 6);
+  if cutoff:
+    z7=bot z1; z8=top z2;
+    penpos1(penx,0); penpos7(penx,0);
+    penpos2(penx,0); penpos8(penx,0);
+    y9=top y4; z9=whatever[z3,z4];
+    y10=bot y6; z10=whatever[z5,z6];
+    penpos3(compactcor*penx,0); penpos9(penx,0);
+    penpos5(compactcor*penx,0); penpos10(penx,0);
+    penstroke z1e--z7e; penstroke z2e--z8e;
+    penstroke z3e--z9e; penstroke z5e--z10e;
+    penlabels(1,2,3,5,7,8,9,10);
+  else:
+    draw z3--z4; draw z5--z6;
+  fi
+endchar;
+
+begindofchar("l",5,cap#,0,0);
+  x1=x2=w/2; 
+  bot y1=0; y2=h-y1;
+  draw z1--z2;
+  labels(1,2);
+  if cutoff:
+    z3=bot z1; z4=top z2;
+    penpos3(penx,0); penpos4(penx,0);
+    penstroke z3e--z4e;
+  fi
+endchar;
+
+begindofchar("m",20,xheight#,0,0);
+  lft x1=leftstemloc; x2=x3=x1; 
+  x8=x9=w-x1; x5=x6=.5[x1,x9];
+  x4=.5[x1,x6]; x7=.5[x6,x9];
+  bot y1=0; y6=y9=y1;
+  top y2=h; y4=y7=y2+o;
+  y5=y8=h/2; y3=.6[y4,y5];
+  draw z1--z2;
+  super_half(3,4,5);
+  draw z5--z6;
+  super_half(5,7,8);
+  draw z8--z9;
+  labels(range 1 thru 9);
+  if cutoff:
+    z10=bot z1; z11=top z2;
+    z12=bot z6; z13=bot z9;
+    penpos10(penx,0); z11l=lft z11; z11r=z11;
+    penpos6(penx,0); penpos12(penx,0);
+    penpos9(penx,0); penpos13(penx,0);
+    penstroke z10e--z11e;
+    penstroke z6e--z12e;
+    penstroke z9e--z13e;
+    penlabels(6,9,10,11,12,13);
+  fi
+endchar;
+
+begindofchar("n",13,xheight#,0,0);
+  lft x1=leftstemloc; x2=x3=x1;
+  x5=w-x1; x6=x5; x4=.5[x3,x5];
+  bot y1=0; y6=y1; 
+  top y2=h; y4-o=y2;
+  y5=.5[y4,y6]; y3=.6[y4,y5];
+  draw z1--z2; 
+  super_half(3,4,5);
+  draw z5--z6;
+  labels(range 1 thru 6);
+  if cutoff:
+    z7=bot z1; z8=top z2; z9=bot z6;
+    penpos7(penx,0); z8l=lft z8; z8r=z8;
+    penpos6(penx,0); penpos9(penx,0);
+    penstroke z7e--z8e;
+    penstroke z6e--z9e;
+    penlabels(6,7,8,9);
+  fi
+endchar;
+
+begindofchar("o",16,xheight#,0,-.5s#);
+  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
+  bot y1+o=top y3-h-o=0; y4=y2=h/2;
+  super_half(4,3,2);
+  super_half(4,1,2);
+  labels(range 1 thru 4);
+endchar;
+
+begindofchar("p",13,xheight#,desc#,-.25s#);
+  lft x1=leftstemloc; x2=x3=x7=x1;
+  x4=x6=w/2; x5=w-x1+.25s;
+  bot y1+d=top y2-h=0; 
+  bot y4+o=top y6-h-o=0; 
+  y5=.5[y4,y6];
+  y3=.6[y4,y5]; y7=h-y3; 
+  draw z1--z2;
+  super_half(7,6,5);
+  super_half(3,4,5);
+  labels(range 1 thru 7);
+  if cutoff:
+    z8=bot z1; z9=top z2;
+    penpos8(penx,0); z9l=lft z9; z9r=z9;
+    penstroke z8e--z9e;
+    penlabels(8,9);
+  fi
+endchar;
+
+begindofchar("q",13,xheight#,desc#,-.25s#);
+  rt x1=w-leftstemloc; x2=x3=x7=x1;
+  x4=x6=w/2; lft x5=leftstemloc-.25s;
+  bot y1+d=bot y4+o=top y2-h=0; y6-o=y2;
+  y5=.5[y4,y6];
+  y3=.6[y4,y5]; y7=h-y3; 
+  draw z1--z2;
+  super_half(7,6,5);
+  super_half(3,4,5);
+  labels(range 1 thru 7);
+  if cutoff:
+    z8=bot z1; z9=top z2;
+    penpos8(penx,0); z9l=lft z9; z9r=z9;
+    penstroke z8e--z9e;
+    penlabels(8,9);
+  fi
+endchar;
+
+begindofchar("r",12,xheight#,0,-.5s#);
+  lft x1=leftstemloc; x2=x3=x6+overdraw=x7-overdraw=x1;
+  rt x5=w-leftstemloc+.5s; x4=.5[x3,x5];
+  bot y1=0; y6=y7=y1; 
+  top y2=h; y4=y2+o;
+  y3=h-.6(h/2); y5=h-.3(h/2);
+  draw z1--z2; draw z6--z7;
+  super_half(3,4,5);
+  labels(range 1 thru 7);
+  if cutoff:
+    z8=bot z1; z9=top z2; z10=bot z5;
+    penpos8(penx,0); z9l=lft z9; z9r=z9;
+    penpos5(penx,0); z10r=rt z10; z10l=lft z10+.5expand*left;
+    penstroke z8e--z9e; penstroke z5e--z10e;
+    penlabels(5,8,9,0);
+  fi
+endchar;
+
+begindofchar("s",13,xheight#,0,0);
+  lft x1=leftstemloc; x5+o=x1;
+  x3=w-x1; x7=x3; x2=x4=x6=w/2;
+  bot y2+o=0; top y6-o=h; y4=h/2;
+  y3=.5[y4,y2]; y5=.5[y6,y4];
+  y1=.3[y2,y4]; y7=.3[y6,y4];
+  super_half(1,2,3);
+  super_half(5,6,7);
+  draw z3{up}..z4..z5{up};
+  labels(range 1 thru 7);
+  if cutoff:
+    z8=top z1; z9=bot z7;
+    penpos1(penx,0); z8l=lft z8; z8r=rt z8+.5expand*right;
+    penpos7(penx,0); z9l=lft z9+.5expand*left; z9r=rt z9;
+    penstroke z1e--z8e; penstroke z7e--z9e;
+    penlabels(1,7,8,9);
+  fi
+endchar;
+
+begindofchar("t",10,cap#,0,-s#);
+  x1=x2=x5+overdraw=x6-overdraw=w/2;
+  lft x3=leftstemloc-.5s; x4=w-x3;
+  bot y1=0; y5=y6=y1; top y2=h;
+  top y3=xheight; y4=y3;
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  labels(range 1 thru 6);
+  if cutoff:
+    z7=bot z1; z8=top z2;
+    z9=lft z3; z10=rt z4;
+    penpos7(penx,0); penpos8(penx,0);
+    penpos9(peny,90); penpos10(peny,90);
+    penstroke z7e--z8e; penstroke z9e--z10e;
+    penlabels(7,8,9,10);
+  fi
+endchar;
+
+begindofchar("u",13,xheight#,0,0);
+  lft x6=leftstemloc; x5=x6; 
+  x1=x2=x3=w-x6; x4=.5[x5,x3];
+  bot y1=0; y4=y1-o;
+  top y2=h; y6=y2;
+  y5=.5[y4,y6]; y3=.6[y4,y5];
+  draw z1--z2; 
+  super_half(3,4,5);
+  draw z5--z6;
+  labels(range 1 thru 6);
+  if cutoff:
+    z7=bot z1; z8=top z2; z9=top z6;
+    penpos1(penx,0); z7l=z7; z7r=rt z7+.5expand*right;
+    penpos2(penx,0); penpos8(penx,0);
+    penpos6(penx,0); penpos9(penx,0);
+    penstroke z1e--z7e; penstroke z2e--z8e; penstroke z6e--z9e;
+    penlabels(1,2,6,7,8,9);
+  fi
+endchar;
+
+begindofchar("v",13,xheight#,0,-.5s#);
+  lft x1=leftstemloc-.25s; x4=w-x1;
+  x2+.35penx=x3-.35penx=w/2;
+  top y1=h; y4=y1;
+  bot y2=0; y3=y2;
+  labels(range 1 thru 4);
+  if cutoff:
+    y5=y8=h; y6=y7=0;
+    z5=whatever[z1,z2]; z6=whatever[z1,z2];
+    z7=whatever[z3,z4]; z8=whatever[z3,z4];
+    penpos5(penx,0); penpos6(compactcor*penx,0);
+    penpos7(compactcor*penx,0); penpos8(penx,0);
+    penstroke z5e--z6e; penstroke z7e--z8e;
+    penlabels(5,6,7,8);
+  else:
+    draw z1--z2--z3--z4;
+  fi
+endchar;
+
+begindofchar("w",22,xheight#,0,-.5s#);
+  if cutoff:
+    lft x1=leftstemloc-.25s-u;
+  else:
+    lft x1=leftstemloc-.25s-u;
+  fi
+  x7=w-x1; x4=w/2;
+  x2+.35penx=x3-.35penx=.5[x1,x4];
+  x5+.35penx=x6-.35penx=.5[x4,x7];
+  if cutoff:
+    y1=y4=y7=h;
+    y2=y3=y5=y6=0;
+    penpos1(penx,0); penpos2(penx,0);
+    penpos3(penx,0); penpos4(compactcor*penx,0);
+    penpos5(penx,0); penpos6(penx,0); penpos7(penx,0);
+    penstroke z1e--z2e; penstroke z3e--z4e;
+    penstroke z3e--z4e; penstroke z4e--z5e;
+    penstroke z6e--z7e;
+    penlabels(range 1 thru 7);
+  else:
+    top y1=h; y4=y7=y1;
+    bot y2=0; y3=y5=y6=y2;
+    draw z1--z2--z3--z4--z5--z6--z7;
+    labels(range 1 thru 7);
+  fi
+endchar;
+
+begindofchar("x",13,xheight#,0,-.5s#);
+  lft x1=leftstemloc-.25s; x4=w-x1; x3=x1+.3u; x4=x2+.3u;
+  if cutoff:
+    y1=y4=0; y2=y3=h; 
+    z5=whatever[z1,z2]=whatever[z3,z4];
+    penpos1(penx,0); penpos2(penx,0);
+    penpos3(penx,0); penpos4(penx,0);
+    penpos5(compactcor*penx,0);
+    penstroke z1e--z5e--z2e;
+    penstroke z3e--z5e--z4e;
+    penlabels(range 1 thru 5);
+  else:
+    bot y1=top y3-h=0; y1=y4; y3=y2;
+    draw z1--z2; draw z3--z4;
+    labels(range 1 thru 4);
+  fi
+endchar;
+
+begindofchar("y",13,xheight#,desc#,-.5s#);
+  lft x1=leftstemloc-.25s; x3=w-x1; x2=w/2;
+  top y1=h; y3=y1; y2=h-y1; y4=h-y1-d;
+  z4=whatever[z2,z3];
+  labels(range 1 thru 4);
+  if cutoff:
+    y5=-d; z5=whatever[z3,z4];
+    y6=y7=h; z6=whatever[z1,z2]; z7=whatever[z3,z4];
+    penpos2(compactcor*penx,0); penpos5(penx,0); 
+    penpos6(penx,0); penpos7(penx,0);
+    penstroke z5e--z7e; penstroke z2e--z6e;
+    penlabels(2,5,6,7);
+  else:
+    draw z1--z2;
+    draw z3--z4;
+  fi
+endchar;
+
+begindofchar("z",13,xheight#,0,-.5s#);
+  lft x1=leftstemloc-.25s; x2=w-x1; x4=x2; x3=x1;
+  top y1=h; y2=y1; bot y3=0; y4=y3;
+  draw z1--z2--z3--z4;
+  labels(range 1 thru 4);
+  if cutoff:
+    z5=lft z1; z6=lft z2;
+    y7=h; z7=whatever[z2,z3];
+    y8=0; z8=whatever[z2,z3];
+    z9=rt z3; z10=rt z4;
+    penpos5(peny,90); penpos6(peny,90);
+    penpos7(penx,0); penpos8(penx,0);
+    penpos9(peny,90); penpos10(peny,90);
+    penstroke z5e--z6e; 
+    penstroke z7e--z8e;
+    penstroke z9e--z10e;
+    penlabels(range 5 thru 10);
+  fi 
+endchar;
