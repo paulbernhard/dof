@@ -1,30 +1,48 @@
-% DOF-1 Italic parameters
+% DOF-Afield Italic
 
-boolean opendraw; boolean cutoff; % basic setup of variables
+% setup variables
+boolean opendraw; boolean cutoff;
 
-slant:=1/4; % slant to italicize font (numeric value, e.g. 1/4, 1/3, …), 0 = no slant
-u#:=3/9pt#; % character width unit, controls the basic character widths
+slant:=1/5.5; % slant to italicize font (numeric value, e.g. 1/4, 1/3, …), 0 = no slant
+u#:=4/9pt#; % character width unit, controls the basic character widths
 cap#:=9pt#; % cap- / ascender-height
 xheight#:=.75cap#; % x-height relative to cap-height
 figheight#:=cap#; % figures' height relative to cap-height
 desc#:=2.25pt#; % descender-height
-s#:=2u#; % average distance of character to sidebearings
+s#:=2.2u#; % average distance of character to sidebearings
 o#:=1/18pt#; % top- / bottom-overshoot for round characters, as for O or U
+
+% accents
+accdist#:=.5u#; % distance between character's top and accent
+accheight#:=.5u#; % height of accent
+accslant#:=4u#; % horizontal slant of accent
 
 leftstemloc#:=s#; % location of the characters' left stem, control this with the sidebearing value
 barheight#:=.5*cap#; % height of horizontal bar, as in H
 ebarheight#:=.5xheight#; % height of the horizontal bar, as in e
 
-overdraw#:=.5u#; % overdraw certain lines, as the horizontal bars of E
+overdraw#:=-3u#; % overdraw certain lines, as the horizontal bars of E
 opendraw:=true; % leave certain circles open (currently in %-, °-symbol and 0)
 superness:=.74; % superness controls the corner-expansion of all round shapes (as in O, S or g). A higher value expands the corners, a lower value implodes the corners, a value of 0.74 equals to regular round ellipses
 cutoff:=false; % cut off the pen at stroke endings (true or false)
 expand#:=1/10pt#; % if cutoff = true, expand the pen stroke towards the stroke ending, as in C
 compactcor:=.7; % if cutoff = true, thin out strokes to correct compaction in certain letters, as in the top of A or the middle of M 
 
-penx#:=1.1pt#; % width of (elliptical) pen nib
-peny#:=.4pt#; % height of (elliptical) pen nib
-penangle:=0; % angle of pen nib
-puncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
+accdist#:=u#;
+accwidth#:=4u#;
+accheight#:=2u#;
 
-input dofbase; % input parameters to base file
+penx#:=1.25pt#; % width of (elliptical) pen nib
+peny#:=.4pt#; % height of (elliptical) pen nib
+penangle:=10; % angle of pen nib
+penpuncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
+penaccscale:=0.8;
+
+% font info
+mode_setup;
+font_identifier "DOF-Afield-Italic";
+font_size 11.25pt#;
+font_coding_scheme:="ASCII";
+
+% start font generation from dofbase
+input dofbase;

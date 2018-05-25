@@ -2,6 +2,9 @@
 
 % ligature oe
 begindofchar(oct"033",15,xheight#,0,0);
+
+  "Special Lowercase oe Ligature";
+
   % part "o"
   x1=x5=w/2; x2=x4=.5[x1,x3]; 
   x3=leftstemloc-o;
@@ -30,7 +33,10 @@ begindofchar(oct"033",15,xheight#,0,0);
 endchar;
 
 % ligature ae
-begindofchar(hex"E6",15,xheight#,0,0);
+begindofchar(oct"032",15,xheight#,0,0);
+
+  "Special Lowercase ae Ligature";
+
   % part "a"
   x1=leftstemloc; x2=.5[x1,x3];
   x3=w/2; x4=x8=x3; x5=x7=x2; x6=x1-o;
@@ -60,5 +66,69 @@ begindofchar(hex"E6",15,xheight#,0,0);
     penstroke z1e--z14e;
     penstroke z11e--z15e;
     penstroke z13e--z16e;
+  fi
+endchar;
+
+% strikethrough o
+begindofchar(oct"034",16,xheight#,0,-.5s#);
+
+  "Special Lowercase Strikethrough o";
+
+  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
+  bot y1+o=top y3-h-o=0; y4=y2=h/2;
+  pickup currentpen scaled penaccscale;
+  x5=x4-.5u; x6=w-x5;
+  bot y5=0; top y6=h;
+  super_half(4,3,2);
+  super_half(4,1,2);
+  labels(1,2,3,4);
+  if cutoff:
+    penpos5(penx*penaccscale,0);
+    penpos6(penx*penaccscale,0);
+    penstroke z5e--z6e;
+    penlabels(5,6);
+  else:
+    draw z5--z6;
+    labels(5,6);
+  fi
+endchar;
+
+% dotless i
+begindofchar(oct"020",5,cap#,0,0);
+
+  "Special Lowercase Dotless i";
+
+  x1=x2=w/2; x3=x5=x1-overdraw; x4=x6=x1+overdraw;
+  bot y1=top y2-xheight=0; y1=y3=y4; y2=y5=y6;
+  draw z1--z2; draw z3--z4; draw z5--z6;
+  labels(range 1 thru 6);
+  if cutoff:
+    z8=bot z1; z9=top z2;
+    penpos1(penx,0); penpos8(penx,0);
+    penpos2(penx,0); penpos9(penx,0);
+    penstroke z1e--z8e;
+    penstroke z2e--z9e;
+    penlabels(1,2,8,9);
+  fi
+endchar;
+
+begindofchar(oct"021",10,cap#,desc#,-s#);
+
+  "Special Lowercase Dotless j";
+
+  rt x1=w-leftstemloc; x2=x5+overdraw=x6-overdraw=x1;
+  lft x4=0; x3=.5[x4,x2];
+  top y1=xheight; y5=y6=y1; bot y3+o=-d; 
+  y2=y4=-d+(1[x4,x2]-x4);
+  draw z1--z2;
+  super_half(2,3,4);
+  draw z5--z6;
+  labels(range 1 thru 6);
+  if cutoff:
+    z8=top z1; z9=top z4;
+    penpos1(penx,0); penpos8(penx,0);
+    penpos4(penx,0); z9l=lft z9; z9r=rt z9+expand*right;
+    penstroke z1e--z8e; penstroke z4e--z9e;
+    penlabels(1,4,8,9);
   fi
 endchar;

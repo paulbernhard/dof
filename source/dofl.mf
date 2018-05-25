@@ -1,6 +1,9 @@
 % lower case
 
 begindofchar("a",13,xheight#,0,0);
+
+  "Lowercase a";
+
   % draw different a for slanted typeface
   if slant<>0:
     rt x7=w-leftstemloc; x6=x1=x5=x7; 
@@ -50,6 +53,9 @@ begindofchar("a",13,xheight#,0,0);
 endchar;
 
 begindofchar("b",13,cap#,0,0);
+
+  "Lowercase b";
+
   lft x1=leftstemloc; x2=x3=x7=x1; 
   x5=w-x1+o; x4=x6=w/2;
   bot y1=top y2-h=0; y6=y1-o; 
@@ -69,6 +75,9 @@ begindofchar("b",13,cap#,0,0);
 endchar;
 
 begindofchar("c",13,xheight#,0,0);
+
+  "Lowercase c";
+
   lft x3+o=leftstemloc; x1=x5=w-x3-o; x2=x4=w/2;
   bot y2=0-o; y3=h/2; y4=h-y2;
   y1=.3[y2,y3]; y5=h-y1;
@@ -87,6 +96,9 @@ begindofchar("c",13,xheight#,0,0);
 endchar;
 
 begindofchar("d",13,cap#,0,0);
+
+  "Lowercase d";
+
   rt x1=w-leftstemloc; x2=x3=x7=x1; 
   x5=w-x1; x4=x6=w/2;
   bot y1=0; y2=h-y1; 
@@ -107,6 +119,9 @@ begindofchar("d",13,cap#,0,0);
 endchar;
 
 begindofchar("e",13,xheight#,0,-.25s#);
+
+  "Lowercase e";
+
   lft x3+o=leftstemloc; x1=x5=w-x3-o; 
   x2=x4=w/2; x6=x3-overdraw;
   bot y2=0-o; y3=ebarheight; y4=h-y2;
@@ -124,30 +139,10 @@ begindofchar("e",13,xheight#,0,-.25s#);
   fi
 endchar;
 
-% original DOF
-% begindofchar("f",10,cap#,0,-.75s#);
-%   lft x1=leftstemloc; 
-%   x2=x5+overdraw=x7+overdraw=x8-overdraw=x1;
-%   rt x4=w-leftstemloc+.75s; x6=.3[x4,x5]; x3=.5[x2,x4];
-%   bot y5=barheight; y6=y5;
-%   bot y1=0; y7=y8=y1; top y3-o=h;
-%   y2=y4=h-(.8[x2,x4]-x2);
-%   draw z1--z2; 
-%   super_half(2,3,4);
-%   draw z5--z6; draw z7--z8;
-%   labels(range 1 thru 8);
-%   if cutoff:
-%     z9=bot z1; z10=rt z6; z11=bot z4;
-%     penpos1(penx,0); penpos9(penx,0);
-%     penpos6(peny,90); penpos10(peny,90);
-%     penpos4(penx,0); 
-%     z11l=lft z11+expand*left; z11r=rt z11;
-%     penstroke z1e--z9e; penstroke z4e--z11e; penstroke z6e--z10e;
-%     penlabels(1,4,6,9,10,11);
-%   fi
-% endchar;
-
 begindofchar("f",12,cap#,0,-.75s#);
+
+  "Lowercase ";
+
   lft x1=leftstemloc; 
   x2=x5+overdraw=x7+overdraw=x8-overdraw=x1;
   rt x4=w-leftstemloc+.75s; x6=.3[x4,x5]; x3=.5[x2,x4];
@@ -171,6 +166,9 @@ begindofchar("f",12,cap#,0,-.75s#);
 endchar;
 
 begindofchar("g",13,xheight#,desc#,0);
+
+  "Lowercase g";
+
   rt x1=w-leftstemloc; x2=x5=x9=x1; 
   x3=x6=x8=w/2; x4=x7+o=w-x1;
   top y1=h; y2=y4=.5[y3,y6];
@@ -192,6 +190,9 @@ begindofchar("g",13,xheight#,desc#,0);
 endchar;
 
 begindofchar("h",13,cap#,0,0);
+
+  "Lowercase h";
+
   lft x1=leftstemloc; x2=x3=x1;
   x5=w-x1; x6=x5; x4=.5[x3,x5];
   bot y1=0; y6=y1; 
@@ -212,6 +213,9 @@ begindofchar("h",13,cap#,0,0);
 endchar;
 
 begindofchar("i",5,cap#,0,0);
+
+  "Lowercase i";
+
   x1=x2=w/2; x3=x5=x1-overdraw; x4=x6=x1+overdraw;
   bot y1=top y2-xheight=0; y1=y3=y4; y2=y5=y6; 
   z7=(x1,xheight+(h-xheight)/2);
@@ -229,6 +233,9 @@ begindofchar("i",5,cap#,0,0);
 endchar;
 
 begindofchar("j",10,cap#,desc#,-s#);
+
+  "Lowercase j";
+
   rt x1=w-leftstemloc; x2=x7=x5+overdraw=x6-overdraw=x1;
   lft x4=0; x3=.5[x4,x2];
   top y1=xheight; y5=y6=y1; bot y3+o=-d; 
@@ -247,6 +254,9 @@ begindofchar("j",10,cap#,desc#,-s#);
 endchar;
 
 begindofchar("k",13,cap#,0,-.5s#);
+
+  "Lowercase k";
+
   lft x1=leftstemloc; x2=x3=x1; 
   rt x4=w-leftstemloc+.5s; x6=x4; 
   bot y1=0; y6=y1; y2=h-y1; 
@@ -271,6 +281,9 @@ begindofchar("k",13,cap#,0,-.5s#);
 endchar;
 
 begindofchar("l",5,cap#,0,0);
+
+  "Lowercase l";
+
   x1=x2=w/2; 
   bot y1=0; y2=h-y1;
   draw z1--z2;
@@ -283,6 +296,9 @@ begindofchar("l",5,cap#,0,0);
 endchar;
 
 begindofchar("m",20,xheight#,0,0);
+
+  "Lowercase m";
+
   lft x1=leftstemloc; x2=x3=x1; 
   x8=x9=w-x1; x5=x6=.5[x1,x9];
   x4=.5[x1,x6]; x7=.5[x6,x9];
@@ -309,6 +325,9 @@ begindofchar("m",20,xheight#,0,0);
 endchar;
 
 begindofchar("n",13,xheight#,0,0);
+
+  "Lowercase n";
+
   lft x1=leftstemloc; x2=x3=x1;
   x5=w-x1; x6=x5; x4=.5[x3,x5];
   bot y1=0; y6=y1; 
@@ -329,6 +348,9 @@ begindofchar("n",13,xheight#,0,0);
 endchar;
 
 begindofchar("o",16,xheight#,0,-.5s#);
+
+  "Lowercase o";
+
   x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
   bot y1+o=top y3-h-o=0; y4=y2=h/2;
   super_half(4,3,2);
@@ -337,6 +359,9 @@ begindofchar("o",16,xheight#,0,-.5s#);
 endchar;
 
 begindofchar("p",13,xheight#,desc#,-.25s#);
+
+  "Lowercase p";
+
   lft x1=leftstemloc; x2=x3=x7=x1;
   x4=x6=w/2; x5=w-x1+.25s;
   bot y1+d=top y2-h=0; 
@@ -356,6 +381,9 @@ begindofchar("p",13,xheight#,desc#,-.25s#);
 endchar;
 
 begindofchar("q",13,xheight#,desc#,-.25s#);
+
+  "Lowercase q";
+
   rt x1=w-leftstemloc; x2=x3=x7=x1;
   x4=x6=w/2; lft x5=leftstemloc-.25s;
   bot y1+d=bot y4+o=top y2-h=0; y6-o=y2;
@@ -374,6 +402,9 @@ begindofchar("q",13,xheight#,desc#,-.25s#);
 endchar;
 
 begindofchar("r",12,xheight#,0,-.5s#);
+
+  "Lowercase r";
+
   lft x1=leftstemloc; x2=x3=x6+overdraw=x7-overdraw=x1;
   rt x5=w-leftstemloc+.5s; x4=.5[x3,x5];
   bot y1=0; y6=y7=y1; 
@@ -392,6 +423,9 @@ begindofchar("r",12,xheight#,0,-.5s#);
 endchar;
 
 begindofchar("s",13,xheight#,0,0);
+
+  "Lowercase s";
+
   lft x1=leftstemloc; x5+o=x1;
   x3=w-x1; x7=x3; x2=x4=x6=w/2;
   bot y2+o=0; top y6-o=h; y4=h/2;
@@ -411,6 +445,9 @@ begindofchar("s",13,xheight#,0,0);
 endchar;
 
 begindofchar("t",10,cap#,0,-s#);
+
+  "Lowercase t";
+
   x1=x2=x5+overdraw=x6-overdraw=w/2;
   lft x3=leftstemloc-.5s; x4=w-x3;
   bot y1=0; y5=y6=y1; top y2=h;
@@ -428,6 +465,9 @@ begindofchar("t",10,cap#,0,-s#);
 endchar;
 
 begindofchar("u",13,xheight#,0,0);
+
+  "Lowercase u";
+
   lft x6=leftstemloc; x5=x6; 
   x1=x2=x3=w-x6; x4=.5[x5,x3];
   bot y1=0; y4=y1-o;
@@ -448,6 +488,9 @@ begindofchar("u",13,xheight#,0,0);
 endchar;
 
 begindofchar("v",13,xheight#,0,-.5s#);
+
+  "Lowercase v";
+
   lft x1=leftstemloc-.25s; x4=w-x1;
   x2+.35penx=x3-.35penx=w/2;
   top y1=h; y4=y1;
@@ -467,6 +510,9 @@ begindofchar("v",13,xheight#,0,-.5s#);
 endchar;
 
 begindofchar("w",22,xheight#,0,-.5s#);
+
+  "Lowercase w";
+
   if cutoff:
     lft x1=leftstemloc-.25s-u;
   else:
@@ -494,6 +540,9 @@ begindofchar("w",22,xheight#,0,-.5s#);
 endchar;
 
 begindofchar("x",13,xheight#,0,-.5s#);
+
+  "Lowercase x";
+
   lft x1=leftstemloc-.25s; x4=w-x1; x3=x1+.3u; x4=x2+.3u;
   if cutoff:
     y1=y4=0; y2=y3=h; 
@@ -512,6 +561,9 @@ begindofchar("x",13,xheight#,0,-.5s#);
 endchar;
 
 begindofchar("y",13,xheight#,desc#,-.5s#);
+
+  "Lowercase y";
+
   lft x1=leftstemloc-.25s; x3=w-x1; x2=w/2;
   top y1=h; y3=y1; y2=h-y1; y4=h-y1-d;
   z4=whatever[z2,z3];
@@ -530,6 +582,9 @@ begindofchar("y",13,xheight#,desc#,-.5s#);
 endchar;
 
 begindofchar("z",13,xheight#,0,-.5s#);
+
+  "Lowercase z";
+
   lft x1=leftstemloc-.25s; x2=w-x1; x4=x2; x3=x1;
   top y1=h; y2=y1; bot y3=0; y4=y3;
   draw z1--z2--z3--z4;

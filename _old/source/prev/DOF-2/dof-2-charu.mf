@@ -416,7 +416,7 @@ begindofchar(hex"C4",18,cap#,0,-.5s#);
     labels(range 7 thru 10);
   fi
   pickup round_pen;
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x11=w/2-.2penx; x12=w-x11;
   bot y11=h+u; y12=y11;
   drawdot z11; drawdot z12;
@@ -430,7 +430,7 @@ begindofchar(hex"D6",20,cap#,0,-.5s#);
   super_half(4,3,2);
   super_half(4,1,2);
   pickup round_pen;
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x5=w/2-.2penx; x6=w-x5;
   bot y5=h+u; y6=y5;
   drawdot z5; drawdot z6;
@@ -453,7 +453,7 @@ begindofchar(hex"DC",16,cap#,0,0);
     labels(6,7);
   fi
   pickup round_pen;
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x8=w/2-.2penx; x9=w-x8;
   bot y8=h+u; y9=y8;
   drawdot z8; drawdot z9;

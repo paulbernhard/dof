@@ -36,7 +36,7 @@ Visualisations of major parameters can be found at [examples/parameters/](https:
 `penx = 1.1pt` stroke-width  
 `peny = 0.4pt` stroke-height  
 `penangle = 0` pen angle (degrees as _numeric value_)  
-`puncscale = 1.2` scale of pen for dots in punctuation
+`penpuncscale = 1.2` scale of pen for dots in punctuation
 
 ## Structure and Rendering
 

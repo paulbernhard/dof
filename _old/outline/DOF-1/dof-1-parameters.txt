@@ -30,7 +30,7 @@ cutoff = false
 penx = 1.1 pt
 peny 0.4 pt
 penangle = 0
-puncscale = 1.2
+penpuncscale = 1.2
 
 
 DOF-1 Italic 
@@ -52,7 +52,7 @@ cutoff = false
 penx = 1.1 pt
 peny 0.4 pt
 penangle = 0
-puncscale = 1.2
+penpuncscale = 1.2
 
 
 DOF-1 Extended 
@@ -74,4 +74,4 @@ cutoff = false
 penx = 1.1 pt
 peny 0.4 pt
 penangle = 0
-puncscale = 1.2
+penpuncscale = 1.2

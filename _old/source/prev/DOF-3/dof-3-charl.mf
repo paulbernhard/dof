@@ -570,7 +570,7 @@ begindofchar(hex"E4",13,xheight#,0,0);
     fi
   fi
   % add umlaut dots
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x12=w/2-.2penx; x13=w-x12;
   bot y12=h+u; y13=y12;
   drawdot z12; drawdot z13;
@@ -585,7 +585,7 @@ begindofchar(hex"F6",16,xheight#,0,-.5s#);
   super_half(4,1,2);
   labels(range 1 thru 4);
   % add umlaut dots
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x5=w/2-.2penx; x6=w-x5;
   bot y5=h+u; y6=y5;
   drawdot z5; drawdot z6;
@@ -612,7 +612,7 @@ begindofchar(hex"FC",13,xheight#,0,0);
     penlabels(1,2,6,7,8,9);
   fi
   % add umlaut dots
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x10=w/2-.2penx; x11=w-x10;
   bot y10=h+u; y11=y10;
   drawdot z10; drawdot z11;

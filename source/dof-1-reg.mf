@@ -1,8 +1,5 @@
 % DOF-1 Regular
 
-% init metafont mode
-mode_setup;
-
 % setup variables
 boolean opendraw; boolean cutoff;
 
@@ -27,18 +24,21 @@ cutoff:=false; % cut off the pen at stroke endings (true or false)
 expand#:=1/10pt#; % if cutoff = true, expand the pen stroke towards the stroke ending, as in C
 compactcor:=.7; % if cutoff = true, thin out strokes to correct compaction in certain letters, as in the top of A or the middle of M 
 
-accdist#:=u#;
+accdist#:=0;
 accwidth#:=4u#;
-accheight#:=u#;
+accheight#:=2u#;
 
 penx#:=1.1pt#; % width of (elliptical) pen nib
 peny#:=.4pt#; % height of (elliptical) pen nib
 penangle:=0; % angle of pen nib
-puncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
+penpuncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
+penaccscale:=0.8;
 
 % font info
+mode_setup;
 font_identifier "DOF-1-Regular";
 font_size 11.25pt#;
+font_coding_scheme:="ASCII";
 
 % start font generation from dofbase
 input dofbase;

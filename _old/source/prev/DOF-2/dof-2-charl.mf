@@ -318,7 +318,7 @@ begindofchar(hex"E4",13,xheight#,0,0);
     labels(range 1 thru 8);
   fi
   % add dots
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x9=w/2-.2penx; x10=w-x9;
   bot y9=h+u; y10=y9;
   drawdot z9; drawdot z10;
@@ -331,7 +331,7 @@ begindofchar(hex"F6",16,xheight#,0,-.5s#);
   bot y1+o=top y3-h-o=0; y4=y2=h/2;
   super_half(4,3,2);
   super_half(4,1,2);
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x5=w/2-.2penx; x6=w-x5;
   bot y5=h+u; y6=y5;
   drawdot z5; drawdot z6;
@@ -348,7 +348,7 @@ begindofchar(hex"FC",13,xheight#,0,0);
   draw z1--z2; 
   super_half(3,4,5);
   draw z5--z6;
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   rt x7=w/2-.2penx; x8=w-x7;
   bot y7=h+u; y8=y7;
   drawdot z7; drawdot z8;

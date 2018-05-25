@@ -41,17 +41,13 @@ if unknown slant: slant:=0 else: currenttransform:=
   identity slanted slant fi;
 
 % draw characters
-% input dofupper; % input to DOF uppercase characters
-% input doflower; % input to DOF lowercase characters
-% input doffigurepunc; % input to DOF figures and punctuation
-
-% input dofl; % lower case
-% input dofu; % upper case
-% input dofd; % digits
-% input dofspl; % special lower case
-% input dofspu; % special lower case
-% input dofsym; % symbols
-% input dofp; % punctuation
+input dofl; % lower case
+input dofu; % upper case
+input dofd; % digits
+input dofspl; % special lower case
+input dofspu; % special lower case
+input dofsym; % symbols
+input dofp; % punctuation
 input dofacc; % accents
 
 bye

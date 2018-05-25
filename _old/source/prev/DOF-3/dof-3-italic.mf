@@ -22,6 +22,6 @@ compactcor:=.7; % correction for stroke compacting with cutoff, e.g. in M or W (
 penx#:=2.55pt#; % width of pen nib
 peny#:=.8pt#; % height of pen nib
 penangle:=0; % angle of pen nib
-puncscale:=1; % scale factor of pen nib for punctuations
+penpuncscale:=1; % scale factor of pen nib for punctuations
 
 input dof-3-base; % base file

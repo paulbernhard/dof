@@ -1,6 +1,9 @@
 % digits
 
 begindofchar("0",14,figheight#,0,0);
+
+  "Digit 0";
+
   x1=x3=w/2; lft x4=leftstemloc-o; x2=w-x4;
   bot y1=0-o; top y3=h+o; y2=y4=h/2;
   x5=x3+u; top y5=bot y3-u;
@@ -16,6 +19,9 @@ begindofchar("0",14,figheight#,0,0);
 endchar;
 
 begindofchar("1",10,figheight#,0,-.75s#);
+
+  "Digit 1";
+
   lft x1=leftstemloc-.7s; rt x2=w-leftstemloc; 
   x3=x4+overdraw=x5-overdraw=x2;
   top y2=h; bot y3=0; y4=y5=y3;
@@ -32,6 +38,9 @@ begindofchar("1",10,figheight#,0,-.75s#);
 endchar;
 
 begindofchar("2",14,figheight#,0,0);
+
+  "Digit 2";
+
   lft x1=leftstemloc; x4=x1; 
   x3=x5=w-x1; x2=.5[x1,x3];
   bot y4=0; y5=y4; top y2=h+o;
@@ -50,6 +59,9 @@ begindofchar("2",14,figheight#,0,0);
 endchar;
 
 begindofchar("3",14,figheight#,0,0);
+
+  "Digit 3";
+
   lft x1=leftstemloc; x7=x1;
   rt x3=w-leftstemloc+o; x5=x3;
   x2=x4=x6=w/2;
@@ -74,6 +86,9 @@ begindofchar("3",14,figheight#,0,0);
 endchar;
 
 begindofchar("4",14,figheight#,0,-.75s#);
+
+  "Digit 4";
+
   x1=x2=w/2+u; lft x4=leftstemloc-.25s; 
   rt x5=w-leftstemloc+.5s; x3=.3[x4,x5];
   bot y1=0; top y2=xheight; 
@@ -97,6 +112,9 @@ begindofchar("4",14,figheight#,0,-.75s#);
 endchar;
 
 begindofchar("5",14,figheight#,0,0);
+
+  "Digit 5";
+
   lft x1=leftstemloc; x5=x6=x1;
   x3-o=x7=w-x1; x2=x4=w/2;
   bot y2=0-o; y4=xheight-y2;
@@ -116,6 +134,9 @@ begindofchar("5",14,figheight#,0,0);
 endchar;
 
 begindofchar("6",14,figheight#,0,0);
+
+  "Digit 6";
+
   x1=x3=x5+u=w/2; lft x4=leftstemloc-o; x2=x6+u=w-x4;
   bot y1=0-o; y3=xheight-y1; 
   y5=h-y1; y2=y4=xheight/2;
@@ -133,6 +154,9 @@ begindofchar("6",14,figheight#,0,0);
 endchar;
 
 begindofchar("7",14,figheight#,0,-s#);
+
+  "Digit 7";
+
   lft x3=leftstemloc-.5s; x2=w-x3; x1=.3[x3,x2];
   bot y1=0; y2=y3=h-y1;
   labels(range 1 thru 3);
@@ -152,6 +176,9 @@ begindofchar("7",14,figheight#,0,-s#);
 endchar;
 
 begindofchar("8",14,figheight#,0,0);
+
+  "Digit 8";
+
   x1=x3=x5=w/2; lft x7=leftstemloc-o; 
   x4=x7+.2u; x2=w-x7; x6=w-x4;
   bot y1=0-o; y5=h-y1; y3=h/2+.4u;
@@ -164,6 +191,9 @@ begindofchar("8",14,figheight#,0,0);
 endchar;
 
 begindofchar("9",14,figheight#,0,0);
+
+  "Digit 9";
+
   x1=x3=x5-u=w/2; lft x2=leftstemloc-o; 
   x4=w-x2; x6=x2+u;
   bot y5=0-o; y1=h-y5;

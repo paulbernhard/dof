@@ -19,7 +19,7 @@ leftstemloc#:=s#; % basic location of the characters left stem
 penx#:=1.1pt#; % width of pen nib
 peny#:=0.4pt#; % height of pen nib
 penangle:=0; % angle of pen nib
-puncscale:=1.2; % scale factor of pen nib for punctuations
+penpuncscale:=1.2; % scale factor of pen nib for punctuations
 
 input dof-1-base; % input parameters to dof-1-base file to render characters
 

@@ -19,7 +19,7 @@ superness:=.74; % "corner"-amount of super-ellipses (0.74 ~ regular ellipse)
 penx#:=.9pt#; % width of pen nib
 peny#:=.9pt#; % height of pen nib
 penangle:=0; % angle of pen nib
-puncscale:=1; % scale factor of pen nib for punctuations
+penpuncscale:=1; % scale factor of pen nib for punctuations
 
 % !! "squarish" feature is not yet fully implemented -> disabled in dof-2.mf by default !!
 % boolean squarish; squarish:=true; % squarize pen edges

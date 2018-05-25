@@ -2,6 +2,9 @@
 
 % ligature OE
 begindofchar(oct"036",20,cap#,0,-.5s#);
+
+  "Special Uppercase OE Ligature";
+
   % part "O"
   x1=w/2; x2=.5[x1,x3]; 
   lft x3=leftstemloc-o-.25s;
@@ -35,7 +38,10 @@ begindofchar(oct"036",20,cap#,0,-.5s#);
 endchar;
 
 % ligature AE
-begindofchar(hex"C6",20,cap#,0,-.5s#);
+begindofchar(oct"035",20,cap#,0,-.5s#);
+
+  "Special Uppercase AE Ligature";
+
   if cutoff:
     lft x1=leftstemloc-.25s; x2=x3=x4-.35penx;
     x4=x5=x7=x9=x11=w/2+u; 
@@ -64,5 +70,29 @@ begindofchar(hex"C6",20,cap#,0,-.5s#);
     draw z1--z2--z3; draw z4--z5;
     draw z6--z7; draw z8--z9;
     draw z5--z10;
+  fi
+endchar;
+
+% strikethrough O
+begindofchar(oct"034",16,xheight#,0,-.5s#);
+
+  "Special Lowercase Strikethrough O";
+
+  x1=x3=w/2; lft x4+o=leftstemloc-.25s; x2=w-x4;
+  bot y1+o=top y3-h-o=0; y4=y2=h/2;
+  pickup currentpen scaled penaccscale;
+  x5=x4-.5u; x6=w-x5;
+  bot y5=0; top y6=h;
+  super_half(4,3,2);
+  super_half(4,1,2);
+  labels(1,2,3,4);
+  if cutoff:
+    penpos5(penx*penaccscale,0);
+    penpos6(penx*penaccscale,0);
+    penstroke z5e--z6e;
+    penlabels(5,6);
+  else:
+    draw z5--z6;
+    labels(5,6);
   fi
 endchar;

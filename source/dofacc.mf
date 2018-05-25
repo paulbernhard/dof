@@ -1,38 +1,170 @@
 % DOF Accents
 
-% accent grave
-begindofchar(oct"022",4,cap#,0,0);
-  x1=w/2; bot y1=h+accdist;
+% À
+begindofchar(oct"023",4,cap#,0,0);
+  
+  "Accent Grave";
+
+  pickup currentpen scaled penaccscale;
+  x1=w/2-.25accwidth; bot y1=h+accdist;
   x2=x1+accwidth; top y2=y1+accheight;
   if cutoff:
-    penpos1(peny,90); penpos2(peny+expand,90);
+    penpos1(peny*penaccscale,90); 
+    penpos2(peny*penaccscale+expand,90);
     penstroke z1e--z2e;
+    penlabels(1,2);
   else:
     draw z1--z2;
+    labels(1,2);
   fi
 endchar;
 
-% accent acute
-begindofchar(oct"023",4,cap#,0,0);
-  x1=w/2; bot y1=h+accdist;
+% Á
+begindofchar(oct"022",4,cap#,0,0);
+
+  "Accent Acute";
+
+  pickup currentpen scaled penaccscale;
+  x1=w/2+.25accwidth; bot y1=h+accdist;
   x2=x1-accwidth; top y2=y1+accheight;
   if cutoff:
     penpos1(peny,90); penpos2(peny+expand,90);
     penstroke z1e--z2e;
+    penlabels(1,2);
   else:
     draw z1--z2;
+    labels(1,2);
   fi
 endchar;
 
-% umlaut
+% ç
+begindofchar(oct"030",4,cap#,0,0);
+
+  "Accent Sedilla";
+
+  pickup currentpen scaled penaccscale;
+  x1=x2=w/2;
+  y1=0; y2=y1-.15xheight-o;
+  if cutoff:
+    penpos1(penx,0); penpos2(penx,0);
+    penstroke z1e{right}..z2e{left};
+    penlabels(1,2);
+  else:
+    draw z1{right}..z2{left};
+    labels(1,2);
+  fi 
+endchar;
+
+% Å
+begindofchar(oct"027",4,cap#,0,0);
+
+  "Accent Overring";
+
+  pickup currentpen scaled penaccscale;
+  x1=x3=w/2;
+  x2=x1-.5accwidth; x4=w-x2;
+  y3=h+accdist; y1=y3+2accheight;
+  y2=y4=.5[y1,y3];
+  if opendraw:
+    super_crescent(1,2,3);
+    super_arc(4,3);
+  else:
+    super_crescent(1,2,3);
+    super_crescent(3,4,1);
+  fi
+  labels(1,2,3,4);
+endchar;
+
+% Â
+begindofchar(oct"136",4,cap#,0,0);
+
+  "Accent Circumflex";
+
+  pickup currentpen scaled penaccscale;
+  x2=w/2; x1=x2-.5accwidth; x3=w-x1;
+  y1=y3=h+accdist; y2=y1+accheight;
+  if cutoff:
+    penpos1(peny,90); penpos3(peny,90);
+    penpos2(peny+expand,90);
+    penstroke z1e--z2e--z3e;
+    penlabels(1,2,3);
+  else:
+    draw z1--z2--z3;
+    labels(1,2,3);
+  fi
+endchar;
+
+% Ǎ
+begindofchar(oct"024",4,cap#,0,0);
+
+  "Accent Caron";
+
+  pickup currentpen scaled penaccscale;
+  x2=w/2; x1=x2-.5accwidth; x3=w-x1;
+  y1=y3=y2+accheight; y2=h+accdist;
+  if cutoff:
+    penpos1(peny,90); penpos3(peny,90);
+    penpos2(peny+expand,90);
+    penstroke z1e--z2e--z3e;
+    penlabels(1,2,3);
+  else:
+    draw z1--z2--z3;
+    labels(1,2,3);
+  fi
+endchar;
+
+% Ă
+begindofchar(oct"025",4,cap#,0,0);
+
+  "Accent Breve";
+
+  pickup currentpen scaled penaccscale;
+  x2=w/2; x1=x2-.5accwidth; x3=w-x1;
+  y2=h+accdist; y1=y3=y2+.5[x1,x2];
+  super_arc(1,2);
+  super_arc(3,2);
+  labels(1,2,3);
+endchar;
+
+begindofchar(oct"176",4,cap#,0,0);
+
+  "Accent Tilde";
+
+  pickup currentpen scaled penaccscale;
+  x3=w/2; x1=x3-accwidth; x5=w-x1;
+  x2=.5[x1,x3]; x4=w-x2;
+  y2=h+accdist;
+  y1=y3=y5=y2+.5accheight;
+  y4=y2+accheight;;
+  super_half(1,2,3);
+  super_half(3,4,5);
+  labels(1,2,3,4,5);
+endchar;
+
 begindofchar(oct"177",4,cap#,0,0);
+
+  "Diacritic Umlaut";
+
+  pickup currentpen scaled penpuncscale;
   x1=w/2-.5accwidth-.25penx; x2=w-x1;
   y1=y2=h+accdist;
   drawdot z1; drawdot z2;
+  labels(1,2);
 endchar;
 
-% sedilla accent
-% …
+begindofchar(oct"026",4,cap#,0,0);
 
-% check accent
-% …
+  "Diacritic Macron";  
+
+  pickup currentpen scaled penaccscale;
+  x1=w/2-accwidth; x2=w-x1;
+  y1=y2=h+accdist+.25u;
+  if cutoff:
+    penpos1(peny,90); penpos2(peny,90);
+    penstroke z1e--z2e;
+    penlabels(1,2);
+  else:
+    draw z1--z2;
+    labels(1,2);
+  fi
+endchar;

@@ -1,0 +1,15 @@
+#!/usr/local/bin/fontforge
+# conversion script for mftrace output file (.pfa)
+# reencode to 'unicode', build accents, scale to 1024, 
+# add credits, generate output (.ttf, .woff)
+Open($1)
+Reencode("unicode")
+SelectAll()
+ScaleToEm(1024)
+SelectWorthOutputting()
+SelectInvert()
+BuildAccented()
+copyright="Copyright (c) 2017, Paul Bernhard (http://pbernhard.com | mail@pbernhard.com), with Reserved Font Name DOF. This Font Software is licensed under the SIL Open Font License, Version 1.1."
+Generate($1:r + ".ttf")
+Generate($1:r + ".woff")
+Close()

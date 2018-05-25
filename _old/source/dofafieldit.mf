@@ -32,7 +32,7 @@
 % penx#:=1.1pt#; % width of (elliptical) pen nib
 % peny#:=.55pt#; % height of (elliptical) pen nib
 % penangle:=10; % angle of pen nib
-% puncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
+% penpuncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
 % 
 % input dofbase; % input parameters to base file
 
@@ -72,6 +72,6 @@ compactcor:=.7; % if cutoff = true, thin out strokes to correct compaction in ce
 penx#:=1.25pt#; % width of (elliptical) pen nib
 peny#:=.4pt#; % height of (elliptical) pen nib
 penangle:=10; % angle of pen nib
-puncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
+penpuncscale:=1.2; % factor to scale the pen nib for punctuations, as in period or colon
 
 input dofbase; % input parameters to base file

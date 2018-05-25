@@ -242,7 +242,7 @@ endchar;
 
 % period
 begindofchar(".",4,xheight#,0,-s#);
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   x1=w/2; bot y1=0;
   drawdot z1;
   labels(1);
@@ -258,7 +258,7 @@ endchar;
 
 % colon
 begindofchar(":",4,xheight#,0,-s#);
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   x1=x2=w/2; bot y2=0; y1=xheight-y2;
   drawdot z1; drawdot z2;
   labels(1,2);
@@ -268,7 +268,7 @@ endchar;
 begindofchar(";",4,xheight#,0,-s#);
   x1=x2=w/2; x3=x2-u;
   bot y2=0; y1=xheight-y2; y3=y2-4u;
-  pickup currentpen scaled puncscale;
+  pickup currentpen scaled penpuncscale;
   drawdot z1; 
   pickup dof_pen;
   draw z2{down}..z3;
