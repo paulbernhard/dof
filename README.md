@@ -1,6 +1,6 @@
 ![DOF Kaktus](examples/kaktus.jpg?raw=true "DOF in Mexico")
-![DOF Specimen](examples/DOF_title.png?raw=true "DOF Specimen")
-![DOF Specimen](examples/DOF_specimen_04.png?raw=true "DOF Specimen")
+<!-- ![DOF Specimen](examples/title.png?raw=true "DOF Specimen") -->
+![DOF Specimen](examples/specimen_04.png?raw=true "DOF Specimen")
 
 DOF is a type(inter)face initiated on the occasion of the exhibition and research project [The Weathers They Live In](http://twtli.nicolaarthen.com). Written in the typographic description language METAFONT, DOF can be understood as a set of genes to generate different font families by the regulation of parameters. 
 
